@@ -1,0 +1,58 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  color: #000;
+  background-color: $white;
+  font-family: "Montserrat", sans-serif;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+
+p {
+  font-size: $font-size-6;
+  line-height: $line-height-sm;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+/* img:not(.nav-logo) {
+  width: 100%;
+  display: block;
+} */
+
+a {
+  text-decoration: none;
+
+  &:focus {
+    outline: 1px solid transparent;
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  li {
+    font-size: $font-size-base;
+    text-decoration: none;
+
+    &:focus {
+      outline: 1px solid transparent;
+    }
+  }
+}
