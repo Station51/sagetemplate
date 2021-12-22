@@ -138,3 +138,30 @@ add_action('after_setup_theme', function () {
         return "<?= " . __NAMESPACE__ . "\\asset_path({$asset}); ?>";
     });
 });
+
+//Remove JQuery migrate
+add_action('wp_default_scripts', function ($scripts) {
+    if (!is_admin() && isset($scripts->registered['jquery'])) {
+        $script = $scripts->registered['jquery'];
+        
+        if ($script->deps) { // Check whether the script has any dependencies
+            $script->deps = array_diff($script->deps, array(
+                'jquery-migrate'
+            ));
+        }
+    }
+});
+
+/**
+ * Disable the emoji's
+ */
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('admin_print_scripts', 'print_emoji_detection_script');
+remove_action('wp_print_styles', 'print_emoji_styles');
+remove_action('admin_print_styles', 'print_emoji_styles');
+
+add_action( 'pre_get_posts', function( $query ) {
+    if ( !is_admin() && $query->is_feed() || ($query->is_main_query() && (is_home() || is_category())) ) {
+        $query->set( 'post_type', array('post', 'story') );
+    }
+} );

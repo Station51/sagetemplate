@@ -7,30 +7,64 @@
 <section data-{{ $block['id'] }} id="{{ $block['id'] }}" class="{{ $block['classes'] }} section">
   <div class="container grid grid__outer">
     <div class="block-2_content">
-      <span class="label">About Us</span>
-      <h2 class="heading heading--2">Lorem ipsum dolor sit amet.</h2>
-      <p class="block-2__content-paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur a doloremque fugit vel rerum ad.</p>
+      @if(get_field('title')) 
+        <h2 class="heading heading--2">
+            {!! get_field('title') !!}
+        </h2>
+      @endif
+      @if(get_field('content'))
+        <p class="block-2__content-paragraph">
+          {!! get_field('content') !!}
+        </p>
+      @endif
 
-      <div class="block-2__content-item">
-        <span class="fa-layers fa-3x">
-          <i class="far fa-building"></i>
-        </span>
-        <div class="u-display-flex u-flex-direction-col">
-          <span class="block-2__content-item-label">Maecenas sit amet</span>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </div>  
-      </div>
-      <div class="block-2__content-item">
-        <span class="fa-layers fa-3x">
-          <i class="far fa-credit-card"></i>
-        </span>
-        <div class="u-display-flex u-flex-direction-col">
-          <span class="block-2__content-item-label">Maecenas sit amet</span>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </div>  
-      </div>
-      <a href="#" class="btn">See More</a>
+      @if(get_field('title_first_row'))
+        <div class="block-2__content-item">
+          <span class="fa-layers fa-3x">
+            <i class="far fa-building"></i>
+          </span>
+          <div class="u-display-flex u-flex-direction-col">
+            <span class="block-2__content-item-label">
+              {!! get_field('title_first_row') !!}
+            </span>
+            <p>
+              @if(get_field('subtitle_first_row'))
+                {!! get_field('subtitle_first_row') !!}
+              @endif
+            </p>
+          </div>  
+        </div>
+      @endif
+
+      @if(get_field('title_second_row'))
+        <div class="block-2__content-item">
+          <span class="fa-layers fa-3x">
+            <i class="far fa-building"></i>
+          </span>
+          <div class="u-display-flex u-flex-direction-col">
+            <span class="block-2__content-item-label">
+              {!! get_field('title_second_row') !!}
+            </span>
+            <p>
+              @if(get_field('subtitle_second_row'))
+               {!! get_field('subtitle_second_row') !!}
+              @endif
+            </p>
+          </div>  
+        </div>
+      @endif
+      @if(get_field('button_name'))
+        <a href="{!! get_field('button_url') !!}" class="btn">{!! get_field('button_name') !!}</a>
+      @endif
     </div>
-    <img src="https://cdn.pixabay.com/photo/2015/11/06/11/45/interior-1026449_960_720.jpg" width='600' height="450" alt="Hotel Room">
+    @if(get_field('image'))
+      @php
+        $image = get_field('image');
+        $size = 'large'; // (thumbnail, medium, large, full or custom size)
+        $attachment_title = get_the_title($attach_id);      
+      @endphp
+        {!! wp_get_attachment_image( $image, $size, $attachment_title ) !!}
+    @endif
   </div>
 </section>
+
