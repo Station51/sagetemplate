@@ -40,6 +40,14 @@ add_action('after_setup_theme', function () {
     add_theme_support('title-tag');
 
     /**
+     * Add Gutenberg Styles to editor
+     */
+    add_action('enqueue_block_editor_assets', function () {
+        wp_enqueue_style('sage/gutenberg.css', asset_path('styles/gutenberg.css'), false, null);
+    });
+
+
+    /**
      * Register navigation menus
      * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
      */

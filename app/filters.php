@@ -89,3 +89,13 @@ add_filter('comments_template', function ($comments_template) {
 
     return $comments_template;
 }, 100);
+
+/**
+ * Removing Default Gutenberg Blocks
+ */
+add_filter( 'allowed_block_types', function ( $allowed_blocks ) {
+    return array(
+        'acf/block-1',
+        'core/image',
+    );
+});
