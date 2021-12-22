@@ -96,6 +96,7 @@ add_filter('comments_template', function ($comments_template) {
 add_filter( 'allowed_block_types', function ( $allowed_blocks ) {
     return array(
         'acf/block-1',
+        'acf/block-banner-1',
         'core/image',
     );
 });
