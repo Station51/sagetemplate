@@ -39,6 +39,8 @@ add_action('after_setup_theme', function () {
      */
     add_theme_support('title-tag');
 
+
+
     /**
      * Add Gutenberg Styles to editor
      */
@@ -60,6 +62,8 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
      */
     add_theme_support('post-thumbnails');
+
+    add_image_size('icon', 100, 100, false);
 
     /**
      * Enable HTML5 markup support

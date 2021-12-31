@@ -1,6 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
 .heading {
   font-weight: bold;
   margin: 15px 0;
+  text-transform: capitalize;
+  color: $grey-2;
 
   &--1 {
     font-size: 27px;

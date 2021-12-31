@@ -33,10 +33,10 @@
 
       span {
         height: 100%;
-        margin-right: 35px;
+        margin-right: 1rem;
 
         @include medium-up {
-          margin-right: 19px;
+          margin-right: 2rem;
         }
       }
 
@@ -62,5 +62,10 @@
 
   img {
     height: auto;
+    /* stylelint-disable */
+    aspect-ratio: 1; 
+    /* stylelint-enable */
+    width: 100%;
+    object-fit: cover;
   }
 }

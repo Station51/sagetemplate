@@ -7,9 +7,9 @@
 }
 
 body {
-  color: #000;
+  color: $grey-4;
   background-color: $white;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: $font-size-base;
   line-height: $line-height-base;
   margin: 0;
@@ -27,6 +27,11 @@ p {
 img {
   width: 100%;
   display: block;
+
+  &.size-icon {
+    width: auto;
+    display: inline-block;
+  }
 }
 
 /* img:not(.nav-logo) {
