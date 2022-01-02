@@ -1,66 +1,61 @@
 {{--
-  Title: Block-6
+  Title: block-6
   Category: common
   Icon: awards
 --}}
-
 <section data-{{ $block['id'] }} id="{{ $block['id'] }}" class="{{ $block['classes'] }} section">
-  <div class="block-5__title">
-    <h2 class="heading heading--2">our menu</h2>
-    <div class="block-5__title--underline"></div>
+  @php
+    $menus = get_terms([
+      'taxonomy' => 'porfiolio_category'
+    ]);
+  @endphp
+  @if(get_field("title")) 
+    <div class="block-6__title">
+      <h2 class="heading heading--2">{!! get_field("title") !!}</h2>
+      <div class="block-6__title--underline"></div>
+    </div>
+  @endif
+  <div class="block-6__btn--container">
+    <button type="button" class="btn block-6__btn--filter" data-filter="all">all</button>
+    @foreach ($menus as $menu) 
+    <button type="button" class="btn block-6__btn--filter" data-filter="{{ $menu->slug }}"> {!! $menu->name !!}</button>
+    @endforeach
   </div>
-
-  <div class="container container_filter">
-
-    <div class="filters filter-button-group">
-          <ul><h4>
-            <li class="active" data-filter="*">All</li>
-
-            <?php
-              $terms = get_terms('porfiolio_category');
-              foreach ($terms as  $term) { ?>
-                <li data-filter=".<?php  echo $term->slug; ?>"><?php echo $term->name; ?></li>
-          <?php  }
-
-            ?>
-            <!-- <li data-filter=".webdesign">Logo</li>
-            <li data-filter=".webdev">videos</li>
-            <li data-filter=".brand">Websites</li> -->
-          </h4></ul>
+  @php
+  $menu = new WP_Query([
+    'post_type' => 'menu',
+    'posts_per_page' => -1,
+  ]);
+  @endphp
+  @if($menu->have_posts()) 
+    <div class="filter-container block-6__item container">
+	@while ($menu->have_posts())
+    @php
+		  $menu->the_post();
+      $price = get_field( 'price', get_the_ID() );
+      $text = get_field( 'text', get_the_ID() );
+    @endphp
+    @foreach (get_the_terms(get_the_ID(), 'porfiolio_category') as $cat) 
+      @php $termsSLug =  $cat->name @endphp     
+		@endforeach
+    <div class="filtr-item block-6__item--section-center" data-category="{!! $termsSLug !!}">
+      @if (has_post_thumbnail()) 
+        <div class="block-6__item--image"> {!! the_post_thumbnail() !!} 
+          <div class="block-6__item--info">
+            <header>
+              <h3>{!! the_title() !!}</h3>
+                <span class="block-6__item--price">£ {!! $price !!}</span>
+               
+            </header>
+              <p class="block-6__item--text">{!! $text !!}</p>
+          </div>
         </div>
-
-        <div class="content grid">
-          <?php
-          $args = array(
-            'post_type' => 'portfolio',
-            'posts_per_page' => 8
-          );
-
-          $query = new WP_Query($args);
-
-          while ($query->have_posts()) {
-            $query->the_post();
-         
-
-            foreach (get_the_terms(get_the_ID(), 'porfiolio_category') as $cat) {
-              $termsSLug =  $cat->name;
-              }
-
-            ?>
-
-                <div class="single-content <?php echo  $termsSLug; ?>  grid-item">
-                  <img class="p2" src="<?php the_post_thumbnail_url(); ?>">
-                </div>
-
-          <?php  }
-    wp_reset_postdata();
-
-            ?>
-
-
-
-
-      </div>
-</div>
-
+	    @endif
+    </div>
+  @endwhile
+  @php
+	  wp_reset_postdata();
+	@endphp
+  </div>
+@endif
 </section>

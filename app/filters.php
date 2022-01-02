@@ -111,6 +111,22 @@ add_filter('tiny_mce_plugins', function ($plugins) {
     }
 });
 
+// Change excerpt length
+
+add_filter('excerpt_length', function ($length) {
+    return 35;
+});
+
+/**
+ * Change the excerpt more string
+ */
+add_filter('excerpt_more', function ($more) {
+    return '&hellip;';
+});
+
+
+
+
 /**
 * Remove emoji CDN hostname from DNS prefetching hints.
 *
@@ -134,6 +150,8 @@ add_filter('wp_resource_hints', function ($urls, $relation_type) {
  */
 add_filter( 'allowed_block_types', function ( $allowed_blocks ) {
     return array(
+        'acf/block-6',
+        'acf/block-5',
         'acf/block-4',
         'acf/block-3',
         'acf/block-2',

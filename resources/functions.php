@@ -90,3 +90,10 @@ Container::getInstance()
             'view' => require dirname(__DIR__).'/config/view.php',
         ]);
     }, true);
+
+
+    /* --
+ Custom post type and taxonomy for Menu
+-- */
+
+
