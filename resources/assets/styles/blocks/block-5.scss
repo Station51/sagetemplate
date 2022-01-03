@@ -1,88 +1,51 @@
 .block-5 {
-  padding: 5rem 0;
+  display: grid;
+  place-items: center;
+  min-height: 90vh;
+  position: relative;
+  padding: 10rem 0 5rem 0;
+  clip-path: polygon(0 0, 100% 15%, 100% 80%, 0% 100%);
+  color: $grey-10;
 
-  &__title {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: $grey-1;
+    opacity: 0.4;
+    z-index: -1;
+  }
+
+  .video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+  }
+
+  .video-banner {
+    background: $grey-9;
+    opacity: 0.8;
+    padding: 3rem 5rem 12rem 5rem;
     text-align: center;
-  }
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
 
-  &__btn {
-    &--container {
-      margin-top: 2em;
-      margin-bottom: 4rem;
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    &--filter {
-      background: transparent;
-      color: $primary-5;
-      border: 1px solid $primary-5;
-
-      &:hover {
-        color: $white;
-        border: 1px solid $primary-1;
-      }
+    .section-title {
+      margin-bottom: 2rem;
     }
   }
 
-  &__item {
-    display: grid;
-    margin: 0 auto;
-    gap: 3rem 2rem;
-    justify-items: center;
-
-    @include medium-up {
-      grid-template-columns: 1fr 1fr;
-    }
-
-    &--section-center {
-      display: grid;
-      gap: 1rem 2rem;
-      max-width: 25rem;
-
-      @include small-up {
-        grid-template-columns: 225px 1fr;
-        gap: 2rem 1.25rem;
-        max-width: 40rem;
-        align-items: center;
-      }
-    }
-
-    &--photo {
-      height: 200px;
-      border-radius: $border-radius;
-
-      @include small-up {
-        height: 175px;
-      }
-
-      @include medium-up {
-        height: 150px;
-      }
-    }
-
-    &--info header {
-      display: flex;
-      justify-content: space-between;
-      border-bottom: 3px dotted $grey-5;
-    }
-
-    &--info h3 {
-      margin-bottom: 0.5rem;
-      text-transform: capitalize;
-      font-weight: $font-weight-medium;
-    }
-
-    &--price {
-      color: $primary-2;
-    }
-
-    &--text {
-      margin: 0;
-      padding-top: 0.5rem;
-      color: $grey-5;
-    }
+  .video-text {
+    max-width: 30rem;
+    color: $grey-2;
+    margin-bottom: 1.5rem;
   }
 }
+

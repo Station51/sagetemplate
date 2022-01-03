@@ -1,0 +1,79 @@
+.header {
+  position: relative;
+  background-color: transparent;
+  transition: all 0.3s ease-out;
+  z-index: 9999;
+
+  &__wrapper {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: $nav-bg-light;
+    box-shadow: $box-shadow-light;
+  }
+
+  .hamburger-box {
+    width: 30px;
+    height: 16px;
+  }
+
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+    width: 30px;
+    height: 4px;
+    background-color: $hamburger-dark;
+  }
+
+  .main-navigation ul a,
+  .main-navigation a:focus,
+  .main-navigation ul a:visited {
+    color: $nav-font-dark;
+  }
+
+  &.parked {
+    .header__wrapper {
+      background-color: transparent;
+      box-shadow: none;
+
+      @include medium-up {
+        background-color: $nav-bg-dark;
+      }
+    }
+
+    .hamburger-inner,
+    .hamburger-inner::before,
+    .hamburger-inner::after {
+      background-color: $hamburger-light;
+    }
+
+    .main-navigation ul a,
+    .main-navigation a:focus,
+    .main-navigation ul a:visited {
+      color: $nav-font-light;
+    }
+  }
+
+  &.parked.is-active {
+    .header__wrapper {
+      background-color: $nav-bg-light;
+      box-shadow: none;
+
+      @include medium-up {
+        background-color: $nav-bg-dark;
+      }
+    }
+
+    .hamburger-inner,
+    .hamburger-inner::before,
+    .hamburger-inner::after {
+      background-color: $hamburger-dark;
+    }
+
+    .main-navigation ul a,
+    .main-navigation a:focus,
+    .main-navigation ul a:visited {
+      color: $nav-font-dark;
+    }
+  }
+}

@@ -102,9 +102,16 @@
 
   p.gallery-copy {
     box-sizing: content-box;
-    font-size: 18px;
-    text-align: center;
-    width: 55%;
+    color: $grey-5;
+    font-size: $font-size-5;
+    line-height: $line-height-base;
+    width: 90%;
     margin: 0 auto 5rem;
+    text-align: left;
+
+    @include medium-up {
+      width: 55%;
+      text-align: center;
+    }
   }
 }

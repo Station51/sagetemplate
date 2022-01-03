@@ -8,6 +8,7 @@
  * @see https://github.com/webpack-contrib/sass-loader#imports
  */
 // @import "~some-node-module";
+@import "~hamburgers/_sass/hamburgers/hamburgers";
 
 /** Import theme styles */
 @import "common/variables";
@@ -30,6 +31,7 @@
 @import "layouts/pages";
 @import "layouts/posts";
 @import "layouts/tinymce";
+@import "layouts/nav-drop";
 
 /** Blocks */
 @import "blocks/block-1-nav";
