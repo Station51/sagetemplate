@@ -1,10 +1,20 @@
 .block-banner-1 {
   background-size: cover;
   padding: 125px 0 184px;
-  margin-top: 60px;
+  position: relative;
 
   @include medium-up {
     padding: 142px 0 220px;
+  }
+
+  .header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    opacity: 0;
   }
 
   .flex {

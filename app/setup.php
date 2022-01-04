@@ -39,6 +39,8 @@ add_action('after_setup_theme', function () {
      */
     add_theme_support('title-tag');
 
+
+
     /**
      * Add Gutenberg Styles to editor
      */
@@ -47,12 +49,13 @@ add_action('after_setup_theme', function () {
     });
 
 
-    /**
+      /**
      * Register navigation menus
      * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
      */
     register_nav_menus([
-        'primary_navigation' => __('Primary Navigation', 'sage')
+        'primary_navigation' => __('Primary Navigation', 'sage'),
+        'footer_navigation' => __('Footer Navigation', 'sage')
     ]);
 
     /**
@@ -60,6 +63,8 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
      */
     add_theme_support('post-thumbnails');
+
+    add_image_size('icon', 100, 100, false);
 
     /**
      * Enable HTML5 markup support
@@ -153,6 +158,13 @@ add_action('wp_default_scripts', function ($scripts) {
 });
 
 /**
+ * Add ACF Options Page
+ */
+if (function_exists('acf_add_options_page')) {
+    acf_add_options_page();
+}
+
+/**
  * Disable the emoji's
  */
 remove_action('wp_head', 'print_emoji_detection_script', 7);
@@ -165,3 +177,61 @@ add_action( 'pre_get_posts', function( $query ) {
         $query->set( 'post_type', array('post', 'story') );
     }
 } );
+
+/** Add Custom Post Type - Menu */
+
+add_action('init', function () {
+    $labels = array(
+        'name' => _x('Menu', 'post type general name', 'your_text_domain'),
+        'singular_name' => _x('Menu', 'post type Singular name', 'your_text_domain'),
+        'add_new' => _x('Add Menu', '', 'your_text_domain'),
+        'add_new_item' => __('Add New Menu', 'your_text_domain'),
+        'edit_item' => __('Edit Menu', 'your_text_domain'),
+        'new_item' => __('New Menu', 'your_text_domain'),
+        'all_items' => __('All Menu', 'your_text_domain'),
+        'view_item' => __('View Menu', 'your_text_domain'),
+        'search_items' => __('Search Menu', 'your_text_domain'),
+        'not_found' => __('No Menu found', 'your_text_domain'),
+        'not_found_in_trash' => __('No Menu on trash', 'your_text_domain'),
+        'parent_item_colon' => '',
+        'menu_name' => __('Menu', 'your_text_domain')
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'query_var' => true,
+        'rewrite' => array('slug' => 'menu'),
+        'capability_type' => 'page',
+        'has_archive' => true,
+        'hierarchical' => true,
+        'menu_position' => null,
+        'menu_icon' => 'dashicons-format-gallery',
+        'supports' => array('title', 'thumbnail','custom-fields', 'page-attributes')
+    );
+    $labels = array(
+        'name' => __('Category'),
+        'singular_name' => __('Category'),
+        'search_items' => __('Search'),
+        'popular_items' => __('More Used'),
+        'all_items' => __('All Categories'),
+        'parent_item' => null,
+        'parent_item_colon' => null,
+        'edit_item' => __('Add new'),
+        'update_item' => __('Update'),
+        'add_new_item' => __('Add new Category'),
+        'new_item_name' => __('New')
+    );
+    register_taxonomy('porfiolio_category', array('menu'), array(
+		'hierarchical' => true,
+		'labels' => $labels,
+		'singular_label' => 'porfiolio_category',
+		'all_items' => 'Category',
+		'query_var' => true,
+		'rewrite' => array('slug' => 'cat'))
+    );
+    register_post_type('menu', $args);
+    flush_rewrite_rules();
+}, 0);

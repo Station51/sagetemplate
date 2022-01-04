@@ -1,4 +1,6 @@
 .block-2 {
+  background-color: $grey-10;
+
   .grid__outer {
     grid-template-columns: 1fr;
 
@@ -11,11 +13,12 @@
     align-self: flex-start;
 
     &-paragraph {
-      font-size: $font-size-4;
+      color: $grey-5;
+      font-size: $font-size-5;
+      line-height: $line-height-base;
       margin: 5px 16px 5px 0;
 
       @include medium-up {
-        font-size: $font-size-5;
         margin: 5px 0 4px;
         width: 90%;
       }
@@ -33,11 +36,7 @@
 
       span {
         height: 100%;
-        margin-right: 35px;
-
-        @include medium-up {
-          margin-right: 19px;
-        }
+        margin-right: 2rem;
       }
 
       h2 {
@@ -62,5 +61,10 @@
 
   img {
     height: auto;
+    /* stylelint-disable */
+    aspect-ratio: 1; 
+    /* stylelint-enable */
+    width: 100%;
+    object-fit: cover;
   }
 }

@@ -16,6 +16,18 @@
   }
 }
 
+@mixin xl-up {
+  @media (min-width: #{$bp-xl}) {
+    @content;
+  }
+}
+
+@mixin xxl-up {
+  @media (min-width: #{$bp-2xl}) {
+    @content;
+  }
+}
+
 @mixin font-15 {
   font-size: $font-size-6;
   line-height: $line-height-sm;
