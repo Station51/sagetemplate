@@ -1,0 +1,54 @@
+
+.block-3 {
+  cursor: pointer;
+
+  .wrapper {
+    background-color: $grey-10;
+  }
+
+  .article {
+    padding: 2.5rem 0;
+    text-align: center;
+    transition: $transition;
+    height: 100%;
+
+    @include medium-up {
+      padding: 3.5rem 0;
+    }
+  }
+
+  .article-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    transition: $transition;
+    display: inline-block;
+    color: $primary-5;
+  }
+
+  .article-text {
+    color: $grey-5;
+    max-width: 17rem;
+    margin: 0 auto;
+  }
+
+  .article:hover {
+    background: $white;
+    box-shadow: 0 2px $primary-5;
+  }
+
+  .article:hover > .article-icon {
+    transform: translateY(-5px);
+  }
+
+  @include small-up {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @include medium-up {
+    .grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

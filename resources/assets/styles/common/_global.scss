@@ -109,3 +109,14 @@
     }
   }
 }
+
+//  REMOVE PADDINGS
+.p {
+  &b-0 {
+    padding-bottom: 0;
+  }
+
+  &t-0 {
+    padding-top: 0;
+  }
+}

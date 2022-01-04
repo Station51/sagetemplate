@@ -1,0 +1,111 @@
+.block-6 {
+  padding: 5rem 0;
+
+  &__title {
+    text-align: center;
+  }
+
+  &__btn {
+    &--container {
+      margin-top: 2em;
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    &--filter {
+      background: transparent;
+      color: $primary-5;
+      border: 1px solid $primary-5;
+
+      &:hover {
+        color: $white;
+        border: 1px solid $primary-1;
+      }
+    }
+  }
+
+  &__item {
+    justify-content: center;
+
+    @include medium-up {
+      justify-content: left;
+    }
+
+    &--section-center {
+      display: flex;
+      gap: 1rem 2rem;
+      max-width: 25rem;
+      padding-top: 20px;
+      width: 100%;
+
+      @include small-up {
+        max-width: 40rem;
+      }
+
+      @include medium-up {
+        max-width: 50%;
+        justify-content: center;
+        padding-right: 1rem;
+      }
+    }
+
+    &--image {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.5rem 1rem;
+
+      @include small-up {
+        grid-template-columns: 1fr 1.5fr;
+        gap: 2rem 1rem;
+      }
+
+      img {
+        /* stylelint-disable */
+        max-height: 250px;
+        aspect-ratio: 2/1; 
+        /* stylelint-enable */
+        width: 100%;
+        object-fit: cover;
+        border-radius: $border-radius;
+
+        @include small-up {
+          max-height: 180px;
+        }
+
+        @include medium-up {
+          max-height: auto;
+          /* stylelint-disable */
+          aspect-ratio: 1/2; 
+          /* stylelint-enable */
+        }
+      }
+    }
+
+    &--info header {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 3px dotted $grey-5;
+    }
+
+    &--info h3 {
+      margin-bottom: 0.5rem;
+      text-transform: capitalize;
+      font-weight: $font-weight-medium;
+      font-size: $font-size-5;
+    }
+
+    &--price {
+      color: $primary-2;
+      font-size: $font-size-5;
+    }
+
+    &--text {
+      margin: 0;
+      padding-top: 0.5rem;
+      color: $grey-5;
+    }
+  }
+}

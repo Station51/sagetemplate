@@ -1,0 +1,70 @@
+.block-2 {
+  background-color: $grey-10;
+
+  .grid__outer {
+    grid-template-columns: 1fr;
+
+    @include medium-up {
+      grid-template-columns: 55% 45%;
+    }
+  }
+
+  &__content {
+    align-self: flex-start;
+
+    &-paragraph {
+      color: $grey-5;
+      font-size: $font-size-5;
+      line-height: $line-height-base;
+      margin: 5px 16px 5px 0;
+
+      @include medium-up {
+        margin: 5px 0 4px;
+        width: 90%;
+      }
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      margin-top: 32px;
+
+      @include medium-up {
+        width: 70%;
+        margin-top: 50px;
+      }
+
+      span {
+        height: 100%;
+        margin-right: 2rem;
+      }
+
+      h2 {
+        margin-top: 3px;
+      }
+
+      &-label {
+        display: block;
+        font-weight: $font-weight-bold;
+      }
+    }
+  }
+
+  a.btn {
+    margin-top: 36px;
+    display: inline-block;
+
+    @include medium-up {
+      margin-top: 54px;
+    }
+  }
+
+  img {
+    height: auto;
+    /* stylelint-disable */
+    aspect-ratio: 1; 
+    /* stylelint-enable */
+    width: 100%;
+    object-fit: cover;
+  }
+}
