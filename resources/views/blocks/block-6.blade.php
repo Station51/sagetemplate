@@ -19,6 +19,7 @@
     <button type="button" class="btn block-6__btn--filter" data-filter="all">all</button>
     @foreach ($menus as $menu) 
     <button type="button" class="btn block-6__btn--filter" data-filter="{{ $menu->slug }}"> {!! $menu->name !!}</button>
+    {!! print_r($menu->slug) !!}
     @endforeach
   </div>
   @php
@@ -39,6 +40,7 @@
       @php $termsSLug =  $cat->name @endphp     
 		@endforeach
     <div class="filtr-item block-6__item--section-center" data-category="{!! $termsSLug !!}">
+      {!! print_r($termsSLug) !!}
       @if (has_post_thumbnail()) 
         <div class="block-6__item--image"> {!! the_post_thumbnail() !!} 
           <div class="block-6__item--info">
