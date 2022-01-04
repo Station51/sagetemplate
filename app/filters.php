@@ -125,8 +125,6 @@ add_filter('excerpt_more', function ($more) {
 });
 
 
-
-
 /**
 * Remove emoji CDN hostname from DNS prefetching hints.
 *
