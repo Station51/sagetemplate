@@ -5,10 +5,10 @@
 --}}
 <section data-{{ $block['id'] }} id="{{ $block['id'] }}" class="{{ $block['classes'] }} connect">
   @if(get_field('image') && ( get_field('radio_button') == 'image' ))
-    <img class="video-container" src="{!! wp_get_attachment_image( get_field('image'), 'full') !!}">
+    <img class="video-container" src="{!! wp_get_attachment_image( get_field('image'), 'hero') !!}">
   @elseif(get_field('video') && ( get_field('radio_button') == 'video' ) ) 
     <video autoplay muted loop class="video-container"
-    poster="{!! wp_get_attachment_image( get_field('image'), 'full') !!}">
+    poster="{!! wp_get_attachment_image( get_field('image'), 'hero') !!}">
     <source src=" {!! get_field('video') !!}" type="video/mp4" />
     Sorry, you browser does not support embedded videos
   </video>
