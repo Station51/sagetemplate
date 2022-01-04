@@ -14,7 +14,7 @@ $attachment_title = get_the_title($attach_id);
   @if(get_field('image') && ( get_field('radio_button') == 'image' ))
     {!! wp_get_attachment_image( $image, $size, $attachment_title ) !!}
   @elseif(get_field('video') && ( get_field('radio_button') == 'video' ) ) 
-    <video autoplay muted loop class="video-container">
+    <video autoplay muted loop class="video-container" poster="get_field('image')">
     <source src="{!! get_field('video') !!}" type="video/mp4" />
     Sorry, you browser does not support embedded videos
   </video>

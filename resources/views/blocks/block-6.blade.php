@@ -16,10 +16,9 @@
     </div>
   @endif
   <div class="block-6__btn--container">
-    <button type="button" class="btn block-6__btn--filter" data-filter="all">all</button>
+    <button type="button" class="btn block-6__btn--filter filtr-item" data-filter="all">all</button>
     @foreach ($menus as $menu) 
-    <button type="button" class="btn block-6__btn--filter" data-filter="{{ $menu->slug }}"> {!! $menu->name !!}</button>
-    {!! print_r($menu->slug) !!}
+    <button type="button" class="btn block-6__btn--filter filtr-item" data-filter="{{ $menu->slug }}">{!! $menu->name !!}</button>
     @endforeach
   </div>
   @php
@@ -33,21 +32,19 @@
 	@while ($menu->have_posts())
     @php
 		  $menu->the_post();
-      $price = get_field( 'price', get_the_ID() );
-      $text = get_field( 'text', get_the_ID() );
+      $price = get_field('price', get_the_ID());
+      $text = get_field('text', get_the_ID());
     @endphp
     @foreach (get_the_terms(get_the_ID(), 'porfiolio_category') as $cat) 
       @php $termsSLug =  $cat->name @endphp     
 		@endforeach
     <div class="filtr-item block-6__item--section-center" data-category="{!! $termsSLug !!}">
-      {!! print_r($termsSLug) !!}
       @if (has_post_thumbnail()) 
-        <div class="block-6__item--image"> {!! the_post_thumbnail() !!} 
+        <div class="block-6__item--image">{!! the_post_thumbnail() !!} 
           <div class="block-6__item--info">
             <header>
               <h3>{!! the_title() !!}</h3>
                 <span class="block-6__item--price">£ {!! $price !!}</span>
-               
             </header>
               <p class="block-6__item--text">{!! $text !!}</p>
           </div>
