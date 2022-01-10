@@ -53,5 +53,8 @@
     "post-create-project-cmd": [
       "Roots\\Sage\\Installer\\ComposerScript::postCreateProject"
     ]
+  },
+  "allow-plugins": {
+    " kylekatarnls/update-helper": "1.2.1"
   }
 }
