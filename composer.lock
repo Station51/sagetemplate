@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e2bef6ead234ffca138308b33cc8f743",
+    "content-hash": "624ff4c4c7df4133bd502e7f998fbdcf",
     "packages": [
         {
             "name": "brain/hierarchy",
@@ -2450,7 +2450,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=7.1"
+        "php": ">=7.1|^7.4"
     },
     "platform-dev": [],
     "plugin-api-version": "2.1.0"
