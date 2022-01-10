@@ -44,8 +44,10 @@ class Blocks extends Controller
              'content' => $slides['slide_content'] ?? null,
              'image' => $slides['slide_image'] ?? null,
              'background_colour' => $slides['slide_background_colour'] ?? null,
-             'button_text' => $slides['button_text'] ?? null,
-             'button_url' => $slides['button_url'] ?? null,
+             'button_text_1' => $slides['button_text_1'] ?? null,
+             'button_url_1' => $slides['button_url_1'] ?? null,
+             'button_text_2' => $slides['button_text_2'] ?? null,
+             'button_url_2' => $slides['button_url_2'] ?? null,
           ];
       }, get_field('slides') ?? []);
   }
