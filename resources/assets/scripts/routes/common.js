@@ -36,6 +36,30 @@ export default {
         },
       });
     });
+
     
+    //---------------------- Slider Block -------------------------------//
+    let block_slider = $('.block-slider');
+
+    if(block_slider.length) {
+      let block_slider_settings = {
+        'dots': true,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear',
+        autoplay: true,
+        prevArrow: false,
+        nextArrow: false,
+      }
+
+      block_slider.slick(block_slider_settings);
+
+      $(window).on('resize', function() {
+        if ($(window).width() >= 769 && !block_slider.hasClass('slick-initialized')) {
+          return block_slider.slick(block_slider_settings);
+        }
+      })
+    }
   },
 };
