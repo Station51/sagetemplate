@@ -157,6 +157,7 @@ add_filter( 'allowed_block_types', function ( $allowed_blocks ) {
         'acf/block-video-1',
         'acf/block-gallery-1',
         'acf/block-banner-1',
+        'acf/block-slider-1',
         'core/image',
     );
 });

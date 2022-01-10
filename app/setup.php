@@ -66,6 +66,7 @@ add_action('after_setup_theme', function () {
 
     add_image_size('hero', 1920, 1080, true);
     add_image_size('icon', 100, 100, false);
+    add_image_size('logo', 390, 220, true);
 
     /**
      * Enable HTML5 markup support
