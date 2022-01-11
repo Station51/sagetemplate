@@ -43,9 +43,6 @@
     "mwdelaney/sage-acf-gutenberg-blocks": "^0.7.0"
   },
   "config": {
-    "platform": {
-      "php": "7.3"
-    },
     "allow-plugins": {
       "composer/installers": true,
       "kylekatarnls/update-helper": true
