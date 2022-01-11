@@ -1,0 +1,11 @@
+.social {
+  &__link {
+    display: block;
+    line-height: 10px;
+  }
+
+  &__icon {
+    color: $black;
+    font-size: $font-size-7;
+  }
+}
