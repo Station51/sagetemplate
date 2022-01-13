@@ -30,4 +30,20 @@ class App extends Controller
         }
         return get_the_title();
     }
+
+        /**
+     *
+     * Block Slider.
+     *
+     * Fetches the slides and returns them in an array.
+     *
+     * @return array An array with the slide data.
+     */
+    public static function getSocial() {
+        return array_map(function ($social) {          
+            return [
+               'content' => $social['facebook_url'] ?? null,
+            ];
+        }, get_field('social','option') ?? []);
+    }
 }

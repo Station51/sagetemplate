@@ -55,7 +55,8 @@ add_action('after_setup_theme', function () {
      */
     register_nav_menus([
         'primary_navigation' => __('Primary Navigation', 'sage'),
-        'footer_navigation' => __('Footer Navigation', 'sage')
+        'footer_navigation_left' => __('Footer Navigation Left', 'sage'),
+        'footer_navigation_right' => __('Footer Navigation Right', 'sage'),
     ]);
 
     /**
@@ -92,7 +93,7 @@ add_action('after_setup_theme', function () {
  */
 add_action('widgets_init', function () {
     $config = [
-        'before_widget' => '<section class="widget %1$s %2$s">',
+        'before_widget' => '<section class="widget footer-info__menu %1$s %2$s">',
         'after_widget'  => '</section>',
         'before_title'  => '<h3>',
         'after_title'   => '</h3>'

@@ -52,3 +52,4 @@ class Blocks extends Controller
       }, get_field('slides') ?? []);
   }
 }
+

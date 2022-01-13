@@ -76,4 +76,11 @@
       color: $nav-font-dark;
     }
   }
+
+  .navbar-item {
+    img {
+      max-width: 55px;
+      height: auto;
+    }
+  }
 }
