@@ -31,7 +31,19 @@ class App extends Controller
         return get_the_title();
     }
 
-        /**
+    /**
+    * Blog banner featured image
+    * @return string
+    */
+
+    public function blog_featured_image() {
+
+        $img = wp_get_attachment_image_src(get_post_thumbnail_id(get_option('page_for_posts')),'full');
+        
+        return $img[0];
+     }
+
+     /**
      *
      * Block Slider.
      *
