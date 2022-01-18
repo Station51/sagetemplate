@@ -22,7 +22,7 @@
                 <div class="card mb-3">
                     <div class="card-body justify-content-center align-items-center">
         
-                      @if(!is_single() && $blog_single_featured_image )
+                      @if( $blog_single_featured_image )
                         <img src="{!! $blog_single_featured_image !!}" alt="">
                       @endif
         
@@ -45,6 +45,19 @@
         <div class="col-lg-4">
           <div class="sidebar-cont">
               <h4>Sidebar goes here...</h4>
+
+              @if (App\display_sidebar())
+
+                <aside class="sidebar column">
+
+                @include('partials.sidebar-blog')
+
+                </aside>
+
+              @else @php echo 'Missed'; @endphp
+
+              @endif
+
           </div>
         </div>
 
