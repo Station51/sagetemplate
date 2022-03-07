@@ -159,5 +159,8 @@ add_filter( 'allowed_block_types', function ( $allowed_blocks ) {
         'acf/block-banner-1',
         'acf/block-slider-1',
         'core/image',
+        'core/heading',
+        'core/list',
+        'core/paragraph',
     );
 });
