@@ -1,7 +1,7 @@
 .container {
   max-width: 1190px;
   margin: 0 auto;
-  padding: 0 $grid-base * 1.5;
+  padding: 0 10px * 1.5;
   overflow: visible;
 
   &--full {
@@ -49,7 +49,7 @@
 
 .col {
   width: 100%;
-  padding: $grid-base * 1.5;
+  padding: 10px * 1.5;
   display: inline-block;
 
   &--md25 {

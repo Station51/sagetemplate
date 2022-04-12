@@ -4,7 +4,7 @@
   }
 
   &__picture {
-    background: $primary-5;
+    background: $primary;
     overflow: hidden;
     cursor: pointer;
 
@@ -50,9 +50,9 @@
 
   &__text {
     max-width: 50rem;
-    color: $grey-5;
-    font-size: $font-size-5;
-    line-height: $line-height-base;
+    color: $body-text-color;
+    font-size: $font-size-18;
+    line-height: 28px;
     padding-bottom: 2rem;
   }
 

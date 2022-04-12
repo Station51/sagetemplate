@@ -1,6 +1,6 @@
 .footer-info {
   width: 100%;
-  background-color: $primary-5;
+  background-color: $primary;
 
   &__inner {
     display: flex;
@@ -19,7 +19,7 @@
   &__menu,
   &__contact {
     ul li {
-      font-size: $font-size-7;
+      font-size: $font-size-12;
       line-height: 20px;
 
       a {
