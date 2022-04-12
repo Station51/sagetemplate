@@ -7,11 +7,11 @@
 }
 
 body {
-  color: $grey-2;
+  color: $body-text-color;
   background-color: $white;
   font-family: "Roboto", sans-serif;
   font-size: $font-size-base;
-  line-height: $line-height-base;
+  line-height: 28px;
   margin: 0;
   padding: 0;
   height: 100%;
@@ -20,8 +20,8 @@ body {
 }
 
 p {
-  font-size: $font-size-6;
-  line-height: $line-height-sm;
+  font-size: $font-size-15;
+  line-height: 24px;
 }
 
 img {

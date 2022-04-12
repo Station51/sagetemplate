@@ -42,10 +42,10 @@
 
     p {
       color: $white;
-      font-size: $font-size-5;
-      line-height: $line-height-base;
+      font-size: $font-size-18;
+      line-height: 28px;
       margin-bottom: 48px;
-      font-weight: $font-weight-medium;
+      font-weight: 500;
 
       @include medium-up {
         width: 50%;

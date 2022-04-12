@@ -3,7 +3,7 @@
   cursor: pointer;
 
   .wrapper {
-    background-color: $grey-10;
+    background-color: $gray-light;
   }
 
   .article {
@@ -22,18 +22,18 @@
     margin-bottom: 1rem;
     transition: $transition;
     display: inline-block;
-    color: $primary-5;
+    color: $primary;
   }
 
   .article-text {
-    color: $grey-5;
+    color: $body-text-color;
     max-width: 17rem;
     margin: 0 auto;
   }
 
   .article:hover {
     background: $white;
-    box-shadow: 0 2px $primary-5;
+    box-shadow: 0 2px $primary;
   }
 
   .article:hover > .article-icon {

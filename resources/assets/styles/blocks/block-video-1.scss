@@ -34,9 +34,9 @@
     }
 
     p {
-      font-size: $font-size-4;
+      font-size: $font-size-22;
       width: 22rem;
-      line-height: $line-height-base;
+      line-height: 28px;
 
       @include small-up {
         width: 40rem;

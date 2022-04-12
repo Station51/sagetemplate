@@ -1,92 +1,72 @@
 /** Colors **/
-$primary:             hsl(185, 62%, 45%);
-$link:                $primary;
-$gray-dark:           hsl(209, 61%, 16%);
+$primary:             #2caeba;
+$gray-dark:           #102a42;
+$gray-light:          #d3d3d3;
+$ghost-white:         #f8f8ff;
 $white:               #fff;
-$black:             #000;
+$black:               #000;
+$blue-light:          #617d98;
+$blue-dark:           #173c5e;
+$secondary:           $ghost-white;
 
-/* dark shades of primary color */
-$primary-1: hsl(184, 91%, 17%);
-$primary-2: hsl(185, 84%, 25%);
+/* link color */
+$link:                $primary;
 
-/* primary/main color */
-$primary-5: $primary;
-
-/* lighter shades of primary color */
-$primary-8: hsl(184, 80%, 74%);
-$primary-9: hsl(185, 94%, 87%);
-$primary-10: hsl(186, 100%, 94%);
-
-/* darkest grey - used for headings */
-$grey-1: $gray-dark;
-$grey-2: hsl(211, 39%, 40%);
-
-/* grey used for paragraphs */
-$grey-5: hsl(210, 22%, 49%);
-$grey-9: hsl(212, 33%, 89%);
-$grey-10: hsl(210, 36%, 96%);
+/* Body text color */
+$heading-text-color: $blue-dark;
+$body-text-color: $blue-light;
 
 /* fonts */
 $ff-primary: "Rajdhani", sans-serif;
 $ff-secondary: "EB Garamond", serif;
+$letter-spacing: 0.25rem;
+$font-size-base: 1rem;
+$font-size-52: $font-size-base * 3.25; // ~52px
+$font-size-44: $font-size-base * 2.75; // ~44px
+$font-size-28: $font-size-base * 1.75; // ~28px
+$font-size-22: $font-size-base * 1.375; // ~22px
+$font-size-18: $font-size-base * 1.125; // ~18px
+$font-size-15: $font-size-base * 0.9375; // ~15px
+$font-size-12: $font-size-base * 0.75; // ~12px
+
+/* transitions */
 $transition: all 0.3s linear;
-$spacing: 0.25rem;
-$radius: 0.5rem;
+
+// Radius
+$border-radius: 5px;
+
+/* shadows */
 $light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 $dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 
-/** Box Model */
-$spacer: 2rem;
-
-// Fonts
-$font-size-base: 1rem;
-$font-size-1: $font-size-base * 3.25; // ~52px
-$font-size-2: $font-size-base * 2.75; // ~44px
-$font-size-3: $font-size-base * 1.75; // ~28px
-$font-size-4: $font-size-base * 1.375; // ~22px
-$font-size-5: $font-size-base * 1.125; // ~18px
-$font-size-6: $font-size-base * 0.9375; // ~15px
-$font-size-7: $font-size-base * 0.75; // ~12px
-
-$font-weight-light: 300;
-$font-weight-regular: 400;
-$font-weight-medium: 500;
-$font-weight-semibold: 600;
-$font-weight-bold: 700;
-
-$line-height-base: 28px;
-$line-height-sm: 24px;
-$line-height-lg: 34px;
-
-// Grid
-$grid-base: 10px;
-
-// Radius
-$border-radius: $grid-base * 0.2;
+/** Box shadow */
 $box-shadow-dark: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 $box-shadow-light: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 
 // Breakpoints
+$bp-xxsmall: "320px";
+$bp-xsmall: "480px";
 $bp-small: "640px";
 $bp-medium: "998px";
 $bp-large: "1024px";
 $bp-xl: "1280px";
 $bp-2xl: "1536px";
 
+/* wp classes margin spacer */
 $spacer: 20;
 
 /** Heading */
 $nav-bg-light: rgba(255, 255, 255, 0.9);
 $nav-bg-dark: rgba(0, 0, 0, 0.1);
-$nav-font-dark: $grey-2 !important;
-$nav-font-light: $grey-9 !important;
-$nav-border: #c0c0c0;
+$nav-font-dark: $gray-dark !important;
+$nav-font-light: $gray-light !important;
+$nav-border: $gray-light;
 
 //Hamburger
-$hamburger-light: $grey-9;
-$hamburger-dark: $grey-2;
+$hamburger-light: $gray-light;
+$hamburger-dark: $gray-dark;
 
 //Footer
-$footer-fonts-color: $black;
+$footer-fonts-color: $body-text-color;
 $footer-fonts-size: $font-size-base * 0.75; // ~12px
 $footer-line-height: 15px;

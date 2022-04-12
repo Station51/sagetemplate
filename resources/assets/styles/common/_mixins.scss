@@ -1,3 +1,15 @@
+@mixin xxsmall-up {
+  @media (min-width: #{$bp-xxsmall}) {
+    @content;
+  }
+}
+
+@mixin xsmall-up {
+  @media (min-width: #{$bp-xsmall}) {
+    @content;
+  }
+}
+
 @mixin small-up {
   @media (min-width: #{$bp-small}) {
     @content;

@@ -3,36 +3,36 @@
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,600&display=swap");
 
 .heading {
-  font-weight: $font-weight-semibold;
+  font-weight: 600;
   margin: 15px 0;
   text-transform: capitalize;
   font-family: $ff-secondary;
   font-style: italic;
-  color: $primary-1;
+  color: $heading-text-color;
 
   &--1 {
-    font-size: $font-size-2;
-    line-height: $line-height-lg;
+    font-size: $font-size-44;
+    line-height: 34px;
 
     @include large-up {
-      font-size: $font-size-1;
+      font-size: $font-size-52;
       line-height: 63px;
     }
   }
 
   &--2 {
-    font-size: $font-size-3;
-    line-height: $line-height-base;
+    font-size: $font-size-28;
+    line-height: 28px;
 
     @include large-up {
-      font-size: $font-size-2;
+      font-size: $font-size-44;
       line-height: 54px;
     }
   }
 
   &--3 {
-    font-size: $font-size-4;
-    line-height: $line-height-lg;
+    font-size: $font-size-22;
+    line-height: 34px;
   }
 }
 
@@ -40,13 +40,13 @@
   display: block;
   margin-bottom: 3px;
   color: $primary;
-  font-weight: $font-weight-semibold;
+  font-weight: 600;
   font-size: 20px;
-  line-height: $line-height-sm;
+  line-height: 24px;
 
   @include medium-up {
-    font-size: $font-size-3;
-    line-height: $line-height-lg;
+    font-size: $font-size-28;
+    line-height: 34px;
     margin-bottom: 12px;
   }
 
