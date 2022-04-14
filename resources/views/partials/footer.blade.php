@@ -7,25 +7,13 @@
         </a>
       </div>
     @endif
-    @php dynamic_sidebar('sidebar-footer') @endphp
-    <div class="footer-info__social">
-      @include('partials/social')
-    </div>
-    <div class="footer-info__email">
-      email
-    </div>
     <div class="footer-info__contact">
       @include('partials/contact')
     </div>
-    <div class="footer-info__email">
-    logo
+    <div class="footer-info__social">
+      @include('partials/social')
     </div>
-    <div class="footer-info__email">
-    logo
-    </div>
-    <div class="footer-info__email">
-    logo
-    </div>
+    @php dynamic_sidebar('sidebar-footer') @endphp
   </div>
 </footer>
 
