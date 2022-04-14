@@ -1,22 +1,34 @@
-/** Colors **/
+// Colors
 $primary:             #2caeba;
 $gray-dark:           #102a42;
 $gray-light:          #d3d3d3;
 $ghost-white:         #f8f8ff;
 $white:               #fff;
 $black:               #000;
-$blue-light:          #617d98;
+$blue-light:          #aae0ea;
 $blue-dark:           #173c5e;
 $secondary:           $ghost-white;
 
-/* link color */
-$link:                $primary;
+// link color
+$link:                $blue-dark;
+$link-hover:          $black;
 
-/* Body text color */
+// Body text color
 $heading-text-color: $blue-dark;
-$body-text-color: $blue-light;
+$body-text-color: $blue-dark;
 
-/* fonts */
+// Buttons
+$button-bg-color: $blue-dark;
+$button-bg-color-hover: $ghost-white;
+$button-text-color: $white;
+$button-text-color-hover: $black;
+$button-border-color: transparent;
+$button-border-color-hover: $gray-dark;
+
+// Radius
+$border-radius: 5px;
+
+// fonts
 $ff-primary: "Rajdhani", sans-serif;
 $ff-secondary: "EB Garamond", serif;
 $letter-spacing: 0.25rem;
@@ -29,17 +41,18 @@ $font-size-18: $font-size-base * 1.125; // ~18px
 $font-size-15: $font-size-base * 0.9375; // ~15px
 $font-size-12: $font-size-base * 0.75; // ~12px
 
-/* transitions */
+// transitions
 $transition: all 0.3s linear;
 
-// Radius
-$border-radius: 5px;
+// overlay background color
+$overlay-background-color: rgba(0, 0, 0, 0.6);
 
-/* shadows */
-$light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-$dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+// shadows
 
-/** Box shadow */
+$button-shadow-light: 0 1px 3px rgba(0, 0, 0, 0.2);
+$button-shadow-dark: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+// Box shadow
 $box-shadow-dark: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 $box-shadow-light: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 
@@ -52,21 +65,24 @@ $bp-large: "1024px";
 $bp-xl: "1280px";
 $bp-2xl: "1536px";
 
-/* wp classes margin spacer */
+// wp classes margin spacer
 $spacer: 20;
 
-/** Heading */
+// Nav 
 $nav-bg-light: rgba(255, 255, 255, 0.9);
 $nav-bg-dark: rgba(0, 0, 0, 0.1);
 $nav-font-dark: $gray-dark !important;
 $nav-font-light: $gray-light !important;
 $nav-border: $gray-light;
 
-//Hamburger
-$hamburger-light: $gray-light;
-$hamburger-dark: $gray-dark;
+// Hamburger
+$hamburger-light: $primary;
+$hamburger-dark: $primary;
 
-//Footer
+// layout
+$blog-container-width: 900px;
+
+// Footer
 $footer-fonts-color: $body-text-color;
 $footer-fonts-size: $font-size-base * 0.75; // ~12px
 $footer-line-height: 15px;

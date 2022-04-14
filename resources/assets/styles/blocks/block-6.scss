@@ -16,13 +16,13 @@
     }
 
     &--filter {
-      background: transparent;
-      color: $primary;
-      border: 1px solid $primary;
+      background: $button-bg-color;
+      color: $button-text-color;
+      border: 1px solid $button-border-color;
 
       &:hover {
-        color: $white;
-        border: 1px solid $gray-dark;
+        color: $button-text-color-hover;
+        border: 1px solid $button-border-color-hover;
       }
     }
   }

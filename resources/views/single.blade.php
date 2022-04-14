@@ -4,36 +4,63 @@
 
 @include('partials.blog-single-page-header')
 
-<div class="container">
+<div class="container single">
   <section class="section">
-    <div class="row">
-      <div class="col-lg-8">
-        <div class="row">
-
+    <div class="grid">
+      <div>
           @while(have_posts()) @php the_post() @endphp
             @include('partials.content-single-'.get_post_type())
           @endwhile
-
-        </div>
       </div>
 
-      <div class="col-lg-4">
-        <div class="sidebar-cont">
-            <h4>Sidebar goes here...</h4>
+      <div class="sidebar-cont">
+          <h3>Latest Posts</h3>
 
-            @if (App\display_sidebar())
+          @php
+            $args = array(
+              'post_type' => 'post',
+              'posts_per_page' => 5,
+              'orderby' => 'post_date',
+              'order' => 'DESC',
+            );
+            $blog_posts = new WP_Query($args)
+          @endphp
 
-              <aside class="sidebar column">
+            @if( $blog_posts->have_posts() )
 
-              @include('partials.sidebar-blog')
+              @while( $blog_posts->have_posts() )
 
-              </aside>
+                {{ $blog_posts->the_post() }}
 
-            @else @php echo 'Missed'; @endphp
+                <article class="">
+                  <a href="{{ the_permalink() }}">
+                    @if( has_post_thumbnail() )
+                      {{ the_post_thumbnail( 'browa-blog', array( 'class' => 'img-thumb')) }}
+                    @endif
+                  </a>
+                  <h4><a href="{{ the_permalink() }}">{{ the_title() }}</a></h4>
+                  {{-- <div class="excerpt">{{ the_excerpt() }}</div> --}}
+                </article>
 
+              @endwhile
+
+              @php wp_reset_postdata() @endphp
+
+            @else
+                <p>Nothing to display.</p>
             @endif
 
-        </div>
+          {{-- @if (App\display_sidebar())
+
+            <aside class="sidebar column">
+
+            @include('partials.sidebar-blog')
+
+            </aside>
+
+          @else @php echo 'Missed'; @endphp
+
+          @endif --}}
       </div>
 
     </div>

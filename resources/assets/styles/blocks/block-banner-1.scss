@@ -2,6 +2,7 @@
   background-size: cover;
   padding: 125px 0 184px;
   position: relative;
+  background-position: center;
 
   @include medium-up {
     padding: 142px 0 220px;
@@ -13,22 +14,18 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgb(255, 255, 255);
-    opacity: 0;
-  }
-
-  &.blog-banner {
-    background-position: center;
-
-    .header-overlay {
-      opacity: initial !important;
-      background: rgba(0, 0, 0, 0.6);
-    }
+    background-color: $overlay-background-color
+    // background-color: $black;
+    // opacity: 0.6;
   }
 
   .flex {
     flex-direction: column;
     align-items: flex-start;
+
+    div {
+      z-index: 10;
+    }
 
     h1 {
       color: $white;
