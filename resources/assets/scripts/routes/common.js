@@ -39,8 +39,6 @@ export default {
     // });
 
     
-
-    
     //---------------------- Slider Block -------------------------------//
     let block_slider = $('.block-slider');
 
@@ -64,5 +62,13 @@ export default {
         }
       })
     }
+
+    $('.hamburger').click(function() {
+      // alert(event.target.id+' and '+$(event.target).attr('class'));
+      jQuery('.nav').toggleClass('isOpen');
+      jQuery('.menu-btn').toggleClass('is-active');
+      jQuery('body').toggleClass('noscroll');
+    });
+
   },
 };

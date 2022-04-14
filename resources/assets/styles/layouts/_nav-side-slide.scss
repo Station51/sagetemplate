@@ -1,0 +1,267 @@
+.nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.nav-slide a {
+  color: $blue-dark;
+}
+
+.header-btn-cont a:hover {
+  color: $white;
+  text-decoration: none;
+}
+
+/* Nav css */
+.main-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.9rem;
+}
+
+.main-menu li > .sub-menu {
+  list-style-type: none;
+  max-height: 0;
+  display: block;
+  overflow: hidden;
+  transition: max-height 0.5s linear;
+}
+
+.menu-item-has-children > .sub-menu a {
+  padding: 0.25rem 1rem;
+}
+
+.menu-item-has-children.open .sub-menu {
+  height: 100%;
+  max-height: 400px;
+  transition: max-height 1s linear;
+}
+
+// .main-menu > li:last-child {
+//   margin-top: 10px;
+// }
+
+// .main-menu li a {
+//   border-left: 4px solid #aae0ea;
+// }
+
+// .nav-slide a:hover {
+//   color: $link-hover;
+//   border-left: 4px solid $gray-light;
+//   text-decoration: none;
+// }
+
+// .current-menu-item > a,
+// .current-menu-parent > a,
+// .current_page_item > a {
+//   border-left: 4px solid $gray-dark !important;
+// }
+
+a.mob-home-btn:hover {
+  border-left: none;
+}
+
+.nav-slide .btn-filled a,
+.nav-slide .btn-filled a:hover {
+  border-left: 1px solid #005d7d;
+}
+
+// .nav-phone-cta a:hover {
+//   border: none;
+//   cursor: pointer;
+// }
+
+.nav-phone-cta a:hover .fa {
+  transition: all 0.3s ease-in-out;
+  background-color: #005d7d;
+  color: #fff;
+}
+
+// .main-menu li a {
+//   display: block;
+//   padding: .5rem 1rem;
+//   font-weight: bold;
+// }
+
+// .nav-cont {
+//   position: relative;
+//   padding: 20px 0 20px 20px;
+//   flex-grow: 1;
+
+//   .fa a {
+//     font-weight: bold;
+//   }
+// }
+
+.nav-slide {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  max-width: 400px;
+  left: -400px;
+  z-index: 10;
+  color: white;
+  transition: left 0.5s ease-in-out;
+  overflow: auto;
+  display: flex;
+  flex-flow: column;
+  background-color: #aae0ea;
+}
+
+.isOpen .nav-slide {
+  left: 0;
+}
+
+.nav.isOpen .cover {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  transition: background-color 0.3s 0.5s, transform 0.3s;
+  transform: translateX(400px);
+  z-index: 100;
+}
+
+/* menu has children icon */
+.main-menu li a:not(:only-child)::after {
+  float: right;
+  content: "\f078";
+  font-family: "FontAwesome";
+}
+
+/* Prevent body scroll */
+.noscroll {
+  position: relative; /* for ios */
+  overflow: hidden;
+}
+
+.logo-cont {
+  text-align: center;
+}
+
+.nav-menu-head {
+  color: #000;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.nav-toggle {
+  position: absolute;
+  right: -40px;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  background-color: red;
+  line-height: 40px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.nav-toggle::before {
+  content: "\2192";
+  font-weight: 600;
+  color: white;
+}
+
+button.hamburger {
+  position: absolute;
+  left: 10px;
+  z-index: 20;
+  transition: background-color 0.5s ease-in-out;
+}
+
+#menu-footer-nav li {
+  padding: 11px 0;
+}
+
+header.nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  align-items: center;
+}
+
+.header-cta-section {
+  position: absolute;
+  right: 0;
+  padding: 0 20px;
+  display: flex;
+}
+
+.brand-logo {
+  height: 100px;
+  padding: 10px 0;
+  transition: all 0.5s ease;
+  margin: auto;
+}
+
+header.addbg .brand-logo {
+  height: 68px;
+  /* padding: 8px 0; */
+}
+
+.brand-logo img, .nav-brand-logo img {
+  height: 100%;
+  width: auto;
+}
+
+.header-phone {
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+}
+
+.header-social {
+  display: flex;
+  text-align: center;
+  margin-right: -4px;
+}
+
+.header-btn-cont {
+  margin-left: 4px;
+}
+
+
+
+
+
+/* @media (max-width: 768px) {
+    .header-phone a {
+        font-size: 16px;
+    }
+    .header-btn-cont .fa-calendar-alt:before {
+        font-size: 20px;
+    }
+}
+@media (max-width: 600px) {
+    button.hamburger {
+        background-color: #005d7d;
+    }
+    .header-phone {
+        display: none;
+    }
+}
+@media (max-width: 420px) {
+    .menu-item-has-children > .sub-menu a {
+        margin: 10px 0;
+    }
+    .nav-slide {
+        margin-left: -420px;
+        max-width: 100%;
+    }
+} */
