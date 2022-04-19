@@ -108,7 +108,7 @@
         },
         {
             "key": "field_61de061f071df",
-            "label": "Cantact Details",
+            "label": "Contact Details",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -121,6 +121,25 @@
             },
             "placement": "left",
             "endpoint": 0
+        },
+        {
+            "key": "field_625ea6a0a3794",
+            "label": "Company Name",
+            "name": "company_name",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_61de074eab915",
@@ -198,5 +217,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1641943135
+    "modified": 1650370239
 }

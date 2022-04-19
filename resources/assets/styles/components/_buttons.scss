@@ -1,4 +1,5 @@
-.btn {
+.btn,
+.book-btn a {
   text-transform: uppercase;
   background: $button-bg-color;
   color: $button-text-color;
@@ -21,4 +22,36 @@
   color: $button-text-color-hover;
   background: $button-bg-color-hover;
   border-color: $button-border-color-hover;
+}
+
+.book-btn {
+  font-size: $font-size-base;
+
+  .social__icon {
+    color: $button-text-color;
+    transition: $transition;
+    margin-left: 0;
+
+    @include small-up {
+      margin-left: 5px;
+    }
+  }
+
+  &:hover .social__icon {
+    color: $button-text-color-hover;
+  }
+}
+
+.nav-slide .book-btn {
+  a {
+    color: $button-text-color;
+    background: $button-bg-color;
+  }
+
+  &:hover {
+    a {
+      color: $button-text-color-hover;
+      background: $button-bg-color-hover;
+    }
+  }
 }

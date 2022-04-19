@@ -40,7 +40,9 @@ $slick-loader-path: "~slick-carousel/slick/";
 @import "layouts/posts";
 @import "layouts/tinymce";
 @import "layouts/blog";
-// @import "layouts/nav-drop";
+
+/** Navigation CSS ptions **/
+@import "layouts/nav-drop";
 @import "layouts/nav-side-slide";
 
 /** Blocks */

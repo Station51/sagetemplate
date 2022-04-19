@@ -133,6 +133,10 @@
     border-bottom: 3px solid;
   }
 
+  .main-navigation ul li.book-btn a {
+    color: $button-text-color !important;
+  }
+
   .main-navigation ul ul {
     display: none;
     margin-top: 0;
