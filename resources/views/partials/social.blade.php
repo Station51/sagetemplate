@@ -4,7 +4,7 @@
       <span class="fa-fw fa-2x">
         <i class="fa-inverse fab fa-facebook-f social__icon"  data-fa-transform="shrink-2"></i>
       </span>
-      <span class="social__icon">Facebook</span>
+      <span class="social__text">Facebook</span>
     </a>
   @endif
   @if(get_field('instagram_url', 'option'))
@@ -12,7 +12,7 @@
       <span class="fa-fw fa-2x">
         <i class="fa-inverse fab fa-instagram social__icon" data-fa-transform="shrink-2"></i>
       </span>
-      <span class="social__icon">Instagram</span>
+      <span class="social__text">Instagram</span>
     </a>
   @endif
   @if(get_field('twitter_url', 'option'))
@@ -20,7 +20,7 @@
       <span class="fa-fw fa-2x">
         <i class="fa-inverse fab fa-twitter social__icon" data-fa-transform="shrink-2"></i>
       </span>
-      <span class="social__icon">Twitter</span>
+      <span class="social__text">Twitter</span>
     </a>
   @endif
 </div>
