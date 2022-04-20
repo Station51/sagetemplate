@@ -42,8 +42,9 @@ $slick-loader-path: "~slick-carousel/slick/";
 @import "layouts/blog";
 
 /** Navigation CSS ptions **/
-@import "layouts/nav-drop";
 @import "layouts/nav-side-slide";
+@import "layouts/nav-drop";
+
 
 /** Blocks */
 @import "blocks/block-1-nav";
@@ -56,3 +57,4 @@ $slick-loader-path: "~slick-carousel/slick/";
 @import "blocks/block-4";
 @import "blocks/block-5";
 @import "blocks/block-6";
+
