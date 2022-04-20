@@ -133,6 +133,18 @@
     border-bottom: 3px solid;
   }
 
+  .main-navigation ul li.book-btn a {
+    color: $button-text-color !important;
+    border: 2px solid transparent;
+    text-transform: none;
+
+    &:hover {
+      border-color: $button-bg-color;
+      color: $button-text-color-hover !important;
+      background-color: $button-bg-color-hover;
+    }
+  }
+
   .main-navigation ul ul {
     display: none;
     margin-top: 0;
@@ -305,7 +317,7 @@
       padding-bottom: 5px;
       padding-top: 5px;
       background-color: $nav-bg-light;
-      border: 1px solid #c0c0c0;
+      border: 1px solid $nav-bg-light;
       z-index: 999;
     }
 
