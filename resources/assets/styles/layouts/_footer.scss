@@ -1,0 +1,103 @@
+.footer-info {
+  width: 100%;
+  background-color: $primary;
+
+  &__inner {
+    gap: 10px;
+    text-align: center;
+    padding: 20px 0;
+
+    @include small-up {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      text-align: left;
+      align-items: center;
+      min-height: 180px;
+      width: 100%;
+      gap: 30px;
+      padding: 0 20px;
+    }
+  }
+
+  &__menu,
+  &__contact {
+    ul li {
+      font-size: $footer-font-size;
+      line-height: 20px;
+
+      a {
+        color: $link;
+
+        &:hover {
+          color: $link-hover;
+        }
+      }
+    }
+  }
+
+  &__social {
+    margin: auto auto 20px;
+
+    @include small-up {
+      margin: auto;
+    }
+  }
+
+  &__contact {
+    margin: auto auto 20px;
+
+    ul li,
+    h5 {
+      font-size: $footer-font-size;
+      color: $body-text-color;
+      line-height: 15px;
+    }
+
+    h5 {
+      font-weight: normal;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+
+      @include small-up {
+        margin: auto;
+      }
+    }
+
+    @include small-up {
+      margin: auto;
+    }
+  }
+
+  &__logo {
+    img {
+      max-width: 100px;
+      height: auto;
+      margin: auto auto 20px;
+
+      @include small-up {
+        margin: auto;
+      }
+    }
+  }
+}
+
+footer {
+  .widget {
+    margin: auto auto 20px;
+
+    @include small-up {
+      margin: auto;
+    }
+  }
+
+  .social {
+    &__icon {
+      font-size: $footer-font-size;
+    }
+
+    &__text {
+      font-size: $footer-font-size;
+    }
+  }
+}

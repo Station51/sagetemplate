@@ -1,0 +1,11 @@
+.social {
+  &__link {
+    display: block;
+    line-height: 12px;
+  }
+
+  &__icon {
+    color: $body-text-color;
+  }
+}
+

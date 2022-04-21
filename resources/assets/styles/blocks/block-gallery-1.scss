@@ -89,7 +89,7 @@
   }
 
   .section-header {
-    color: $primary-1;
+    color: $heading-text-color;
     text-align: center;
   }
 
@@ -102,9 +102,9 @@
 
   p.gallery-copy {
     box-sizing: content-box;
-    color: $grey-5;
-    font-size: $font-size-5;
-    line-height: $line-height-base;
+    color: $body-text-color;
+    font-size: $font-size-18;
+    line-height: 28px;
     width: 90%;
     margin: 0 auto 5rem;
     text-align: left;

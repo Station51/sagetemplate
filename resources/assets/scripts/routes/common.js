@@ -23,19 +23,73 @@ export default {
       }
     }
 
-    $(window).scroll(function() {
-      var scrollTop = $(this).scrollTop();
+  // Add opacity to a banner when scrolling
+
+    // $(window).scroll(function() {
+    //   var scrollTop = $(this).scrollTop();
     
-      $('.header-overlay').css({
-        opacity: function() {
-          var elementHeight = $(this).height(),
-              opacity = ((1  - (elementHeight - scrollTop) / elementHeight) * 0.8);
-              console.log(scrollTop)
-              console.log(opacity)
-          return opacity;
-        },
-      });
+    //   $('.header-overlay').css({
+    //     opacity: function() {
+    //       var elementHeight = $(this).height(),
+    //         opacity = ((1  - (elementHeight - scrollTop) / elementHeight) * 0.8);
+    //       return opacity;
+    //     },
+    //     backgroundColor: 'white',
+    //   });
+    // });
+
+    
+    //---------------------- Slider Block -------------------------------//
+    let block_slider = $('.block-slider');
+
+    if(block_slider.length) {
+      let block_slider_settings = {
+        'dots': true,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear',
+        autoplay: true,
+        prevArrow: false,
+        nextArrow: false,
+      }
+
+      block_slider.slick(block_slider_settings);
+
+      $(window).on('resize', function() {
+        if ($(window).width() >= 769 && !block_slider.hasClass('slick-initialized')) {
+          return block_slider.slick(block_slider_settings);
+        }
+      })
+    }
+
+    // hamburger button
+    $('.hamburger').click(function() {
+      // alert(event.target.id+' and '+$(event.target).attr('class'));
+      jQuery('.nav').toggleClass('isOpen');
+      jQuery('.menu-btn').toggleClass('is-active');
+      jQuery('body').toggleClass('noscroll');
+    });
+
+    // Check submenu is open before allow default
+    $('#side-slide ul#menu-primary-navigation li.menu-item-has-children').click(function (e) {
+      $(this).siblings().removeClass('open');
+      if ($('.menu-item-has-children').hasClass('open')) {
+        // do nothing
+      } else {
+        e.preventDefault();
+      }
+      $(this).toggleClass('open');
     });
     
+    // scroll ad nav bg color
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 50) {
+        $('header').addClass('addbg');
+      } else {
+        $('header').removeClass('addbg');
+      }
+    });
+
   },
 };

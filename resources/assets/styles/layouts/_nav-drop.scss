@@ -1,3 +1,90 @@
+.header {
+  position: relative;
+  background-color: transparent;
+  transition: all 0.3s ease-out;
+  z-index: 9999;
+
+  &__wrapper {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: $nav-bg-light;
+    box-shadow: $box-shadow-light;
+  }
+
+  .hamburger-box {
+    width: 30px;
+    height: 16px;
+  }
+
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+    width: 30px;
+    height: 4px;
+    background-color: $hamburger-light;
+  }
+
+  .main-navigation ul a,
+  .main-navigation a:focus,
+  .main-navigation ul a:visited {
+    color: $nav-font-dark;
+  }
+
+  &.parked {
+    .header__wrapper {
+      background-color: transparent;
+      box-shadow: none;
+
+      @include medium-up {
+        background-color: $nav-bg-dark;
+      }
+    }
+
+    .hamburger-inner,
+    .hamburger-inner::before,
+    .hamburger-inner::after {
+      background-color: $hamburger-light;
+    }
+
+    .main-navigation ul a,
+    .main-navigation a:focus,
+    .main-navigation ul a:visited {
+      color: $nav-font-light;
+    }
+  }
+
+  &.parked.is-active {
+    .header__wrapper {
+      background-color: $nav-bg-light;
+      box-shadow: none;
+
+      @include medium-up {
+        background-color: $nav-bg-dark;
+      }
+    }
+
+    .hamburger-inner,
+    .hamburger-inner::before,
+    .hamburger-inner::after {
+      background-color: $hamburger-light;
+    }
+
+    .main-navigation ul a,
+    .main-navigation a:focus,
+    .main-navigation ul a:visited {
+      color: $nav-font-dark;
+    }
+  }
+
+  .navbar-item {
+    img {
+      max-width: 55px;
+      height: auto;
+    }
+  }
+}
+
 #custom-nav {
   margin: 0.6rem 0.2rem;
 
@@ -29,7 +116,7 @@
     color: $nav-font-dark;
     border-bottom: 3px solid transparent;
     text-decoration: none;
-    font-size: $font-size-4;
+    font-size: $font-size-22;
   }
 
   .main-navigation a:focus {
@@ -44,6 +131,18 @@
 
   .main-navigation ul a:hover {
     border-bottom: 3px solid;
+  }
+
+  .main-navigation ul li.book-btn a {
+    color: $button-text-color !important;
+    border: 2px solid transparent;
+    text-transform: none;
+
+    &:hover {
+      border-color: $button-bg-color;
+      color: $button-text-color-hover !important;
+      background-color: $button-bg-color-hover;
+    }
   }
 
   .main-navigation ul ul {
@@ -139,7 +238,7 @@
     font-weight: bold;
   }
 
-  /* Screen readers */
+  // Screen readers
   .screen-readers {
     position: absolute !important;
     width: 1px;
@@ -197,7 +296,7 @@
     }
 
     .main-navigation ul a {
-      font-size: $font-size-5;
+      font-size: $font-size-18;
     }
 
     .parked.main-navigation ul a {
@@ -218,7 +317,7 @@
       padding-bottom: 5px;
       padding-top: 5px;
       background-color: $nav-bg-light;
-      border: 1px solid #c0c0c0;
+      border: 1px solid $nav-bg-light;
       z-index: 999;
     }
 
