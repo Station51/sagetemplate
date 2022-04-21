@@ -161,6 +161,17 @@ add_filter( 'allowed_block_types', function ( $allowed_blocks ) {
         'core/image',
         'core/heading',
         'core/list',
-        'core/paragraph',
+        'acf/block-banner-slider-1',
+        'acf/block-contact-details-1',
+        'acf/block-cta-1',
+        'acf/block-gallery-tabs-1',
+        'acf/block-image-wysiwyg',
+        'acf/block-map-split-1',
+        'acf/block-offers-1',
+        'acf/block-rooms-1',
+        'acf/block-slider-split-1',
+        'acf/block-slider-testimonials-1',
+        'acf/block-wysiwyg',
+        'acf/block-banner-basic',
     );
 });

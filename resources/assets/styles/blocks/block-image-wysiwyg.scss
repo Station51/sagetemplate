@@ -1,0 +1,52 @@
+.block-image-wysiwyg {
+  .grid__outer {
+    grid-template-columns: 1fr;
+
+    @include medium-up {
+      grid-template-columns: 55% 45%;
+    }
+  }
+
+  &__content {
+    text-align: center;
+
+    h2,
+    h3 {
+      font-size: $font-size-28;
+      line-height: inherit;
+      margin: 20px 0;
+
+      @include small-up {
+        margin: 5px 80px 20px;
+      }
+
+      @include medium-up {
+        font-size: $font-size-44;
+        line-height: 50px;
+        margin: 5px 160px 20px;
+      }
+    }
+
+    h4 {
+      font-size: $font-size-22;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__btns {
+    padding-top: 1.5rem;
+
+    a {
+      margin-bottom: 20px;
+    }
+  }
+
+  img {
+    height: 100px;
+    width: auto;
+    margin: auto;
+  }
+}

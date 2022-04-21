@@ -63,6 +63,68 @@ export default {
       })
     }
 
+    //---------------------- section slider -------------------------------//
+    let section_slider = $('.section-slider');
+
+    if(section_slider.length) {
+      let section_slider_settings = {
+        'dots': true,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear',
+        autoplay: true,
+        prevArrow: false,
+        nextArrow: false,
+      }
+
+      section_slider.slick(section_slider_settings);
+
+      // $(window).on('resize', function() {
+      //   if ($(window).width() >= 769 && !section_slider.hasClass('slick-initialized')) {
+      //     return section_slider.slick(section_slider_settings);
+      //   }
+      // })
+    }
+
+    //---------------------- Slider Testimonials Block -------------------------------//
+    let block_slider_testimonials = $('.block-slider-testimonials-1');
+
+    if(block_slider_testimonials.length) {
+      let block_slider_settings = {
+        'dots': true,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        speed: 500,
+        cssEase: 'linear',
+        autoplay: true,
+        prevArrow: false,
+        nextArrow: false,
+        responsive: [
+          {
+            breakpoint: 820,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+            },
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },
+          // You can unslick at a given breakpoint now by adding:
+          // settings: "unslick"
+          // instead of a settings object
+        ],
+      }
+
+      block_slider_testimonials.slick(block_slider_settings);
+    }
+
     // hamburger button
     $('.hamburger').click(function() {
       // alert(event.target.id+' and '+$(event.target).attr('class'));

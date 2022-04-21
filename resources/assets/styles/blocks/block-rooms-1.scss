@@ -1,0 +1,173 @@
+.block-rooms-1 {
+  padding: 2rem 0;
+
+  &__banner {
+    min-height: 80vh;
+    background-color: $overlay-background-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    h2 {
+      font-size: $font-size-44;
+      color: $white;
+      margin-top: 40px;
+    }
+
+    @include small-up {
+      min-height: 450px;
+    }
+
+    @include xl-up {
+      min-height: calc(70vh - 50px);
+    }
+  }
+
+  &__column {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-attachment: initial;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__item {
+    &.grid {
+      grid-template-columns: 1fr;
+      align-items: initial;
+
+      @include xsmall-up {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include small-up {
+        grid-template-columns: repeat(3, 1fr);
+        align-items: initial;
+      }
+    }
+
+    &--section-center {
+      display: flex;
+      gap: 1rem 2rem;
+      max-width: 25rem;
+      width: 100%;
+      justify-content: center;
+    }
+
+    &--block {
+      text-align: center;
+      border: 1px solid $gray-light;
+
+      h3 {
+        font-size: $font-size-22;
+        margin: 10px 0 0;
+      }
+
+      @include small-up {
+        width: 95%;
+      }
+
+      img {
+        /* stylelint-disable */
+        max-height: 250px;
+        aspect-ratio: 2/1; 
+        /* stylelint-enable */
+        width: 100%;
+        object-fit: cover;
+        // border-radius: $border-radius;
+
+        @include small-up {
+          max-height: 180px;
+        }
+
+        @include medium-up {
+          max-height: initial;
+          /* stylelint-disable */
+          // aspect-ratio: 1/2; 
+          /* stylelint-enable */
+        }
+      }
+    }
+
+    &--content {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+      padding: 15px 15px 20px;
+    }
+  }
+
+  &__btns {
+    padding-top: 1.5rem;
+    // bottom: 0;
+
+    a {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+article.rooms {
+  padding: 3em 0;
+
+  .entry-content.grid {
+    grid-template-columns: 1fr;
+    align-items: initial;
+
+    @include small-up {
+      gap: 40px;
+      padding: 0 10px;
+      grid-template-columns: 70% 30%;
+    }
+  }
+
+  p {
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-size: $font-size-28;
+    margin-bottom: 20px;
+  }
+
+  .rm-desc {
+    p {
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      margin: 20px 0 10px;
+    }
+
+    @include small-up {
+      padding: 0 10px;
+    }
+  }
+
+  .rm-serv {
+    padding-bottom: 20px;
+
+    ul {
+      margin-left: 20px;
+    }
+
+    li {
+      list-style-type: circle;
+    }
+
+    @include small-up {
+      padding-bottom: initial;
+    }
+  }
+
+  @include small-up {
+    padding: 4em 0;
+    max-width: 80%;
+    margin: auto;
+  }
+}
