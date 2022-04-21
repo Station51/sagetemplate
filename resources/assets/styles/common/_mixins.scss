@@ -22,6 +22,12 @@
   }
 }
 
+@mixin medium-down {
+  @media (max-width: #{$bp-medium}) {
+    @content;
+  }
+}
+
 @mixin large-up {
   @media (min-width: #{$bp-large}) {
     @content;
