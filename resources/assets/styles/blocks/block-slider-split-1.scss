@@ -1,0 +1,279 @@
+.block-slider-split-1 {
+  &__banner {
+    min-height: calc(60vh - 150px);
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    @include small-up {
+      min-height: 40vh;
+    }
+
+    @include xl-up {
+      min-height: 80vh;
+    }
+
+    @include xxl-up {
+      min-height: calc(80vh - 100px);
+    }
+  }
+
+  &__column {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-attachment: initial;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .grid {
+    gap: 0;
+  }
+
+  .text-block {
+    position: relative;
+    overflow: hidden;
+    padding: 2rem;
+
+    h1,
+    h2,
+    h3 {
+      font-size: 1.8em;
+      line-height: initial;
+      margin-bottom: 10px;
+
+      @include xl-up {
+        font-size: 2em;
+        margin-bottom: 20px;
+      }
+
+      @include xxl-up {
+        font-size: 2.2em;
+        margin-bottom: 30px;
+      }
+    }
+
+    h4 {
+      font-size: 1.4em;
+      line-height: initial;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      margin-bottom: 10px;
+    }
+
+    ul li::before {
+      content: "\2713";
+      width: 1.5em;
+      height: 1.5em;
+      background-color: $gold;
+      border-radius: 50%;
+      margin-right: 10px;
+      margin-bottom: 2px;
+      color: $white;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    article {
+      position: relative;
+    }
+
+    @include small-up {
+      padding: 5rem;
+    }
+
+    @include medium-up {
+      padding: 2rem 1rem;
+    }
+
+    @include xl-up {
+      padding: 0 10rem;
+    }
+
+    @include xxl-up {
+      padding: 0 16rem;
+    }
+  }
+
+  &__btns {
+    padding-top: 1.5rem;
+
+    a {
+      margin-bottom: 20px;
+    }
+  }
+
+  .btn {
+    background-color: $green-light;
+    color: $white;
+    border-color: $white;
+
+    &:hover {
+      background-color: $white;
+      text-decoration: none;
+    }
+  }
+
+  &.section-dark {
+    background-color: $secondary;
+    color: $white;
+
+    .btn {
+      background-color: $green-light;
+      color: $white;
+      border-color: $white;
+    }
+
+    a {
+      color: $white;
+    }
+
+    .text-block {
+      ul li::before {
+        content: "\2713";
+        width: 1.5em;
+        height: 1.5em;
+        background-color: $gold;
+        border-radius: 50%;
+        margin-right: 10px;
+        margin-bottom: 2px;
+        color: $black;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  &.section-medium {
+    background-color: $green-light;
+    color: $white;
+
+    .btn {
+      background-color: $white;
+      color: $black;
+      border-color: $black;
+
+      &:hover {
+        background-color: $white;
+        border-color: $white;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &.section-dark.btn:hover {
+    background-color: $white;
+    text-decoration: none;
+  }
+
+  .grid__outer {
+    grid-template-columns: 100%;
+
+    &.space {
+      padding: 5vw;
+
+      .text-block {
+        padding: 0;
+
+        &.left {
+          @include small-up {
+            padding: 0 5rem 2rem 5rem;
+          }
+
+          @include medium-up {
+            padding: 0 10rem 2rem 10rem;
+          }
+
+          @include xl-up {
+            padding: 0 10rem 0 3rem;
+          }
+
+          @include xxl-up {
+            padding: 0 16rem 0 6rem;
+          }
+        }
+
+        &.right {
+          @include small-up {
+            padding: 0 5rem 2rem 5rem;
+          }
+
+          @include medium-up {
+            padding: 0 10rem 2rem 10rem;
+          }
+
+          @include xl-up {
+            padding: 0 3rem 0 10rem;
+          }
+
+          @include xxl-up {
+            padding: 0 6rem 0 16rem;
+          }
+        }
+      }
+
+      @include small-up {
+        padding: 10vw;
+      }
+    }
+
+    @include medium-up {
+      grid-template-columns: 50% 50%;
+    }
+  }
+
+  &.section-flip .grid__outer {
+    @include medium-down {
+      article:nth-of-type(1) {
+        order: 2;
+      }
+
+      article:nth-of-type(2) {
+        order: 1;
+      }
+    }
+  }
+
+  .slick-dots {
+    bottom: 1.5rem;
+
+    @include medium-up {
+      bottom: 10%;
+    }
+
+    li button {
+      height: 10px;
+      width: 10px;
+
+      &::before {
+        color: transparent;
+        border: 1px solid $white;
+        border-radius: 50%;
+        height: 10px;
+        width: 10px;
+      }
+    }
+
+    li {
+      width: 5px;
+    }
+
+    li.slick-active button::before {
+      background-color: $white;
+    }
+  }
+}

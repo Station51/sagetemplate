@@ -1,0 +1,47 @@
+.block-wysiwyg {
+  .grid__outer {
+    grid-template-columns: 1fr;
+
+    @include medium-up {
+      grid-template-columns: 55% 45%;
+    }
+  }
+
+  &__content {
+    h2,
+    h3 {
+      font-size: $font-size-28;
+      line-height: inherit;
+      margin-bottom: 20px;
+
+      @include small-up {
+        font-size: $font-size-44;
+        line-height: 50px;
+      }
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+  }
+
+  img {
+    height: 100px;
+    width: auto;
+    margin: auto;
+  }
+
+  ul li::before {
+    content: "\2713";
+    width: 1.5em;
+    height: 1.5em;
+    background-color: $gold;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-bottom: 2px;
+    color: $white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

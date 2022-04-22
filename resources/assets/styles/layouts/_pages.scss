@@ -1,0 +1,86 @@
+.search,
+.error404 {
+  .content .container {
+    padding: 10rem 2rem 5rem;
+
+    @include small-up {
+      padding: 15rem 2rem 10rem;
+    }
+  }
+
+  h1 {
+    margin-bottom: 10px;
+  }
+
+  .entry-title {
+    margin: 20px 0;
+  }
+}
+
+.single-rooms {
+  .block-slider {
+    margin-top: 20px;
+  }
+
+  .block-rooms-1__banner {
+    min-height: 450px;
+    background-color: initial;
+    display: block;
+    width: initial;
+  }
+
+  .grid {
+    @include medium-down {
+      display: block;
+    }
+  }
+
+  .rooms-page-slider {
+    padding: 2rem 0;
+
+    &__banner {
+      min-height: 300px;
+
+      @include small-up {
+        min-height: 400px;
+      }
+
+      @include medium-up {
+        min-height: 450px;
+      }
+    }
+
+    &__column {
+      width: 100%;
+      background-repeat: no-repeat;
+      background-attachment: initial;
+      background-position: center;
+      background-size: cover;
+      margin-bottom: 20px;
+    }
+  }
+
+  .slick-dots {
+    bottom: 30px;
+  }
+
+  .slick-dots li.slick-active button::before {
+    color: $white;
+    opacity: 0.75;
+  }
+}
+
+.error404 {
+  form {
+    flex-direction: column;
+
+    @include small-up {
+      flex-direction: row;
+    }
+  }
+}
+
+.error-message-wrap {
+  background-color: $ghost-white;
+  padding: 60px;
+}

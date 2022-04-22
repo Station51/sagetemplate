@@ -7,6 +7,8 @@ $white:               #fff;
 $black:               #000;
 $blue-light:          #aae0ea;
 $blue-dark:           #173c5e;
+$green-light:         #1c6061;
+$gold:                #d7bd70;
 $secondary:           $ghost-white;
 
 // link color
@@ -31,8 +33,9 @@ $border-radius: 5px;
 // fonts
 $ff-primary: "Rajdhani", sans-serif;
 $ff-secondary: "EB Garamond", serif;
-$letter-spacing: 0.2rem;
 $font-size-base: 1rem;
+$font-color: $gray-dark;
+$letter-spacing: 0.2rem;
 $font-size-52: $font-size-base * 3.25; // ~52px
 $font-size-44: $font-size-base * 2.75; // ~44px
 $font-size-28: $font-size-base * 1.75; // ~28px
@@ -90,4 +93,3 @@ $footer-fonts-color: $body-text-color;
 $footer-fonts-size: $font-size-base * 0.75; // ~12px
 $footer-line-height: 15px;
 $footer-font-size: $font-size-12;
-
