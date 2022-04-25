@@ -1,11 +1,16 @@
 .block-banner-1 {
   background-size: cover;
-  padding: 125px 0 184px;
+  // padding: 125px 0 184px;
   position: relative;
   background-position: center;
+  min-height: $banner-height-mobile;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   @include medium-up {
-    padding: 142px 0 220px;
+    // padding: 142px 0 220px;
+    min-height: $banner-height-desktop;
   }
 
   .header-overlay {

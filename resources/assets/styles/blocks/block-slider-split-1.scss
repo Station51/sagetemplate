@@ -123,23 +123,25 @@
 
     &:hover {
       background-color: $white;
+      border-color: $black;
+      color: $black;
       text-decoration: none;
     }
   }
 
   &.section-dark {
-    background-color: $secondary;
+    background-color: $black;
     color: $white;
 
     .btn {
-      background-color: $green-light;
-      color: $white;
+      background-color: $white;
+      color: $black;
       border-color: $white;
     }
 
-    a {
-      color: $white;
-    }
+    // a {
+    //   color: $white;
+    // }
 
     .text-block {
       ul li::before {
@@ -159,8 +161,8 @@
   }
 
   &.section-medium {
-    background-color: $green-light;
-    color: $white;
+    background-color: $gray-light;
+    // color: $white;
 
     .btn {
       background-color: $white;
@@ -168,15 +170,18 @@
       border-color: $black;
 
       &:hover {
-        background-color: $white;
+        background-color: $black;
         border-color: $white;
+        color: $white;
+        // border-color: $white;
         text-decoration: none;
       }
     }
   }
 
-  &.section-dark.btn:hover {
-    background-color: $white;
+  &.section-dark .btn:hover {
+    background-color: $black;
+    color: $white;
     text-decoration: none;
   }
 

@@ -2,39 +2,39 @@
 @import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,600&display=swap");
 
-.heading {
-  font-weight: 600;
-  margin: 15px 0;
-  text-transform: capitalize;
-  font-family: $ff-secondary;
-  font-style: italic;
-  color: $heading-text-color;
+// .heading {
+//   font-weight: 600;
+//   margin: 15px 0;
+//   text-transform: capitalize;
+//   font-family: $ff-secondary;
+//   font-style: italic;
+//   color: $heading-text-color;
 
-  &--1 {
-    font-size: $font-size-44;
-    line-height: 34px;
+//   &--1 {
+//     font-size: $font-size-44;
+//     line-height: 34px;
 
-    @include large-up {
-      font-size: $font-size-52;
-      line-height: 63px;
-    }
-  }
+//     @include large-up {
+//       font-size: $font-size-52;
+//       line-height: 63px;
+//     }
+//   }
 
-  &--2 {
-    font-size: $font-size-28;
-    line-height: 28px;
+//   &--2 {
+//     font-size: $font-size-28;
+//     line-height: 28px;
 
-    @include large-up {
-      font-size: $font-size-44;
-      line-height: 54px;
-    }
-  }
+//     @include large-up {
+//       font-size: $font-size-44;
+//       line-height: 54px;
+//     }
+//   }
 
-  &--3 {
-    font-size: $font-size-22;
-    line-height: 34px;
-  }
-}
+//   &--3 {
+//     font-size: $font-size-22;
+//     line-height: 34px;
+//   }
+// }
 
 .label {
   display: block;

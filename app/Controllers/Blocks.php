@@ -29,6 +29,14 @@ class Blocks extends Controller
     }
 
   /**
+   *  Get Block Gallery Tabs content.
+   */
+
+    public static function getGalleryTabs() {
+      return $images = get_sub_field('the_gallery');
+    }
+
+  /**
    *
    * Block Slider.
    *
@@ -50,6 +58,47 @@ class Blocks extends Controller
              'button_url_2' => $slides['button_url_2'] ?? null,
           ];
       }, get_field('slides') ?? []);
+  }
+
+  /**
+   *
+   * Block Banner Slider.
+   *
+   * Fetches the slides and returns them in an array.
+   *
+   * @return array An array with the slide data.
+   */
+  public static function getBannerSlider() {
+    return array_map(function ($slides) {          
+        return [
+           'content' => $slides['slide_content'] ?? null,
+           'image' => $slides['slide_image'] ?? null,
+           'background_colour' => $slides['slide_background_colour'] ?? null,
+           'popup_button' => $slides['popup_button'] ?? null,
+           'popup_button_text' => $slides['popup_button_text'] ?? null,
+           'popup_class' => $slides['popup_class'] ?? null,
+           'button_text_1' => $slides['button_text_1'] ?? null,
+           'button_url_1' => $slides['button_url_1'] ?? null,
+           'button_text_2' => $slides['button_text_2'] ?? null,
+           'button_url_2' => $slides['button_url_2'] ?? null,
+        ];
+    }, get_field('slides') ?? []);
+  }
+
+  /**
+   *
+   * Block Slider half page.
+   *
+   * Fetches the slides and returns them in an array.
+   *
+   * @return array An array with the slide data.
+   */
+  public static function getSliderTestimonials() {
+    return array_map(function ($slides) {          
+        return [
+           'content' => $slides['slide_content'] ?? null,
+        ];
+    }, get_field('slides') ?? []);
   }
 }
 
