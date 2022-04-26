@@ -78,6 +78,10 @@
       flex-direction: row;
     }
   }
+
+  .header.parked .header__wrapper {
+    background-color: $gray-dark;
+  }
 }
 
 .error-message-wrap {
