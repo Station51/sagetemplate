@@ -44,17 +44,17 @@
     h1,
     h2,
     h3 {
-      font-size: 1.8em;
+      font-size: $font-size-28;
       line-height: initial;
       margin-bottom: 10px;
+      font-family: $heading-font-family;
 
       @include xl-up {
-        font-size: 2em;
+        font-size: $font-size-44;
         margin-bottom: 20px;
       }
 
       @include xxl-up {
-        font-size: 2.2em;
         margin-bottom: 30px;
       }
     }
@@ -139,10 +139,6 @@
       border-color: $white;
     }
 
-    // a {
-    //   color: $white;
-    // }
-
     .text-block {
       ul li::before {
         content: "\2713";
@@ -162,7 +158,6 @@
 
   &.section-medium {
     background-color: $gray-light;
-    // color: $white;
 
     .btn {
       background-color: $white;
@@ -173,7 +168,6 @@
         background-color: $black;
         border-color: $white;
         color: $white;
-        // border-color: $white;
         text-decoration: none;
       }
     }

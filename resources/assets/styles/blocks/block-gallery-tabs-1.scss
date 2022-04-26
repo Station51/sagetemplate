@@ -151,6 +151,7 @@
   .section-header {
     color: $primary;
     text-align: center;
+    font-family: $heading-font-family;
   }
 
   @media (max-width: 320px) {

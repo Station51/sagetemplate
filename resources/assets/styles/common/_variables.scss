@@ -84,8 +84,17 @@ $hamburger-dark: $primary;
 
 // layout
 $blog-container-width: 900px;
+
+// Banner
 $banner-height-desktop: 70vh;
-$banner-height-mobile: 60vh;
+$banner-height-mobile: 80vh;
+$banner-h1-size-desktop: $font-size-52;
+$banner-h1-size-mobile: $font-size-44;
+$banner-h2-size-desktop: $font-size-44;
+$banner-h2-size-mobile: $font-size-28;
+
+// Headings
+$heading-font-family: $ff-secondary;
 
 // Logo height
 $logo-height: 80px;

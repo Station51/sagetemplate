@@ -75,6 +75,7 @@
       font-size: $font-size-44;
       margin-bottom: 20px;
       text-align: center;
+      font-family: $heading-font-family;
     }
 
     @include small-up {

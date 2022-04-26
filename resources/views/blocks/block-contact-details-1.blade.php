@@ -17,7 +17,7 @@
       @endif
 
       @if(get_field('phone_block_telephone')) 
-        <p class="phone"><i class="fas fa-phone-alt"></i><a href="tel:{!! get_field('phone_block_telephone') !!}"">{!! get_field('phone_block_telephone') !!}</a></p>
+        <p class="phone"><i class="fa fa-phone"></i><a href="tel:{!! get_field('phone_block_telephone') !!}"">{!! get_field('phone_block_telephone') !!}</a></p>
       @endif
 
       @if(get_field('phone_block_email')) 

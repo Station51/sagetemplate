@@ -19,8 +19,6 @@
       position: absolute;
       top: 100%;
       right: 20%;
-      // height: 30px;
-      // width: 50px;
       height: 15px;
       width: 30px;
       background: inherit;
@@ -73,6 +71,7 @@
     font-size: 2em;
     line-height: initial;
     margin-bottom: 10px;
+    font-family: $heading-font-family;
 
     @include small-up {
       font-size: 3em;
@@ -80,12 +79,12 @@
   }
 
   h4 {
-    font-size: 1.5em;
+    font-size: $font-size-18;
   }
 
   &__inner {
     background-color: $overlay-background-color;
-    padding: 2em 0;
+    padding: 2em 1em;
 
     .intro {
       text-align: center;
