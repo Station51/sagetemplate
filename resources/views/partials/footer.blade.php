@@ -16,4 +16,5 @@
     @php dynamic_sidebar('sidebar-footer') @endphp
   </div>
 </footer>
+<footer class="sub-footer grid"><div>&copy; @php echo date("Y"); @endphp Sage Starter Theme </div><div>@php dynamic_sidebar('sub-footer') @endphp</div><div> Developed by <a class="hop-link" href="https://www.hopsoftware.com/digital">Hop Digital</a></div></footer>
 

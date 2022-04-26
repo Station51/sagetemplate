@@ -101,3 +101,43 @@ footer {
     }
   }
 }
+
+.sub-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  padding: 10px;
+  gap: 0;
+
+  @include small-up {
+    flex-direction: row;
+
+    #menu-sub-footer a::after,
+    #menu-sub-footer li:first-child a::before {
+      content: "|";
+      padding: 0 10px;
+    }
+  }
+
+  div {
+    text-align: center;
+  }
+
+  .widget {
+    margin: auto;
+  }
+
+  ul {
+    display: flex;
+
+    li {
+      margin: auto 5px;
+
+      @include small-up {
+        margin: auto;
+      }
+    }
+  }
+}
