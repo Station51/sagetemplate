@@ -1,11 +1,14 @@
 .block-banner-1 {
   background-size: cover;
-  padding: 125px 0 184px;
   position: relative;
   background-position: center;
+  min-height: $banner-height-mobile;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   @include medium-up {
-    padding: 142px 0 220px;
+    min-height: $banner-height-desktop;
   }
 
   .header-overlay {
@@ -14,9 +17,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: $overlay-background-color
-    // background-color: $black;
-    // opacity: 0.6;
+    background-color: $overlay-background-color;
   }
 
   .flex {
@@ -25,6 +26,7 @@
 
     div {
       z-index: 10;
+      text-align: center;
     }
 
     h1 {
@@ -32,7 +34,7 @@
       z-index: 10;
 
       @include medium-up {
-        width: 50%;
+        // width: 50%;
         margin-bottom: 27px;
       }
     }
@@ -45,7 +47,7 @@
       font-weight: 500;
 
       @include medium-up {
-        width: 50%;
+        // width: 50%;
         margin-bottom: 32px;
       }
     }
