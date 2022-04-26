@@ -10,25 +10,48 @@
   &__content {
     text-align: center;
 
-    h2,
-    h3 {
+    h1 {
       font-size: $font-size-28;
       line-height: inherit;
       margin: 20px 0;
 
       @include small-up {
-        margin: 5px 80px 20px;
+        margin: 25px 0;
       }
 
       @include medium-up {
         font-size: $font-size-44;
         line-height: 50px;
-        margin: 5px 160px 20px;
       }
     }
 
-    h4 {
+    h2 {
       font-size: $font-size-22;
+      line-height: inherit;
+      margin: 20px 0;
+
+      @include small-up {
+        margin: 20px 0;
+      }
+
+      @include medium-up {
+        font-size: $font-size-28;
+        line-height: 30px;
+      }
+    }
+
+    h3 {
+      font-size: $font-size-18;
+      line-height: inherit;
+      margin: 10px 0;
+
+      @include small-up {
+        margin: 0 0 15px;
+      }
+
+      @include medium-up {
+        font-size: $font-size-22;
+      }
     }
 
     p {
