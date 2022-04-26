@@ -62,19 +62,8 @@
     }
   }
 
-  .btn {
-    background-color: $white;
-    color: $black;
-    border-color: $white;
-
-    &:hover {
-      background-color: $white;
-      text-decoration: none;
-    }
-  }
-
   &.section-dark {
-    background-color: $secondary;
+    background-color: $black;
     color: $white;
 
     h3 {
@@ -86,7 +75,8 @@
       color: $black;
 
       &:hover {
-        background-color: $white;
+        background-color: $primary;
+        border-color: $white;
       }
     }
   }

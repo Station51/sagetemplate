@@ -64,8 +64,8 @@
 
 @if(get_field('section_bg_color') == 'dark')
   <section data-{{ $block['id'] }} id="{{ $block['id'] }}" class="{{ $block['classes'] }} section-dark section-flip">
-@elseif(get_field('section_bg_color') == 'gold')
-  <section data-{{ $block['id'] }} id="{{ $block['id'] }}" class="{{ $block['classes'] }} section-gold section-flip">
+@elseif(get_field('section_bg_color') == 'medium')
+  <section data-{{ $block['id'] }} id="{{ $block['id'] }}" class="{{ $block['classes'] }} section-medium section-flip">
 @else
   <section data-{{ $block['id'] }} id="{{ $block['id'] }}" class="{{ $block['classes'] }} section-flip">
 @endif

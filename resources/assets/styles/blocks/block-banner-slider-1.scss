@@ -1,7 +1,6 @@
 .block-banner-slider-1 {
   &__banner {
-    // min-height: calc(80vh - 150px);
-    min-height: 90vh;
+    min-height: $banner-height-mobile;
     background-color: $overlay-background-color;
     display: flex;
     flex-direction: column;
@@ -15,7 +14,7 @@
     }
 
     @include xl-up {
-      min-height: 90vh;
+      min-height: $banner-height-desktop;
     }
   }
 
@@ -39,6 +38,7 @@
       font-size: 3em;
       line-height: initial;
       padding: 0;
+      font-family: $heading-font-family;
 
       @include xl-up {
         font-size: 3.5em;
