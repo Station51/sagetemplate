@@ -2,22 +2,30 @@
   width: 100%;
   background-color: $primary;
 
-  &__inner {
-    gap: 10px;
-    text-align: center;
-    padding: 20px 0;
+  // &__inner {
+  //   gap: 10px;
+  //   text-align: center;
+  //   padding: 20px 0;
 
-    @include small-up {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      text-align: left;
-      align-items: center;
-      min-height: 180px;
-      width: 100%;
-      gap: 30px;
-      padding: 0 20px;
-    }
+  //   @include small-up {
+  //     display: flex;
+  //     justify-content: space-between;
+  //     flex-wrap: wrap;
+  //     text-align: left;
+  //     align-items: center;
+  //     min-height: 180px;
+  //     width: 100%;
+  //     gap: 30px;
+  //     padding: 0 20px;
+  //   }
+  // }
+  &__info {
+    font-size: $footer-font-size;
+    line-height: 20px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
   &__menu,

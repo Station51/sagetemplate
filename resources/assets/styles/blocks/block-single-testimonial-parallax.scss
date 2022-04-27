@@ -1,0 +1,58 @@
+
+.block-single-testimonial-parallax {
+  background-size: cover;
+  padding: 105px 0 130px;
+  background-position: center center;
+  position: relative;
+
+  @include medium-up {
+    padding: 145px 0 170px;
+  }
+
+  &.attachment-fixed {
+    @include large-up {
+      background-attachment: fixed;
+    }
+  }
+
+  .header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(119, 145, 153, 0.7);
+  }
+
+  .flex {
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+      position: relative;
+      font-family: $ff-secondary;
+      font-size: $font-size-40;
+      line-height: 55px;
+      color: $white;
+      text-align: center;
+      z-index: 5;
+      font-style: italic;
+      font-weight: 100;
+      text-transform: none;
+      margin-top: 30px;
+      margin-bottom: 40px;
+
+      @include medium-up {
+        font-size: $font-size-71;
+        line-height: 71px;
+      }
+    }
+  }
+
+  .quote {
+    position: relative;
+    color: $white;
+    z-index: 5;
+    text-align: center;
+  }
+}

@@ -1,0 +1,158 @@
+.block-image-split {
+  position: relative;
+  padding-bottom: 0;
+  overflow: hidden;
+
+  &-h__col {
+    color: $primary;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 25px;
+    margin-top: 0;
+    position: relative;
+    z-index: 5;
+  }
+
+  article {
+    padding-bottom: 35px;
+  }
+
+  &-h__wrapper {
+    width: 100%;
+    min-height: 500px;
+    padding-top: 80px;
+    padding-bottom: 125px;
+
+    @include medium-up {
+      padding-top: 0;
+      padding-bottom: 185px;
+    }
+  }
+
+  .grid__outer {
+    grid-template-columns: 1fr;
+
+    @include medium-up {
+      grid-template-columns: 45% 55%;
+      align-items: center;
+      padding-top: 130px;
+      padding-bottom: 20px;
+    }
+
+    &.isSwitched {
+      @include medium-up {
+        grid-template-columns: 55% 45%;
+        align-items: center;
+        padding-top: 130px;
+        padding-bottom: 20px;
+      }
+    }
+  }
+
+  &-h__content {
+    &.isSwitched {
+      @include medium-up {
+        order: 2;
+      }
+    }
+
+    .heading--2 {
+      text-align: left;
+      max-width: 600px;
+    }
+
+    &-title {
+      color: $primary;
+      font-weight: 700;
+      padding-bottom: 40px;
+    }
+  }
+
+  &-h__top-images {
+    width: 100%;
+    position: relative;
+    max-width: 320px;
+    margin: 0 auto;
+
+    @include small-up {
+      max-width: 600px;
+    }
+
+    &--top {
+      width: 100%;
+      display: block;
+      height: auto;
+    }
+
+    &--left {
+      position: absolute;
+      top: -10%;
+      right: 0;
+      left: 70%;
+      z-index: 1;
+
+      @include xl-up {
+        // top: -20%;
+        right: -50px;
+        left: 73%;
+      }
+
+      &_inner {
+        max-width: 120px;
+        margin: auto;
+        height: auto;
+        display: block;
+
+        @include small-up {
+          max-width: 300px;
+        }
+      }
+    }
+
+    &--bottom {
+      position: absolute;
+      display: none;
+
+      @include medium-up {
+        display: block;
+        right: -10%;
+        bottom: -20%;
+        left: -10%;
+      }
+
+      &_inner {
+        max-width: 362px;
+        height: auto;
+      }
+    }
+  }
+
+  &__tartan {
+    max-width: 110px;
+    position: absolute;
+    right: -35px;
+    bottom: -65px;
+
+    @include medium-up {
+      max-width: 210px;
+      right: -75px;
+      bottom: -75px;
+    }
+  }
+
+  .btn {
+    position: relative;
+    cursor: pointer;
+    font-weight: 600;
+    z-index: 9;
+    min-width: 180px;
+
+    @include xl-up {
+      min-width: 220px;
+    }
+
+    &:last-child {
+      margin-bottom: 120px;
+    }
+  }
+}
