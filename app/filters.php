@@ -175,5 +175,7 @@ add_filter( 'allowed_block_types', function ( $allowed_blocks ) {
         'acf/block-banner-basic',
         'acf/block-single-testimonial-parallax',
         'acf/block-image-split',
+        'acf/block-slider-tabs',
+        'acf/block-gallery-things-to-do',
     );
 });

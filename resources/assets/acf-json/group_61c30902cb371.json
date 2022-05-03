@@ -1,6 +1,6 @@
 {
     "key": "group_61c30902cb371",
-    "title": "Block Banner 1",
+    "title": "Block-Banner-1",
     "fields": [
         {
             "key": "field_61c3091953af0",
@@ -171,5 +171,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1640183475
+    "modified": 1651573544
 }

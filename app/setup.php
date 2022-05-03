@@ -236,10 +236,10 @@ add_action('init', function () {
         'add_new_item' => __('Add new Category'),
         'new_item_name' => __('New')
     );
-    register_taxonomy('porfiolio_category', array('menu'), array(
+    register_taxonomy('menu_category', array('menu'), array(
 		'hierarchical' => true,
 		'labels' => $labels,
-		'singular_label' => 'porfiolio_category',
+		'singular_label' => 'menu_category',
 		'all_items' => 'Category',
 		'query_var' => true,
 		'rewrite' => array('slug' => 'cat'))
@@ -293,14 +293,72 @@ add_action('init', function () {
         'add_new_item' => __('Add new Category'),
         'new_item_name' => __('New')
     );
-    register_taxonomy('porfiolio_category', array('rooms'), array(
+    register_taxonomy('room_category', array('rooms'), array(
 		'hierarchical' => true,
 		'labels' => $labels,
-		'singular_label' => 'porfiolio_category',
+		'singular_label' => 'room_category',
 		'all_items' => 'Category',
 		'query_var' => true,
 		'rewrite' => array('slug' => 'cat'))
     );
     register_post_type('rooms', $args);
+    flush_rewrite_rules();
+}, 0);
+
+/** Add Custom Post Type - Thing To Do */
+
+add_action('init', function () {
+    $labels = array(
+        'name' => _x('Galleries', 'post type general name'),
+        'singular_name' => _x('Gallery', 'post type Singular name'),
+        'add_new' => _x('Add Gallery ', ''),
+        'add_new_item' => __('Add New Gallery'),
+        'edit_item' => __('Edit Gallery'),
+        'new_item' => __('New Gallery'),
+        'all_items' => __('All Galleries'),
+        'view_item' => __('View Gallery'),
+        'search_items' => __('Search Gallery'),
+        'not_found' => __('No Gallery'),
+        'not_found_in_trash' => __('No Gallery on trash'),
+        'parent_item_colon' => '',
+        'menu_name' => __('Things To Do')
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'query_var' => true,
+        'rewrite' => array('slug' => 'gallery'),
+        'capability_type' => 'page',
+        'has_archive' => true,
+        'hierarchical' => true,
+        'menu_position' => null,
+        'menu_icon' => 'dashicons-format-gallery',
+        'supports' => array('title', 'thumbnail','custom-fields', 'page-attributes')
+    );
+    $labels = array(
+        'name' => __('Category'),
+        'singular_name' => __('Category'),
+        'search_items' => __('Search'),
+        'popular_items' => __('More Used'),
+        'all_items' => __('All Categories'),
+        'parent_item' => null,
+        'parent_item_colon' => null,
+        'edit_item' => __('Add new'),
+        'update_item' => __('Update'),
+        'add_new_item' => __('Add new Category'),
+        'new_item_name' => __('New')
+    );
+    register_taxonomy('things_todo_category', array('gallery'), array(
+		'hierarchical' => true,
+		'labels' => $labels,
+		'singular_label' => 'things_todo_category',
+		'all_items' => 'Category',
+		'query_var' => true,
+		'rewrite' => array('slug' => 'cat'))
+    );
+    register_post_type('gallery', $args);
     flush_rewrite_rules();
 }, 0);

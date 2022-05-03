@@ -6,7 +6,7 @@
 <section data-{{ $block['id'] }} id="{{ $block['id'] }}" class="{{ $block['classes'] }} section">
   @php
     $menus = get_terms([
-      'taxonomy' => 'porfiolio_category'
+      'taxonomy' => 'menu_category'
     ]);
   @endphp
   @if(get_field("title")) 
@@ -35,7 +35,7 @@
       $price = get_field('price', get_the_ID());
       $text = get_field('text', get_the_ID());
     @endphp
-    @foreach (get_the_terms(get_the_ID(), 'porfiolio_category') as $cat) 
+    @foreach (get_the_terms(get_the_ID(), 'menu_category') as $cat) 
       @php $termsSLug =  $cat->name @endphp     
 		@endforeach
     <div class="filtr-item block-6__item--section-center" data-category="{!! $termsSLug !!}">
