@@ -1,5 +1,5 @@
 {{--
-  Title: Block-4
+  Title: Block-Image-Split-Repeater
   Category: common
   Icon: awards
 --}}
@@ -10,32 +10,32 @@
   @endphp
   @if( get_row_index() % 2 == 0 )
   <div class="grid">
-    <article class='block-4__picture'>
-      <div class='block-4__container'>
+    <article class='block-image-split-repeater__picture'>
+      <div class='block-image-split-repeater__container'>
          <img src="{!!the_sub_field('image')!!}" alt="">
       </div>
     </article>
-    <article class='block-4__info'>
-      <div class="block-4__title">
+    <article class='block-image-split-repeater__info'>
+      <div class="block-image-split-repeater__title">
         <h2 class="heading heading--2">{!! the_sub_field('title') !!}</h2>
       </div>
-      <p class="block-4__text">{!! the_sub_field('content') !!}
+      <p class="block-image-split-repeater__text">{!! the_sub_field('content') !!}
       </p>
       <a href="{!! the_sub_field('url') !!}" class='btn'>{!! the_sub_field('cta') !!}</a>
     </article>
   </div>
   @else 
   <div class="grid">
-    <article class='block-4__info'>
-      <div class="block-4__title">
+    <article class='block-image-split-repeater__info'>
+      <div class="block-image-split-repeater__title">
         <h2 class="heading heading--2">{!! the_sub_field('title') !!}</h2>
       </div>
-      <p class="block-4__text">{!! the_sub_field('content') !!}
+      <p class="block-image-split-repeater__text">{!! the_sub_field('content') !!}
       </p>
       <a href="{!! the_sub_field('url') !!}" class='btn'>{!! the_sub_field('cta') !!}e</a>
     </article>
-    <article class='block-4__picture'>
-      <div class='block-4__container'>
+    <article class='block-image-split-repeater__picture'>
+      <div class='block-image-split-repeater__container'>
       <img src="{!!the_sub_field('image')!!}" alt="">
       </div>
     </article>

@@ -1,6 +1,6 @@
 {
     "key": "group_61c30902cb371",
-    "title": "Block-Banner-1",
+    "title": "Block-Banner-Image",
     "fields": [
         {
             "key": "field_61c3091953af0",
@@ -158,7 +158,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/block-banner-1"
+                "value": "acf\/block-banner-image"
             }
         ]
     ],
@@ -171,5 +171,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1651573544
+    "modified": 1651660886
 }

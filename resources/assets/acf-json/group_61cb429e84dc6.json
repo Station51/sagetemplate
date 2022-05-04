@@ -1,6 +1,6 @@
 {
     "key": "group_61cb429e84dc6",
-    "title": "Block-4",
+    "title": "Block-Image-Split-Repeater",
     "fields": [
         {
             "key": "field_61cb42a8571a0",
@@ -126,7 +126,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/block-4"
+                "value": "acf\/block-image-split-repeater"
             }
         ]
     ],
@@ -139,5 +139,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1640718389
+    "modified": 1651658049
 }
