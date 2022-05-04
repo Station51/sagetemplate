@@ -1,6 +1,6 @@
 {
     "key": "group_62615f2f3b9e1",
-    "title": "Block Banner Basic",
+    "title": "Block-Banner-Basic",
     "fields": [
         {
             "key": "field_62615f35f1c8b",
@@ -64,5 +64,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1650549043
+    "modified": 1651573557
 }

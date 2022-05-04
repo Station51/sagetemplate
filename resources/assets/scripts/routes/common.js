@@ -11,17 +11,34 @@ export default {
     // This will extend the $.fn prototype with Filterizr
     Filterizr.installAsJQueryPlugin($);
 
-    window.onload = function() {
-      var filterContainer = document.getElementsByClassName('filter-container');
-      if (filterContainer.length > 0) {
-        var options = {
-          layout: 'sameWidth',
-          gutterPixels: 10,
-        }
-        // eslint-disable-next-line no-undef
-        filterizr = new Filterizr('.filter-container', options);
+    // window.onload = function() {
+    //   var filterContainer = document.getElementsByClassName('filter-container');
+    //   if (filterContainer.length > 0) {
+    //     var options = {
+    //       layout: 'sameWidth',
+    //       gutterPixels: 10,
+    //     }
+    //     // eslint-disable-next-line no-undef
+    //     filterizr = new Filterizr('.filter-container', options);
+    //   }
+    // }
+
+    $('.filtr').on('click', function() {
+      $(this).addClass('active');
+      $(this).siblings('.active').removeClass('active');
+    });
+    var filterContainer = document.getElementsByClassName('filter-container');
+    if (filterContainer.length > 0) {
+      var options = {
+        layout: 'sameSize',
+        gutterPixels: 10,
       }
     }
+
+    $(document).ready(function() {
+       // eslint-disable-next-line no-unused-vars
+       const filterizr = new Filterizr('.filter-container', options);
+    });
 
   // Add opacity to a banner when scrolling
 
@@ -124,6 +141,44 @@ export default {
 
       block_slider_testimonials.slick(block_slider_settings);
     }
+
+    /--- Slider Tab Rooms Slider ----------------------/
+
+    $('.slider-single').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      fade: false,
+      adaptiveHeight: true,
+      infinite: true,
+      useTransform: true,
+      speed: 400,
+      cssEase: 'cubic-bezier(0.77, 0, 0.18, 1)',
+    });
+    
+    $('.slider-nav')
+      .slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: false,
+        focusOnSelect: true,
+        infinite: false,
+      });
+    
+    $('.slider-single').on('afterChange', function(event, slick, currentSlide) {
+      $('.slider-nav').slick('slickGoTo', currentSlide);
+      var currrentNavSlideElem = '.slider-nav .slick-slide[data-slick-index="' + currentSlide + '"]';
+      $('.slider-nav .slick-slide.is-active').removeClass('is-active');
+      $(currrentNavSlideElem).addClass('is-active');
+    });
+    
+    $('.slider-nav').on('click', '.slick-slide', function(event) {
+      event.preventDefault();
+      var goToSingleSlide = $(this).data('slick-index');
+    
+      $('.slider-single').slick('slickGoTo', goToSingleSlide);
+    });
 
     // hamburger button
     $('.hamburger').click(function() {
