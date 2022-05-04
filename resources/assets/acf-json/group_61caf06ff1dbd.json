@@ -1,6 +1,6 @@
 {
     "key": "group_61caf06ff1dbd",
-    "title": "Block-3",
+    "title": "Block-4-Column-Image-Text",
     "fields": [
         {
             "key": "field_61caf080c5734",
@@ -91,7 +91,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/block-3"
+                "value": "acf\/block-4-column-image-text"
             }
         ]
     ],
@@ -104,5 +104,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1640692873
+    "modified": 1651657510
 }

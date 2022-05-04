@@ -1,5 +1,5 @@
 {{--
-Title: Image Split
+Title: Block-Image-3x-Split
 Category: common
 Icon: awards
 --}}
@@ -10,10 +10,10 @@ Icon: awards
   $size = 'large'; // (thumbnail, medium, large, full or custom size)
   $attachment_title = get_the_title($attach_id);
   @endphp
-  <div class="block-image-split-h__wrapper" @if(get_field('background_colour'))
+  <div class="block-image-3x-split-h__wrapper" @if(get_field('background_colour'))
     style="background-color: {{ get_field('background_colour') }};" @endif>
     <div class="container grid grid__outer @if(get_field('switch_images')) isSwitched @endif">
-      <div class="block-image-split-h__content @if(get_field('switch_images')) isSwitched @endif" data-aos="fade"
+      <div class="block-image-3x-split-h__content @if(get_field('switch_images')) isSwitched @endif" data-aos="fade"
         data-aos-duration="2000">
         @if(get_field('label_bottom'))
         <h3 class="heding heading--line" @if(get_field('header_text_color'))
@@ -28,14 +28,14 @@ Icon: awards
         <span class="emblem"></span>
         @endif
         @if(get_field('sub_header_bottom'))
-        <p class="block-image-split-h__content-title" @if(get_field('header_text_color'))
+        <p class="block-image-3x-split-h__content-title" @if(get_field('header_text_color'))
           style="color: {{ get_field('header_text_color') }};" @endif data-aos="fade">
           {!! get_field('sub_header_bottom') !!}
         </p>
         @endif
         <article @if(get_field('text_column')=='two' ) style=" column-width: 210px;" @endif>
           @if(get_field('text_bottom'))
-          <p class="block-image-split-h__col" @if(get_field('text_color')) style="color: {{ get_field('text_color') }};"
+          <p class="block-image-3x-split-h__col" @if(get_field('text_color')) style="color: {{ get_field('text_color') }};"
             @endif>
             {!! get_field('text_bottom') !!}
           </p>
@@ -50,15 +50,15 @@ Icon: awards
         <a href="{{ $buttonR[button_url] }}" class="btn" style="color: {{ $buttonR['button_font_color'] }}; background-color: {{ $buttonR['button_background_color'] }}; border: 2px solid {{ $buttonR['button_border_color']  }};">{!! $buttonR['button_text'] !!}</a>
         @endif
       </div>
-      <div class="block-image-split-h__inner">
-        <div class="block-image-split-h__top-images">
+      <div class="block-image-3x-split-h__inner">
+        <div class="block-image-3x-split-h__top-images">
           @php
           $imageID = $section_bottom['image_1'];
           $image = wp_get_attachment_image_src( $imageID, 'full' );
           $alt_text = get_post_meta($imageID , '_wp_attachment_image_alt', true);
           @endphp
           @if($section_bottom['image_1'])
-          <img class="block-image-split-h__top-images--top" src="{!! $image[0] !!}" alt="{{ $alt_text }}"
+          <img class="block-image-3x-split-h__top-images--top" src="{!! $image[0] !!}" alt="{{ $alt_text }}"
             smooth-parallax="1" start-position-y="0.3" end-position-y="0" />
           @endif
 
@@ -68,9 +68,9 @@ Icon: awards
           $alt_text2 = get_post_meta($image2 , '_wp_attachment_image_alt', true);
           @endphp
 
-          <div class="block-image-split-h__top-images--left" smooth-parallax="1" start-position-y="1"
+          <div class="block-image-3x-split-h__top-images--left" smooth-parallax="1" start-position-y="1"
             end-position-y="0.2">
-            <img class="block-image-split-h__top-images--left_inner" src="{!! $imageLeft[0] !!}"
+            <img class="block-image-3x-split-h__top-images--left_inner" src="{!! $imageLeft[0] !!}"
               alt="{{ $alt_text2 }}" />
           </div>
 
@@ -81,16 +81,16 @@ Icon: awards
           @endphp
 
           @if($section_bottom['image_3'])
-          <div class="block-image-split-h__top-images--bottom" smooth-parallax="1" start-position-y="-0.4"
+          <div class="block-image-3x-split-h__top-images--bottom" smooth-parallax="1" start-position-y="-0.4"
             end-position-y="0">
-            <img class="block-image-split-h__top-images--bottom_inner" src="{!! $imageTop[0] !!}" alt="{{ $alt_text3 }}"
+            <img class="block-image-3x-split-h__top-images--bottom_inner" src="{!! $imageTop[0] !!}" alt="{{ $alt_text3 }}"
               smooth-parallax="1" start-position-y="-0.1" end-position-y="0" />
           </div>
           @endif
 
           @if($section_bottom['tartan'])
-          <div class="block-image-split__tartan">
-            <img class="block-image-split__tartan--inner" src="@asset('images/svg/white-tartan.svg')" alt="Tartan"
+          <div class="block-image-3x-split__tartan">
+            <img class="block-image-3x-split__tartan--inner" src="@asset('images/svg/white-tartan.svg')" alt="Tartan"
               smooth-parallax="1" start-position-y="-0.4" end-position-y="0.2" />
           </div>
           @endif

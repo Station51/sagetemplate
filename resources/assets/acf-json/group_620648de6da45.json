@@ -1,6 +1,6 @@
 {
     "key": "group_620648de6da45",
-    "title": "Block-Image-Split",
+    "title": "Block-Image-3x-Split",
     "fields": [
         {
             "key": "field_620648e129b35",
@@ -473,7 +473,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/block-image-split"
+                "value": "acf\/block-image-3x-split"
             }
         ]
     ],
@@ -486,5 +486,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1651573511
+    "modified": 1651655821
 }

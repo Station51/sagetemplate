@@ -1,5 +1,5 @@
 {{--
-  Title: block-6
+  Title: Block-Menu-Filter
   Category: common
   Icon: awards
 --}}
@@ -10,15 +10,15 @@
     ]);
   @endphp
   @if(get_field("title")) 
-    <div class="block-6__title">
+    <div class="block-menu-filter__title">
       <h2 class="heading heading--2">{!! get_field("title") !!}</h2>
-      <div class="block-6__title--underline"></div>
+      <div class="block-menu-filter__title--underline"></div>
     </div>
   @endif
-  <div class="block-6__btn--container">
-    <button type="button" class="btn block-6__btn--filter filtr-item" data-filter="all">all</button>
+  <div class="block-menu-filter__btn--container">
+    <button type="button" class="btn block-menu-filter__btn--filter filtr-item" data-filter="all">all</button>
     @foreach ($menus as $menu) 
-    <button type="button" class="btn block-6__btn--filter filtr-item" data-filter="{{ $menu->slug }}">{!! $menu->name !!}</button>
+    <button type="button" class="btn block-menu-filter__btn--filter filtr-item" data-filter="{{ $menu->slug }}">{!! $menu->name !!}</button>
     @endforeach
   </div>
   @php
@@ -28,7 +28,7 @@
   ]);
   @endphp
   @if($menu->have_posts()) 
-    <div class="filter-container block-6__item container">
+    <div class="filter-container block-menu-filter__item container">
 	@while ($menu->have_posts())
     @php
 		  $menu->the_post();
@@ -38,15 +38,15 @@
     @foreach (get_the_terms(get_the_ID(), 'menu_category') as $cat) 
       @php $termsSLug =  $cat->name @endphp     
 		@endforeach
-    <div class="filtr-item block-6__item--section-center" data-category="{!! $termsSLug !!}">
+    <div class="filtr-item block-menu-filter__item--section-center" data-category="{!! $termsSLug !!}">
       @if (has_post_thumbnail()) 
-        <div class="block-6__item--image">{!! the_post_thumbnail() !!} 
-          <div class="block-6__item--info">
+        <div class="block-menu-filter__item--image">{!! the_post_thumbnail() !!} 
+          <div class="block-menu-filter__item--info">
             <header>
               <h3>{!! the_title() !!}</h3>
-                <span class="block-6__item--price">£ {!! $price !!}</span>
+                <span class="block-menu-filter__item--price">£ {!! $price !!}</span>
             </header>
-              <p class="block-6__item--text">{!! $text !!}</p>
+              <p class="block-menu-filter__item--text">{!! $text !!}</p>
           </div>
         </div>
 	    @endif

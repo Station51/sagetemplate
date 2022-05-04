@@ -1,5 +1,5 @@
 {{--
-  Title: Block-5
+  Title: Block-CTA-Banner-2
   Category: common
   Icon: awards
 --}}
