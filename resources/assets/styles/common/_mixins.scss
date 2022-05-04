@@ -40,6 +40,12 @@
   }
 }
 
+@mixin mxl-up {
+  @media (min-width: #{$bp-1xl}) {
+    @content;
+  }
+}
+
 @mixin xxl-up {
   @media (min-width: #{$bp-2xl}) {
     @content;

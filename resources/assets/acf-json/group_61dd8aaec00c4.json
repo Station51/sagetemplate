@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_625fe4889bf65",
-            "label": "Header Book Button",
+            "label": "Booking URLs",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -20,8 +20,8 @@
         },
         {
             "key": "field_625fe4aa9bf66",
-            "label": "Button URL",
-            "name": "button_url",
+            "label": "Book A Room URL",
+            "name": "book_a_room_url",
             "type": "url",
             "instructions": "",
             "required": 0,
@@ -229,6 +229,98 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_62694d6452826",
+            "label": "Footer",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_62694d6f52827",
+            "label": "Text Footer",
+            "name": "text_footer",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_62694d8b52828",
+            "label": "Instagram Shortcode",
+            "name": "instagram_shortcode",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_627274374c554",
+            "label": "Footer Contact form",
+            "name": "footer_contact_form",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6272740e4c553",
+            "label": "Footer Newsletter",
+            "name": "footer_newsletter",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -249,5 +341,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1650452242
+    "modified": 1651668230
 }

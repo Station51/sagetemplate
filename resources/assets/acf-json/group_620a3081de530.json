@@ -1,12 +1,12 @@
 {
-    "key": "group_61cb429e84dc6",
-    "title": "Block-Image-Split-Repeater",
+    "key": "group_620a3081de530",
+    "title": "Block-Single-Testimonial-Parallax",
     "fields": [
         {
-            "key": "field_61cb42a8571a0",
-            "label": "Steps",
-            "name": "steps",
-            "type": "repeater",
+            "key": "field_620a308c538cb",
+            "label": "Testimonial Banner",
+            "name": "testimonial_banner",
+            "type": "group",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,16 +15,31 @@
                 "class": "",
                 "id": ""
             },
-            "collapsed": "",
-            "min": 0,
-            "max": 0,
             "layout": "table",
-            "button_label": "",
             "sub_fields": [
                 {
-                    "key": "field_61cb4322571a1",
-                    "label": "Image",
-                    "name": "image",
+                    "key": "field_620a30ec538cd",
+                    "label": "Testimonial Text",
+                    "name": "testimonial_text",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_620a30f4538ce",
+                    "label": "Background Image",
+                    "name": "background_image",
                     "type": "image",
                     "instructions": "",
                     "required": 0,
@@ -35,7 +50,7 @@
                         "id": ""
                     },
                     "return_format": "url",
-                    "preview_size": "medium",
+                    "preview_size": "full",
                     "library": "all",
                     "min_width": "",
                     "min_height": "",
@@ -46,10 +61,10 @@
                     "mime_types": ""
                 },
                 {
-                    "key": "field_61cb434b571a2",
-                    "label": "Title",
-                    "name": "title",
-                    "type": "text",
+                    "key": "field_620f8f95e4543",
+                    "label": "Overlay Color",
+                    "name": "overlay_color",
+                    "type": "color_picker",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -58,17 +73,36 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
+                    "default_value": "rgba(119, 145, 153, 0.7)",
+                    "enable_opacity": 1,
+                    "return_format": "string"
+                },
+                {
+                    "key": "field_62113769bce8e",
+                    "label": "Image Height",
+                    "name": "image_height",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 0,
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "maxlength": ""
+                    "min": "",
+                    "max": "",
+                    "step": ""
                 },
                 {
-                    "key": "field_61cb4353571a3",
-                    "label": "Content",
-                    "name": "content",
-                    "type": "textarea",
+                    "key": "field_62113782bce8f",
+                    "label": "Background Attachment Fixed",
+                    "name": "background_attachment",
+                    "type": "true_false",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -77,46 +111,11 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "placeholder": "",
-                    "maxlength": "",
-                    "rows": "",
-                    "new_lines": ""
-                },
-                {
-                    "key": "field_61cb4364571a4",
-                    "label": "CTA",
-                    "name": "cta",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_61cb4fd24f960",
-                    "label": "URL",
-                    "name": "url",
-                    "type": "url",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": ""
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
                 }
             ]
         }
@@ -126,7 +125,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/block-image-split-repeater"
+                "value": "acf\/block-single-testimonial-parallax"
             }
         ]
     ],
@@ -139,5 +138,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1651658049
+    "modified": 1651668527
 }

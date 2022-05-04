@@ -1,5 +1,5 @@
 {{--
-  Title: Block-3
+  Title: Block-4-Column-Image-Text
   Category: common
   Icon: editor-paste-text
 --}}

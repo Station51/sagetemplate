@@ -1,30 +1,30 @@
 {{--
-  Title: Block 2
+  Title: Block-Image-Icons-Split
   Category: common
   Icon: awards
 --}}
 
 <section data-{{ $block['id'] }} id="{{ $block['id'] }}" class="{{ $block['classes'] }} section">
   <div class="container grid grid__outer">
-    <div class="block-2_content">
+    <div class="block-image-icons-split_content">
       @if(get_field('title')) 
         <h2 class="heading heading--2">
             {!! get_field('title') !!}
         </h2>
       @endif
       @if(get_field('content'))
-        <p class="block-2__content-paragraph">
+        <p class="block-image-icons-split__content-paragraph">
           {!! get_field('content') !!}
         </p>
       @endif
 
       @if(get_field('title_first_row'))
-        <div class="block-2__content-item">
+        <div class="block-image-icons-split__content-item">
           <span class="fa-layers fa-3x">
             <i class="far fa-building"></i>
           </span>
           <div class="u-display-flex u-flex-direction-col">
-            <span class="block-2__content-item-label">
+            <span class="block-image-icons-split__content-item-label">
               {!! get_field('title_first_row') !!}
             </span>
             <p>
@@ -37,12 +37,12 @@
       @endif
 
       @if(get_field('title_second_row'))
-        <div class="block-2__content-item">
+        <div class="block-image-icons-split__content-item">
           <span class="fa-layers fa-3x">
             <i class="far fa-building"></i>
           </span>
           <div class="u-display-flex u-flex-direction-col">
-            <span class="block-2__content-item-label">
+            <span class="block-image-icons-split__content-item-label">
               {!! get_field('title_second_row') !!}
             </span>
             <p>

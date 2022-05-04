@@ -148,15 +148,14 @@ add_filter('wp_resource_hints', function ($urls, $relation_type) {
  */
 add_filter( 'allowed_block_types', function ( $allowed_blocks ) {
     return array(
-        'acf/block-6',
-        'acf/block-5',
-        'acf/block-4',
-        'acf/block-3',
-        'acf/block-2',
-        'acf/block-1',
-        'acf/block-video-1',
+        'acf/block-menu-filter',
+        'acf/block-cta-banner-2',
+        'acf/block-image-split-repeater',
+        'acf/block-4-column-image-text',
+        'acf/block-image-icons-split',
+        'acf/block-banner-video-1',
         'acf/block-gallery-1',
-        'acf/block-banner-1',
+        'acf/block-banner-image',
         'acf/block-slider-1',
         'core/image',
         'core/heading',
@@ -172,6 +171,9 @@ add_filter( 'allowed_block_types', function ( $allowed_blocks ) {
         'acf/block-slider-split-1',
         'acf/block-slider-testimonials-1',
         'acf/block-wysiwyg',
-        'acf/block-banner-basic',
+        'acf/block-single-testimonial-parallax',
+        'acf/block-image-3x-split',
+        'acf/block-slider-tabs',
+        'acf/block-gallery-things-to-do',
     );
 });

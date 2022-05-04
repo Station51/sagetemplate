@@ -36,13 +36,20 @@ $ff-secondary: "EB Garamond", serif;
 $font-size-base: 1rem;
 $font-color: $gray-dark;
 $letter-spacing: 0.2rem;
+$font-size-160: $font-size-base * 10; // ~160px
+$font-size-80: $font-size-base * 5; // ~80px
+$font-size-71: $font-size-base * 4.4375; // ~71px
+$font-size-60: $font-size-base * 3.75; // ~60px
 $font-size-52: $font-size-base * 3.25; // ~52px
 $font-size-44: $font-size-base * 2.75; // ~44px
+$font-size-40: $font-size-base * 2.5; // ~40px
 $font-size-28: $font-size-base * 1.75; // ~28px
 $font-size-22: $font-size-base * 1.375; // ~22px
 $font-size-18: $font-size-base * 1.125; // ~18px
 $font-size-15: $font-size-base * 0.9375; // ~15px
+$font-size-14: $font-size-base * 0.875; // ~14px
 $font-size-12: $font-size-base * 0.75; // ~12px
+$font-size-10: $font-size-base * 0.625; // ~10px
 
 // transitions
 $transition: all 0.3s linear;
@@ -66,6 +73,7 @@ $bp-small: "640px";
 $bp-medium: "998px";
 $bp-large: "1024px";
 $bp-xl: "1280px";
+$bp-1xl: "1385px";
 $bp-2xl: "1536px";
 
 // wp classes margin spacer
@@ -103,4 +111,4 @@ $logo-height: 80px;
 $footer-fonts-color: $body-text-color;
 $footer-fonts-size: $font-size-base * 0.75; // ~12px
 $footer-line-height: 15px;
-$footer-font-size: $font-size-12;
+$footer-font-size: $font-size-14;

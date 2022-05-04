@@ -1,14 +1,14 @@
 {
-    "key": "group_61cdc33eabaa9",
-    "title": "Block-Menu-Filter",
+    "key": "group_61fbae8aa62e6",
+    "title": "Block-Gallery-Things-To-Do-Overlay",
     "fields": [
         {
-            "key": "field_61cdc3455da81",
-            "label": "Text",
-            "name": "text",
+            "key": "field_61fbb44f4700d",
+            "label": "Overlay Text",
+            "name": "overlay_text",
             "type": "textarea",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -16,15 +16,34 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "max 140 words",
-            "maxlength": 240,
-            "rows": 4,
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
             "new_lines": ""
         },
         {
-            "key": "field_61cdc3a23b2e9",
-            "label": "Price",
-            "name": "price",
+            "key": "field_61fbb4654700e",
+            "label": "Overlay Button Text",
+            "name": "overlay_button",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_61fbb47a4700f",
+            "label": "Overlay Button URL",
+            "name": "overlay_button_url",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -46,7 +65,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "menu"
+                "value": "gallery"
             }
         ]
     ],
@@ -59,5 +78,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1651661352
+    "modified": 1651583273
 }

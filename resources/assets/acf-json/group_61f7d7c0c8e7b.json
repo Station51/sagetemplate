@@ -1,12 +1,12 @@
 {
-    "key": "group_61caf06ff1dbd",
-    "title": "Block-4-Column-Image-Text",
+    "key": "group_61f7d7c0c8e7b",
+    "title": "Block-Gallery-Things-To-Do",
     "fields": [
         {
-            "key": "field_61caf080c5734",
-            "label": "Block-3",
-            "name": "articles",
-            "type": "repeater",
+            "key": "field_61f7d7f298655",
+            "label": "Gallery",
+            "name": "gallery",
+            "type": "group",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,40 +15,12 @@
                 "class": "",
                 "id": ""
             },
-            "collapsed": "field_61caf267c5735",
-            "min": 4,
-            "max": 4,
-            "layout": "table",
-            "button_label": "",
+            "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_61caf267c5735",
-                    "label": "Icon",
-                    "name": "icon",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array",
-                    "preview_size": "thumbnail",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": ""
-                },
-                {
-                    "key": "field_61caf283c5736",
-                    "label": "title",
-                    "name": "title",
+                    "key": "field_61f7d80298656",
+                    "label": "Header",
+                    "name": "header",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -65,9 +37,9 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_61caf28ac5737",
-                    "label": "content",
-                    "name": "content",
+                    "key": "field_61f7d81298657",
+                    "label": "Text",
+                    "name": "text",
                     "type": "textarea",
                     "instructions": "",
                     "required": 0,
@@ -80,7 +52,7 @@
                     "default_value": "",
                     "placeholder": "",
                     "maxlength": "",
-                    "rows": 5,
+                    "rows": "",
                     "new_lines": ""
                 }
             ]
@@ -91,7 +63,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/block-4-column-image-text"
+                "value": "acf\/block-gallery-things-to-do"
             }
         ]
     ],
@@ -104,5 +76,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1651657510
+    "modified": 1651583309
 }

@@ -41,3 +41,36 @@ input[type=submit] {
     margin-bottom: 10px;
   }
 }
+
+.footer-contact {
+  &__label {
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+
+  &__label input,
+  &__label textarea {
+    background-color: $white;
+    border-radius: 5px;
+    min-height: 40px;
+    width: 280px;
+    border: 1px solid $white;
+    padding: 5px 15px;
+    color: #fff;
+    font-family: $ff-primary;
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:focus {
+      transition: background-color 600000s 0s, color 600000s 0s;
+    }
+  }
+
+  &__label input[type=submit] {
+    width: min-content;
+    min-width: 140px;
+    font-weight: 700;
+    background-color: $blue-dark;
+    border: 1px solid $blue-dark;
+    min-height: 34px;
+  }
+}

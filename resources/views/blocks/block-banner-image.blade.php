@@ -1,10 +1,10 @@
 {{--
-  Title: Block Banner 1
+  Title: Block-Banner-Image
   Category: common
   Icon: awards
 --}}
 
-<section data-{{ $block['id'] }} id="{{ $block['id'] }}" class="{{ $block['classes'] }} block-banner-1" @if(get_field('background_image')) style="background-image: url({{ get_field('background_image') }})" @endif role="img">
+<section data-{{ $block['id'] }} id="{{ $block['id'] }}" class="{{ $block['classes'] }} block-banner-image" @if(get_field('background_image')) style="background-image: url({{ get_field('background_image') }})" @endif role="img">
   <div class="container">
     <div class="flex">
       <div>

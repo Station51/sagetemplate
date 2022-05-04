@@ -1,5 +1,5 @@
 {{--
-  Title: Block-Video-1
+  Title: Block-Banner-Video-1
   Category: common
   Icon: awards
 --}}

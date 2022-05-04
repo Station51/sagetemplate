@@ -1,12 +1,12 @@
 {{--
-  Title: block-rooms-1
+  Title: Block-Rooms-1
   Category: common
   Icon: awards
 --}}
 <section data-{{ $block['id'] }} id="{{ $block['id'] }}" class="{{ $block['classes'] }} section">
   @php
     $rooms = get_terms([
-      'taxonomy' => 'porfiolio_category'
+      'taxonomy' => 'room_category'
     ]);
 
     $room = new WP_Query([
@@ -26,7 +26,7 @@
           $roomdesc = get_field('room_description', get_the_ID());
           $roomserv = get_field('room_services', get_the_ID());
         @endphp
-        @foreach (get_the_terms(get_the_ID(), 'porfiolio_category') as $cat) 
+        @foreach (get_the_terms(get_the_ID(), 'room_category') as $cat) 
           @php $termsSLug =  $cat->name @endphp     
         @endforeach
 
