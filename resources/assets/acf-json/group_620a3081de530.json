@@ -1,6 +1,6 @@
 {
     "key": "group_620a3081de530",
-    "title": "Single Testimonial Parallax",
+    "title": "Block-Single-Testimonial-Parallax",
     "fields": [
         {
             "key": "field_620a308c538cb",
@@ -138,5 +138,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1651063071
+    "modified": 1651668527
 }

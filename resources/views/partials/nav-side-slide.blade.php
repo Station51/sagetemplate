@@ -44,7 +44,7 @@
           @endif       
       </div>
       <div class="header-btn-cont">
-          <a class="btn book-btn" target="_blank" href="{{ get_field('button_url', 'option') }}"><span class="book-btn-text">Book Now</span><i class="fa-solid fa fa-calendar social__icon"></i></a>
+          <a class="btn book-btn" target="_blank" href="{{ get_field('book_a_room_url', 'option') }}"><span class="book-btn-text">Book Now</span><i class="fa-solid fa fa-calendar social__icon"></i></a>
       </div>
   </div>
 
