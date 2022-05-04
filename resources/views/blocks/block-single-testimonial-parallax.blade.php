@@ -1,5 +1,5 @@
 {{--
-Title: Block Single Testimonial Parallax
+Title: Block-Single-Testimonial-Parallax
 Category: common
 Icon: awards
 --}}

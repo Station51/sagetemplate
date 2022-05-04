@@ -1,6 +1,6 @@
 {
     "key": "group_61fa88e9d640a",
-    "title": "Rooms",
+    "title": "Block-Rooms",
     "fields": [
         {
             "key": "field_61faa6830af50",
@@ -140,5 +140,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1650543045
+    "modified": 1651668548
 }

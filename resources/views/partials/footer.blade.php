@@ -33,7 +33,7 @@
     {{-- @if(do_shortcode(get_field('newsletter_form', 'option'))) --}}
     <div class="footer-info__contact footer-info--row contact-form-widget">
       <h3 class="footer-info__contact-title contact-widget">Contact Us</h3>
-      {!! do_shortcode('[contact-form-7 id="397" title="Footer contact form"]') !!}
+      {!! do_shortcode(get_field('footer_contact_form', 'option')) !!}
     </div>
     {{-- @endif --}}
     <div class="last-col">
@@ -41,7 +41,7 @@
       </div>
       <div class="sign-up-form">
         <label>Subscribe to our newsletter</label>
-        {!! do_shortcode('[contact-form-7 id="398" title="Footer newsletter"]') !!}
+        {!! do_shortcode(get_field('footer_newsletter', 'option')) !!}
       </div>
     </div>
   </div>

@@ -1,5 +1,5 @@
 {{--
-  Title: block-rooms-1
+  Title: Block-Rooms-1
   Category: common
   Icon: awards
 --}}
