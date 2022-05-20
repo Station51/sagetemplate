@@ -1,0 +1,162 @@
+.block-contact-details-with-forms {
+  .container__contact {
+    gap: 20px;
+    align-items: self-start;
+    grid-template-columns: 1fr;
+
+    @include small-up {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include medium-up {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    // @include xxl-up {
+    //   grid-template-columns: repeat(3, 1fr);
+    //   gap: 30px;
+    // }
+  }
+
+  .heading--2 {
+    font-size: 40px;
+    line-height: 53px;
+    text-align: center;
+  }
+
+  .contact-us__paragraph {
+    max-width: 720px;
+    padding: 0 10px 40px;
+    font-size: 14px;
+    line-height: 21px;
+    margin: 35px auto 0;
+    text-align: center;
+  }
+
+  .contact-us__p {
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 35px;
+    color: $body-text-color;
+    font-weight: bold;
+
+    &.address {
+      max-width: 200px;
+    }
+
+    &.mail a,
+    &.telephone a {
+      color: $body-text-color;
+    }
+  }
+
+  .newsletter-contact-email {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    max-width: 100%;
+    min-height: 100%;
+    font-family: $ff-primary;
+  }
+
+  input,
+  textarea,
+  .newsletter-contact-email input {
+    border: 1px solid #707070;
+    border-radius: $border-radius;
+    background-color: #0f23511c;
+    min-height: 60px;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 0.6rem;
+    outline-color: $primary;
+    outline-width: 1px;
+  }
+
+  .newsletter-contact-label,
+  .contact-us__label,
+  label {
+    color: $body-text-color;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  input[type=submit] {
+    font-family: $ff-primary;
+    text-transform: uppercase;
+    background: $button-bg-color;
+    font-weight: bold;
+    color: $white;
+    min-width: 160px;
+    min-height: 48px;
+    width: auto;
+  }
+
+  .name-wrapper {
+    input {
+      width: 48%;
+    }
+
+    .first-name {
+      margin-right: 2%;
+    }
+  }
+
+  .newsletter-contact-submit {
+    margin-top: 25px;
+    display: block;
+  }
+
+  .newsletter__label--submit-contact {
+    margin-top: 20px;
+    display: block;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    font-family: $ff-primary;
+    color: #0f1111;
+    opacity: 0.2;
+  }
+
+  p {
+    margin-bottom: 2px;
+  }
+
+  .contact-us__times {
+    grid-template-columns: 1fr 1fr 2fr;
+    color: $body-text-color;
+
+    p {
+      color: $body-text-color;
+      margin: 5px 0;
+    }
+
+    &:nth-child(8) {
+      margin-bottom: 25px;
+    }
+
+    &--col {
+      font-weight: bold;
+    }
+  }
+
+  .contact-us__open {
+    margin-top: 25px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .contact-us__label {
+    margin-bottom: 35px !important;
+    color: $body-text-color;
+  }
+}
+
+.google-map {
+  margin-bottom: -9px;
+}
