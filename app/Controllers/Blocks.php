@@ -100,5 +100,25 @@ class Blocks extends Controller
         ];
     }, get_field('slides') ?? []);
   }
+
+  /**
+   *
+   * Block Our Services.
+   *
+   * Fetches the slides and returns them in an array.
+   *
+   * @return array An array with the slide data.
+   */
+  public static function getOurServices() {
+    return array_map(function ($services) {          
+        return [
+           'icon' => $services['icon'] ?? null,
+           'title' => $services['title'] ?? null,
+           'content' => $services['content'] ?? null,
+           'button_text' => $services['button_text'] ?? null,
+           'button_url' => $services['button_url'] ?? null,
+        ];
+    }, get_field('services', 'option') ?? []);
+  }
 }
 
