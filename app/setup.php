@@ -173,7 +173,27 @@ add_action('wp_default_scripts', function ($scripts) {
  * Add ACF Options Page
  */
 if (function_exists('acf_add_options_page')) {
-    acf_add_options_page();
+    // acf_add_options_page();
+    acf_add_options_page(
+        array(
+            'page_title'    => __('Theme General Settings'),
+            'menu_title'    => __('Theme Settings'),
+            'menu_slug'     => 'theme-general-settings',
+            'capability'    => 'edit_posts',
+            'redirect'      => false,
+            'position' => 10
+        )
+    );
+
+    acf_add_options_page(
+        array(
+         'page_title'  => __('Services'),
+         'menu_title'  => __('Our Services'),
+         'capability'    => 'edit_posts',
+         'icon_url' => 'dashicons-screenoptions', 
+         'position' => 11
+        )
+    );
 }
 
 /**

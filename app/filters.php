@@ -176,5 +176,6 @@ add_filter( 'allowed_block_types', function ( $allowed_blocks ) {
         'acf/block-slider-tabs',
         'acf/block-gallery-things-to-do',
         'acf/block-contact-details-with-forms',
+        'acf/block-our-services',
     );
 });
