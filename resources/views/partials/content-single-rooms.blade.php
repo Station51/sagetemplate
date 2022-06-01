@@ -1,15 +1,10 @@
 @php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ) @endphp
 
-<section class="block-banner-basic" style="background-image: url({!! $backgroundImg[0] !!})" role="img">
-  <article class="block-banner-basic__column">
-    <div class="block-banner-basic__banner">
-        <div class="banner-content">
-            <div class="text-block">
-                <h2>{!! get_the_title() !!}</h2>
-            </div>
-        </div>
-    </div>
-    </article>
+<section class="block-banner-image" style="background-image: url({!! $backgroundImg[0] !!})" role="img">
+  <div class="container flex">
+    <div class="header-overlay"></div>
+    <h1 class="heading heading--1">{!! App::title() !!}</h1>
+  </div>
 </section>
 
 <div class="container">
