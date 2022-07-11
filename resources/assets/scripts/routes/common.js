@@ -7,21 +7,8 @@ export default {
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired
-
     // This will extend the $.fn prototype with Filterizr
     Filterizr.installAsJQueryPlugin($);
-
-    // window.onload = function() {
-    //   var filterContainer = document.getElementsByClassName('filter-container');
-    //   if (filterContainer.length > 0) {
-    //     var options = {
-    //       layout: 'sameWidth',
-    //       gutterPixels: 10,
-    //     }
-    //     // eslint-disable-next-line no-undef
-    //     filterizr = new Filterizr('.filter-container', options);
-    //   }
-    // }
 
     $('.filtr').on('click', function() {
       $(this).addClass('active');
@@ -33,29 +20,19 @@ export default {
         layout: 'sameSize',
         gutterPixels: 10,
       }
+
+      $(document).ready(function() {
+        // eslint-disable-next-line no-unused-vars
+        const filterizr = new Filterizr('.filter-container', options);
+      });
     }
 
-    $(document).ready(function() {
-       // eslint-disable-next-line no-unused-vars
-       const filterizr = new Filterizr('.filter-container', options);
-    });
-
-  // Add opacity to a banner when scrolling
-
-    // $(window).scroll(function() {
-    //   var scrollTop = $(this).scrollTop();
-    
-    //   $('.header-overlay').css({
-    //     opacity: function() {
-    //       var elementHeight = $(this).height(),
-    //         opacity = ((1  - (elementHeight - scrollTop) / elementHeight) * 0.8);
-    //       return opacity;
-    //     },
-    //     backgroundColor: 'white',
-    //   });
+    // AOS init
+    // $(function() {
+    //   AOS.init();
     // });
+    // window.addEventListener('load', AOS.refresh);
 
-    
     //---------------------- Slider Block -------------------------------//
     let block_slider = $('.block-slider');
 
@@ -97,18 +74,18 @@ export default {
 
       section_slider.slick(section_slider_settings);
 
-      // $(window).on('resize', function() {
-      //   if ($(window).width() >= 769 && !section_slider.hasClass('slick-initialized')) {
-      //     return section_slider.slick(section_slider_settings);
-      //   }
-      // })
+      $(window).on('resize', function() {
+        if ($(window).width() >= 769 && !section_slider.hasClass('slick-initialized')) {
+          return section_slider.slick(section_slider_settings);
+        }
+      })
     }
 
     //---------------------- Slider Testimonials Block -------------------------------//
     let block_slider_testimonials = $('.block-slider-testimonials-1');
 
     if(block_slider_testimonials.length) {
-      let block_slider_settings = {
+      let block_slider_testimonials_settings = {
         'dots': true,
         infinite: true,
         slidesToShow: 3,
@@ -139,7 +116,13 @@ export default {
         ],
       }
 
-      block_slider_testimonials.slick(block_slider_settings);
+      block_slider_testimonials.slick(block_slider_testimonials_settings);
+
+      $(window).on('resize', function() {
+        if ($(window).width() >= 769 && !block_slider_testimonials.hasClass('slick-initialized')) {
+          return block_slider_testimonials.slick(block_slider_testimonials_settings);
+        }
+      })
     }
 
     /--- Slider Tab Rooms Slider ----------------------/
