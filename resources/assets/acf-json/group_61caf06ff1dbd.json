@@ -3,6 +3,25 @@
     "title": "Block-4-Column-Image-Text",
     "fields": [
         {
+            "key": "field_62ce9eedcf6f4",
+            "label": "Section ID",
+            "name": "section_id",
+            "type": "text",
+            "instructions": "id's must be unique for each page",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_61caf080c5734",
             "label": "Block-3",
             "name": "articles",
@@ -104,5 +123,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1651657510
+    "modified": 1657708595
 }

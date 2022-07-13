@@ -4,19 +4,16 @@
   Icon: format-gallery
 --}}
 
-@if(get_field('page_link') == 'yes') 
-  <a id="{!! get_field('page_link_id') !!}"></a>
-@endif
-
+@php $section_id = get_field('section_id'); @endphp
 @if(get_field('text_position') == 'left') 
 
-@if(get_field('section_bg_color') == 'dark')
-  <section data-{{ $block['id'] }} id="{{ $block['id'] }}" class="{{ $block['classes'] }} section-dark">
-@elseif(get_field('section_bg_color') == 'medium')
-  <section data-{{ $block['id'] }} id="{{ $block['id'] }}" class="{{ $block['classes'] }} section-medium">
-@else
-  <section data-{{ $block['id'] }} id="{{ $block['id'] }}" class="{{ $block['classes'] }}">
-@endif
+  @if(get_field('section_bg_color') == 'dark')
+    <section data-{{ $block['id'] }} id="{{ $block['id'] }} {{ $section_id }}" class="{{ $block['classes'] }} section-dark">
+  @elseif(get_field('section_bg_color') == 'medium')
+    <section data-{{ $block['id'] }} id="{{ $block['id'] }} {{ $section_id }}" class="{{ $block['classes'] }} section-medium">
+  @else
+    <section data-{{ $block['id'] }} id="{{ $block['id'] }} {{ $section_id }}" class="{{ $block['classes'] }}">
+  @endif
   
     @if(get_field('section_layout_style') == 'space') 
       <div class="grid grid__outer space">
@@ -60,15 +57,16 @@
 
     </div>
   </section>
+
 @else
 
-@if(get_field('section_bg_color') == 'dark')
-  <section data-{{ $block['id'] }} id="{{ $block['id'] }}" class="{{ $block['classes'] }} section-dark section-flip">
-@elseif(get_field('section_bg_color') == 'medium')
-  <section data-{{ $block['id'] }} id="{{ $block['id'] }}" class="{{ $block['classes'] }} section-medium section-flip">
-@else
-  <section data-{{ $block['id'] }} id="{{ $block['id'] }}" class="{{ $block['classes'] }} section-flip">
-@endif
+  @if(get_field('section_bg_color') == 'dark')
+    <section data-{{ $block['id'] }} id="{{ $block['id'] }} {{ $section_id }}" class="{{ $block['classes'] }} section-dark section-flip">
+  @elseif(get_field('section_bg_color') == 'medium')
+    <section data-{{ $block['id'] }} id="{{ $block['id'] }} {{ $section_id }}" class="{{ $block['classes'] }} section-medium section-flip">
+  @else
+    <section data-{{ $block['id'] }} id="{{ $block['id'] }} {{ $section_id }}" class="{{ $block['classes'] }} section-flip">
+  @endif
 
     @if(get_field('section_layout_style') == 'space') 
       <div class="grid grid__outer space">

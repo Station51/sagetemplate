@@ -3,6 +3,25 @@
     "title": "Block-Slider-Testimonials-1",
     "fields": [
         {
+            "key": "field_62cecd6afcfa7",
+            "label": "Section ID",
+            "name": "section_id",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_61f1047ace3e5",
             "label": "Main Title",
             "name": "main_title",
@@ -123,5 +142,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1650543045
+    "modified": 1657720185
 }

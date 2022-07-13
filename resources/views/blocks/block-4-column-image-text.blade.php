@@ -3,8 +3,10 @@
   Category: common
   Icon: editor-paste-text
 --}}
+
+@php $section_id = get_field('section_id'); @endphp
 @if(Blocks::getBlock3())
-<section data-{{ $block['id'] }} id="{{ $block['id'] }}" class="{{ $block['classes'] }}">
+<section data-{{ $block['id'] }} id="{{ $block['id'] }} {{ $section_id }}" class="{{ $block['classes'] }}">
   <div class="grid wrapper">
   @foreach(Blocks::getBlock3() as $article)
   <article class='article'>

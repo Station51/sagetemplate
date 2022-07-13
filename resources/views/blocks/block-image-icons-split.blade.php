@@ -4,7 +4,8 @@
   Icon: awards
 --}}
 
-<section data-{{ $block['id'] }} id="{{ $block['id'] }}" class="{{ $block['classes'] }} section">
+@php $section_id = get_field('section_id'); @endphp
+<section data-{{ $block['id'] }} id="{{ $block['id'] }} {{ $section_id }}" class="{{ $block['classes'] }} section">
   <div class="container grid grid__outer">
     <div class="block-image-icons-split_content">
       @if(get_field('title')) 

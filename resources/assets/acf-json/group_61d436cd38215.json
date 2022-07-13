@@ -3,6 +3,25 @@
     "title": "Block-CTA-Banner-2",
     "fields": [
         {
+            "key": "field_62cea593ce2d4",
+            "label": "Section ID",
+            "name": "section_id",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_61d443fa9aaec",
             "label": "Choose the background",
             "name": "radio_button",
@@ -161,5 +180,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1651658791
+    "modified": 1657709990
 }
