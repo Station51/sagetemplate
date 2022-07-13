@@ -3,6 +3,25 @@
     "title": "Block-Slider-Tabs",
     "fields": [
         {
+            "key": "field_62cecaf23b668",
+            "label": "Section ID",
+            "name": "section_id",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_620d119077507",
             "label": "Label",
             "name": "label",
@@ -11,7 +30,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -319,5 +338,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1651573813
+    "modified": 1657719824
 }

@@ -4,7 +4,8 @@
   Icon: awards
 --}}
 
-<section data-{{ $block['id'] }} id="{{ $block['id'] }}" class="{{ $block['classes'] }} section">
+@php $section_id = get_field('section_id'); @endphp
+<section data-{{ $block['id'] }} id="{{ $block['id'] }} {{ $section_id }}" class="{{ $block['classes'] }} section">
 @php 
   while( have_rows('steps') ): the_row() 
   @endphp

@@ -4,8 +4,8 @@
   Icon: awards
 --}}
 
-<div id="gallery"></div>
-<section data-{{ $block['id'] }} id="{{ $block['id'] }}" class="{{ $block['classes'] }} section">
+@php $section_id = get_field('section_id'); @endphp
+<section data-{{ $block['id'] }} id="{{ $block['id'] }} {{ $section_id }}" class="{{ $block['classes'] }} section">
   <div class="container">
     <h2 class="section-header heading--2">@if(get_field('title')){!! get_field('title') !!}@endif</h2>
     <p class="gallery-copy">@if(get_field('content')){!! get_field('content') !!}@endif</p>

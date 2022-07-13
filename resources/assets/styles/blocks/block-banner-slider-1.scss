@@ -1,21 +1,53 @@
 .block-banner-slider-1 {
   &__banner {
-    min-height: $banner-height-mobile;
-    background-color: $overlay-background-color;
+    position: relative;
+    max-height: $banner-height-mobile;
+    // background-color: $overlay-background-color;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 10px;
+    // padding: 10px;
 
     @include small-up {
       padding: 0;
     }
 
     @include xl-up {
-      min-height: $banner-height-desktop;
+      max-height: $banner-height-desktop;
     }
+
+    img {
+      height: 80vh;
+
+      @include small-up {
+        height: auto;
+      }
+    }
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $overlay-background-color;
+    z-index: 1;
+  }
+
+  .content-cont {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
   }
 
   &__column {

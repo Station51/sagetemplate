@@ -3,6 +3,25 @@
     "title": "Block-Gallery-1",
     "fields": [
         {
+            "key": "field_62cea667ba5c4",
+            "label": "Section ID",
+            "name": "section_id",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_61cc3ffacc63c",
             "label": "Title",
             "name": "title",
@@ -86,5 +105,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1640777457
+    "modified": 1657710192
 }

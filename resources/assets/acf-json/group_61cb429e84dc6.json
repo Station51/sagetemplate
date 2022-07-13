@@ -3,6 +3,25 @@
     "title": "Block-Image-Split-Repeater",
     "fields": [
         {
+            "key": "field_62ceb2e6c6e4b",
+            "label": "Section ID",
+            "name": "section_id",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_61cb42a8571a0",
             "label": "Steps",
             "name": "steps",
@@ -139,5 +158,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1651658049
+    "modified": 1657713390
 }

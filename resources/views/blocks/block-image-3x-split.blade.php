@@ -4,7 +4,8 @@ Category: common
 Icon: awards
 --}}
 
-<section data-{{ $block['id'] }} id="{{ $block['id'] }}" class="{{ $block['classes'] }}">
+@php $section_id = get_field('section_id'); @endphp
+<section data-{{ $block['id'] }} id="{{ $block['id'] }} {{ $section_id }}" class="{{ $block['classes'] }}">
   @php
   $section_bottom = get_field('images_bottom');
   $size = 'large'; // (thumbnail, medium, large, full or custom size)

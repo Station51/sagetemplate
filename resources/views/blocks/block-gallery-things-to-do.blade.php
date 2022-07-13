@@ -3,7 +3,9 @@ Title: Block-Gallery-Things-To-Do
 Category: common
 Icon: awards
 --}}
-<section data-{{ $block['id'] }} id="{{ $block['id'] }}" class="{{ $block['classes'] }} section">
+
+@php $section_id = get_field('section_id'); @endphp
+<section data-{{ $block['id'] }} id="{{ $block['id'] }} {{ $section_id }}" class="{{ $block['classes'] }} section">
   @php
   $menus = get_terms([
   'taxonomy' => 'things_todo_category'

@@ -82,7 +82,7 @@ export default {
     }
 
     //---------------------- Slider Testimonials Block -------------------------------//
-    let block_slider_testimonials = $('.block-slider-testimonials-1');
+    let block_slider_testimonials = $('.block-slider-testimonials');
 
     if(block_slider_testimonials.length) {
       let block_slider_testimonials_settings = {

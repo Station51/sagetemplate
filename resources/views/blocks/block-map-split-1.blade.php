@@ -4,10 +4,11 @@
   Icon: format-gallery
 --}}
 
-@if(get_field('map_position') == 'left') 
+@php $section_id = get_field('section_id'); @endphp
+<section data-{{ $block['id'] }} id="{{ $block['id'] }} {{ $section_id }}" class="{{ $block['classes'] }}">
+  <article class="grid grid__outer">
 
-  <section data-{{ $block['id'] }} id="{{ $block['id'] }}" class="{{ $block['classes'] }}">
-    <article class="grid grid__outer">
+    @if(get_field('map_position') == 'left') 
 
       @if(get_field('google_map_iframe'))
         <div class="iframe-cont">
@@ -23,14 +24,8 @@
           {!! get_field('contact_form') !!}
         </div>
       @endif
-      
-    </article>
-  </section>
-
-@else
-
-  <section data-{{ $block['id'] }} id="{{ $block['id'] }}" class="{{ $block['classes'] }}">
-    <article class="grid grid__outer">
+          
+    @else
 
       @if(get_field('contact_form')) 
         <div class="form-block" data-aos="flip-right">
@@ -47,7 +42,7 @@
         </div>
       @endif
 
-    </article>
-  </section>
+    @endif
 
-@endif
+  </article>
+</section>
