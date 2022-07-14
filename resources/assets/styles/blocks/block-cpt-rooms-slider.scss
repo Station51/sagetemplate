@@ -1,0 +1,250 @@
+.block-cpt-rooms-slider {
+  padding: 3rem 0 6em;
+  background-color: $gray-light;
+
+  .container {
+    width: 90%;
+  }
+
+  @include xxl-up {
+    .container {
+      width: in;
+    }
+  }
+
+  &__content {
+    text-align: center;
+
+    @include medium-up {
+      width: 70%;
+      margin: auto;
+    }
+
+    img {
+      margin: auto;
+    }
+  }
+
+  &__intro {
+    margin-bottom: 40px;
+  }
+
+  &__room_snippet {
+    line-height: 1.4rem;
+  }
+
+  &__tile {
+    padding: 20px;
+    background-color: $white;
+    margin: 0 10px;
+  }
+
+  &__image {
+    width: auto;
+  }
+
+  h2 {
+    font-size: $font-size-28;
+    line-height: inherit;
+    margin: 20px 0;
+
+    @include small-up {
+      font-size: $font-size-40;
+      margin: 20px 0;
+    }
+
+    @include medium-up {
+      line-height: 30px;
+    }
+  }
+
+  h3 {
+    font-size: $font-size-22;
+    font-weight: 600;
+    color: $gray-dark;
+    margin: 15px 0;
+  }
+
+  .slick-arrow {
+    background-color: $primary;
+    padding: 10px 5px;
+    width: auto;
+    height: auto;
+    z-index: 100;
+
+    @include small-up {
+      padding: 15px 12px;
+    }
+
+    &.slick-next {
+      right: -30px;
+    }
+
+    &.slick-prev {
+      left: -30px;
+    }
+
+    @include small-up {
+      &.slick-next {
+        right: -45px;
+      }
+
+      &.slick-prev {
+        left: -45px;
+      }
+    }
+
+    @include medium-up {
+      &.slick-next {
+        right: -60px;
+      }
+
+      &.slick-prev {
+        left: -60px;
+      }
+    }
+
+    &.slick-prev,
+    &.slick-next {
+      z-index: 100;
+
+      &::before {
+        font-family: initial;
+        font-size: 20px;
+        line-height: 6px;
+        font-weight: 600;
+        opacity: 1;
+      }
+    }
+
+    &.slick-next::before {
+      content: url(../images/svg/arrow-right-white.svg);
+    }
+
+    &.slick-prev::before {
+      content: url(../images/svg/arrow-left-white.svg);
+    }
+  }
+
+  .btn-wrapper {
+    margin-top: 10px;
+    // grid-template-columns: repeat(2, 1fr);
+
+    @include large-up {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .basic-btn {
+    background-color: $primary;
+
+    &.read-more {
+      width: 100%;
+    }
+
+    &:hover {
+      background-color: $white;
+    }
+  }
+
+  .grid {
+    .price {
+      font-size: $font-size-18;
+      font-weight: 600;
+      text-align: center;
+
+      @include medium-up {
+        text-align: initial;
+        font-size: $font-size-22;
+      }
+
+      @include xl-up {
+        font-size: $font-size-28;
+      }
+
+      span {
+        font-size: initial;
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .slick-track {
+    display: flex !important;
+  }
+
+  .slick-slide {
+    height: inherit !important;
+  }
+}
+
+/* Modal CSS */
+body.fix {
+  height: 100%;
+  overflow: hidden;
+}
+
+.modal-wrapper {
+  display: none;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(43, 47, 49, 0.9);
+  overflow: scroll;
+}
+
+.modal {
+  position: relative;
+  display: block;
+  justify-content: center;
+  width: 80%;
+  height: auto;
+  min-height: 300px;
+  padding: 20px 15px;
+  background: #eee;
+  color: #000;
+  margin: 10% auto;
+  border-radius: 10px;
+  overflow: visible;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block !important;
+}
+
+.modal .close-modal {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  cursor: pointer;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
+
+.modal h1 {
+  font-size: 56px;
+  margin: 35px 0;
+}
+
+.modal .entry-content p {
+  font-size: 16px;
+}
+
+.apply-flex {
+  display: flex;
+}
+
+/* end Modal CSS */
