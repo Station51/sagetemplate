@@ -3,6 +3,25 @@
     "title": "Block-Offers-1",
     "fields": [
         {
+            "key": "field_62ceb55c9a301",
+            "label": "Section ID",
+            "name": "section_id",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_6200f05a6237f",
             "label": "The Offer",
             "name": "the_offer",
@@ -182,5 +201,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1650543044
+    "modified": 1657714020
 }

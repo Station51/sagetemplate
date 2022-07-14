@@ -1,4 +1,46 @@
 .block-slider-testimonials-1 {
+  background-repeat: no-repeat;
+  // background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  color: $white;
+
+  @include medium-up {
+    background-attachment: fixed;
+  }
+
+  h3 {
+    font-size: 2em;
+    line-height: initial;
+    margin-bottom: 10px;
+    font-family: $heading-font-family;
+
+    @include small-up {
+      font-size: 3em;
+    }
+  }
+
+  h4 {
+    font-size: $font-size-18;
+  }
+
+  &__inner {
+    background-color: $overlay-background-color;
+    padding: 2em 1em;
+
+    .intro {
+      text-align: center;
+    }
+
+    @include xl-up {
+      padding: 5em 2em;
+    }
+
+    @include xxl-up {
+      padding: 5em 15em;
+    }
+  }
+
   &__column {
     padding: 50px 30px;
   }
@@ -58,48 +100,4 @@
 
 .slick-dotted.slick-slider {
   margin-bottom: 0 !important;
-}
-
-.block-slider-testimonials-wrap {
-  background-repeat: no-repeat;
-  // background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  color: $white;
-
-  h3 {
-    font-size: 2em;
-    line-height: initial;
-    margin-bottom: 10px;
-    font-family: $heading-font-family;
-
-    @include small-up {
-      font-size: 3em;
-    }
-  }
-
-  h4 {
-    font-size: $font-size-18;
-  }
-
-  &__inner {
-    background-color: $overlay-background-color;
-    padding: 2em 1em;
-
-    .intro {
-      text-align: center;
-    }
-
-    @include xl-up {
-      padding: 5em 2em;
-    }
-
-    @include xxl-up {
-      padding: 5em 15em;
-    }
-  }
-
-  @include medium-up {
-    background-attachment: fixed;
-  }
 }

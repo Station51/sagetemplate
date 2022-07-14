@@ -156,7 +156,7 @@ add_filter( 'allowed_block_types', function ( $allowed_blocks ) {
         'acf/block-banner-video-1',
         'acf/block-gallery-1',
         'acf/block-banner-image',
-        'acf/block-slider-1',
+        'acf/block-banner-slider-bg-image',
         'core/image',
         'core/heading',
         'core/list',

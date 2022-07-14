@@ -4,7 +4,8 @@
   Icon: format-gallery
 --}}
 
-<section data-{{ $block['id'] }} id="{{ $block['id'] }}" class="{{ $block['classes'] }} section-color">
+@php $section_id = get_field('section_id'); @endphp
+<section data-{{ $block['id'] }} id="{{ $block['id'] }} {{ $section_id }}" class="{{ $block['classes'] }} section-color">
   <div class="container grid grid__outer grid-top">
 
     <article class="cta-block">

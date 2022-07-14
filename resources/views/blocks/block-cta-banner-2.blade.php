@@ -5,12 +5,13 @@
 --}}
 
 @php
+$section_id = get_field('section_id');
 $image = get_field('image');
 $size = 'large'; // (thumbnail, medium, large, full or custom size)
 $attachment_title = get_the_title($attach_id);      
 @endphp
 
-<section data-{{ $block['id'] }} id="{{ $block['id'] }}" class="{{ $block['classes'] }} connect">
+<section data-{{ $block['id'] }} id="{{ $block['id'] }} {{ $section_id }}" class="{{ $block['classes'] }} connect">
   @if(get_field('image') && ( get_field('radio_button') == 'image' ))
     {!! wp_get_attachment_image( $image, $size, $attachment_title ) !!}
   @elseif(get_field('video') && ( get_field('radio_button') == 'video' ) ) 

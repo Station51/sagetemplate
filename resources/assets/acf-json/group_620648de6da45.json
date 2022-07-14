@@ -3,6 +3,25 @@
     "title": "Block-Image-3x-Split",
     "fields": [
         {
+            "key": "field_62ceb105bee19",
+            "label": "Section ID",
+            "name": "section_id",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_620648e129b35",
             "label": "Label",
             "name": "label_bottom",
@@ -486,5 +505,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1651655821
+    "modified": 1657712911
 }
