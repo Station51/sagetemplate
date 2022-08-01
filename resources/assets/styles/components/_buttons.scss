@@ -24,6 +24,32 @@
   border-color: $button-border-color-hover;
 }
 
+.basic-btn,
+.gallery-btn {
+  text-transform: uppercase;
+  background: transparent;
+  color: $button-text-color;
+  padding: 0.6rem 3rem;
+  // letter-spacing: $letter-spacing;
+  display: inline-block;
+  text-align: center;
+
+  /* font-weight: 700; */
+  transition: $transition;
+  font-size: $font-size-12;
+  border: 1px solid transparent;
+  border-color: $button-border-color;
+  // border-radius: $border-radius;
+  cursor: pointer;
+  box-shadow: $button-shadow-light;
+
+  &:hover {
+    color: $button-text-color-hover;
+    background: $button-bg-color-hover;
+    border-color: $button-border-color-hover;
+  }
+}
+
 .book-btn {
   font-size: $font-size-base;
 
