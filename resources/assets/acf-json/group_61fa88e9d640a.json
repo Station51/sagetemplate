@@ -1,6 +1,6 @@
 {
     "key": "group_61fa88e9d640a",
-    "title": "Block-Rooms",
+    "title": "Block-CPT-Rooms-Slider",
     "fields": [
         {
             "key": "field_61faa6830af50",
@@ -11,7 +11,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "33",
+                "width": "30",
                 "class": "",
                 "id": ""
             },
@@ -22,22 +22,6 @@
             "maxlength": ""
         },
         {
-            "key": "field_61fba8df20020",
-            "label": "Button Url",
-            "name": "button_url",
-            "type": "url",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "33",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": ""
-        },
-        {
             "key": "field_61fb9a4e59369",
             "label": "Room Snippet",
             "name": "room_snippet",
@@ -46,15 +30,15 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "34",
+                "width": "70",
                 "class": "",
                 "id": ""
             },
             "default_value": "",
-            "maxlength": "",
             "placeholder": "",
             "prepend": "",
-            "append": ""
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_61faa6b00af51",
@@ -62,25 +46,6 @@
             "name": "room_description",
             "type": "wysiwyg",
             "instructions": "Add p tags if needed",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "default_value": "",
-            "delay": 0
-        },
-        {
-            "key": "field_61faa6d00af52",
-            "label": "Room Services",
-            "name": "room_services",
-            "type": "wysiwyg",
-            "instructions": "Put services in li tags",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -103,11 +68,11 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "100",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
-            "return_format": "url",
+            "return_format": "array",
             "preview_size": "medium",
             "insert": "append",
             "library": "all",
@@ -120,6 +85,92 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_6295f271b8084",
+            "label": "CTA layout (price and book)",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "30",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_6295d2d59f218",
+            "label": "Room Price",
+            "name": "room_price",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "30",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_61fba8df20020",
+            "label": "Button Url",
+            "name": "button_url",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "40",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_6296069366c52",
+            "label": "CTA layout (read more)",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "30",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_6295f3276cf2d",
+            "label": "Read More Button Text",
+            "name": "read_more_button_text",
+            "type": "text",
+            "instructions": "default is Read more",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "30",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Read more",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -132,7 +183,7 @@
         ]
     ],
     "menu_order": 0,
-    "position": "normal",
+    "position": "acf_after_title",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
@@ -140,5 +191,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1657714346
+    "modified": 1657809179
 }

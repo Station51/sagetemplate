@@ -125,6 +125,56 @@ export default {
       })
     }
 
+    //---------------------- CPT Rooms Slider Block -------------------------------//
+    let room_block_slider = $('.room-block-slider');
+
+    if(room_block_slider.length) {
+      let room_block_slider_settings = {
+        'dots': true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        cssEase: 'linear',
+        autoplay: false,
+        pauseOnHover: false,
+        responsive: [
+          {
+            breakpoint: 1500,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1,
+            },
+          },
+          {
+            breakpoint: 820,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+            },
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },
+          // You can unslick at a given breakpoint now by adding:
+          // settings: "unslick"
+          // instead of a settings object
+        ],
+      }
+
+      room_block_slider.slick(room_block_slider_settings);
+
+      $(window).on('resize', function() {
+        if ($(window).width() >= 769 && !room_block_slider.hasClass('slick-initialized')) {
+          return room_block_slider.slick(room_block_slider_settings);
+        }
+      })
+    }
+
     /--- Slider Tab Rooms Slider ----------------------/
 
     $('.slider-single').slick({
