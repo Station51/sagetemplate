@@ -103,13 +103,13 @@ class Blocks extends Controller
 
   /**
    *
-   * Block Our Services.
+   * Block Our Services CPT
    *
    * Fetches the slides and returns them in an array.
    *
    * @return array An array with the slide data.
    */
-  public static function getOurServices() {
+  public static function getOurServicesCPT() {
     return array_map(function ($services) {          
         return [
            'icon' => $services['icon'] ?? null,
@@ -119,6 +119,26 @@ class Blocks extends Controller
            'button_url' => $services['button_url'] ?? null,
         ];
     }, get_field('services', 'option') ?? []);
+  }
+
+  /**
+   *
+   * Block Our Services Single.
+   *
+   * Fetches the slides and returns them in an array.
+   *
+   * @return array An array with the slide data.
+   */
+  public static function getOurServicesSingle() {
+    return array_map(function ($services) {          
+        return [
+           'icon' => $services['icon'] ?? null,
+           'title' => $services['title'] ?? null,
+           'content' => $services['content'] ?? null,
+           'button_text' => $services['button_text'] ?? null,
+           'button_url' => $services['button_url'] ?? null,
+        ];
+    }, get_field('services') ?? []);
   }
 }
 

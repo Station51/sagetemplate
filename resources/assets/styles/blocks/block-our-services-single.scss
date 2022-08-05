@@ -1,5 +1,5 @@
-.block-our-services {
-  background-color: #eaeaea;
+.block-our-services-single {
+  background-color: $blue-light;
   margin-top: -2px;
 
   .service {
@@ -7,8 +7,18 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 1.5rem 1rem;
+    padding: 0;
     max-width: 350px;
+
+    @include small-plus {
+      padding: 1.5rem 1rem;
+    }
+  }
+
+  img {
+    height: 100px;
+    width: auto;
+    margin: auto;
   }
 
   .icon {
@@ -27,18 +37,40 @@
     flex-wrap: wrap;
   }
 
+  h2 {
+    text-align: center;
+    font-size: $font-size-28;
+    line-height: inherit;
+    margin: 20px 0;
+
+    @include small-up {
+      margin: 20px 0;
+      font-size: $font-size-40;
+    }
+
+    @include medium-up {
+      line-height: 30px;
+    }
+  }
+
   h4 {
-    color: $gray-dark;
     font-size: 20px;
     text-transform: uppercase;
     line-height: 35px;
-    font-weight: 500;
+    font-weight: 300;
     letter-spacing: 2px;
     padding: 1rem;
   }
 
+  .intro_container {
+    margin: auto;
+
+    @include small-plus {
+      width: 60%;
+    }
+  }
+
   p {
-    color: $gray-dark;
     line-height: 28px;
     font-size: $font-size-15;
     margin-top: 0;

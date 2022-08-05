@@ -1,9 +1,47 @@
 {
-    "key": "group_627247d639290",
-    "title": "Block-Our-Services-CPT",
+    "key": "group_62ecd932b85a9",
+    "title": "Block-Our-Services-Single",
     "fields": [
         {
-            "key": "field_627248bbe192e",
+            "key": "field_62ecd967e2ce8",
+            "label": "Headline",
+            "name": "headline",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_62ecd975e2ce9",
+            "label": "Intro",
+            "name": "intro",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_62ecd984e2cea",
             "label": "Services",
             "name": "services",
             "type": "repeater",
@@ -22,11 +60,11 @@
             "button_label": "",
             "sub_fields": [
                 {
-                    "key": "field_627260bb8f20b",
+                    "key": "field_62ecd99be2ceb",
                     "label": "Icon",
                     "name": "icon",
                     "type": "image",
-                    "instructions": "",
+                    "instructions": "Size: 80x80",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -46,7 +84,7 @@
                     "mime_types": ""
                 },
                 {
-                    "key": "field_627260cc8f20c",
+                    "key": "field_62ecda21e2cec",
                     "label": "Title",
                     "name": "title",
                     "type": "text",
@@ -65,7 +103,7 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_627260d78f20d",
+                    "key": "field_62ecda4de2ced",
                     "label": "Content",
                     "name": "content",
                     "type": "textarea",
@@ -84,7 +122,7 @@
                     "new_lines": ""
                 },
                 {
-                    "key": "field_627260ea8f20e",
+                    "key": "field_62ecda6de2cee",
                     "label": "Button Text",
                     "name": "button_text",
                     "type": "text",
@@ -103,16 +141,16 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_627260f98f20f",
+                    "key": "field_62ecda76e2cef",
                     "label": "Button URL",
                     "name": "button_url",
-                    "type": "url",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": [
                         [
                             {
-                                "field": "field_627260ea8f20e",
+                                "field": "field_62ecda6de2cee",
                                 "operator": "!=empty"
                             }
                         ]
@@ -123,7 +161,10 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "placeholder": ""
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 }
             ]
         }
@@ -131,9 +172,9 @@
     "location": [
         [
             {
-                "param": "options_page",
+                "param": "block",
                 "operator": "==",
-                "value": "acf-options-our-services"
+                "value": "acf\/block-our-services-single"
             }
         ]
     ],
@@ -146,5 +187,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1659687614
+    "modified": 1659692439
 }
