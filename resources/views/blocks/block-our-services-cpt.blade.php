@@ -1,14 +1,14 @@
 {{--
-  Title: Block Our Services
+  Title: Block Our Services CPT
   Category: common
   Icon: awards
 --}}
 
-@if(Blocks::getOurServices())
+@if(Blocks::getOurServicesCPT())
 <section data-{{ $block['id'] }} id="{{ $block['id'] }}" class="{{ $block['classes'] }} section">
   <div class="services-center container flex-1 section-center">
     <!-- single service -->
-    @foreach(Blocks::getOurServices() as $service)
+    @foreach(Blocks::getOurServicesCPT() as $service)
     <article class="service">
       @if( $service['icon'])
       <div data-aos="zoom-in" class="icon">

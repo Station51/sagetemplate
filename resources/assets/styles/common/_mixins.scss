@@ -16,6 +16,12 @@
   }
 }
 
+@mixin small-plus {
+  @media (min-width: #{$bp-smallplus}) {
+    @content;
+  }
+}
+
 @mixin medium-up {
   @media (min-width: #{$bp-medium}) {
     @content;
