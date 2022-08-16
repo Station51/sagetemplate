@@ -19,6 +19,22 @@
   }
 }
 
+.section-top {
+  padding: 36px 0 0 0;
+
+  @include medium-up {
+    padding: 73px 0 0 0;
+  }
+}
+
+.section-bottom {
+  padding: 0 0 36px 0;
+
+  @include medium-up {
+    padding: 0 0 73px 0;
+  }
+}
+
 a {
   color: $body-text-color;
 }

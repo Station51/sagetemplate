@@ -8,6 +8,11 @@
   }
 
   &__content {
+    @include medium-up {
+      width: 70%;
+      margin: auto;
+    }
+
     h1 {
       font-size: $font-size-28;
       line-height: inherit;
