@@ -54,9 +54,9 @@
                 "id": ""
             },
             "choices": {
-                "white": "white",
-                "medium": "medium",
-                "dark": "dark"
+                "section-light": "Light",
+                "section-medium": "Medium",
+                "section-dark": "Dark"
             },
             "allow_null": 0,
             "other_choice": 0,
@@ -138,5 +138,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1657709668
+    "modified": 1660832417
 }

@@ -4,15 +4,12 @@
   Icon: awards
 --}}
 
-@php $section_id = get_field('section_id'); @endphp
-@if(get_field('section_bg_color') == 'dark')
-  <section data-{{ $block['id'] }} id="{{ $block['id'] }} {{ $section_id }}" class="{{ $block['classes'] }} section section-dark">
-@elseif(get_field('section_bg_color') == 'medium')
-  <section data-{{ $block['id'] }} id="{{ $block['id'] }} {{ $section_id }}" class="{{ $block['classes'] }} section section-medium">
-@else
-  <section data-{{ $block['id'] }} id="{{ $block['id'] }} {{ $section_id }}" class="{{ $block['classes'] }} section">
-@endif
+@php 
+  $section_id = get_field('section_id');
+  $section_bg_color = get_field('section_bg_color');
+@endphp
 
+<section data-{{ $block['id'] }} id="{{ $block['id'] }} {{ $section_id }}" class="{{ $block['classes'] }} section {{ $section_bg_color }}">
   <article class="container cta flex" data-aos="zoom-in"" data-aos-duration="1000">
 
       @if(get_field('title')) 

@@ -90,4 +90,13 @@
       text-shadow: 2px 2px $black;
     }
   }
+
+  &.section-light {
+    background-color: $white;
+    color: $black;
+
+    h3 {
+      color: $black;
+    }
+  }
 }
