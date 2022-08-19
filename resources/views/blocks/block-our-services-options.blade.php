@@ -1,5 +1,5 @@
 {{--
-  Title: Block Our Services CPT
+  Title: Block Our Services Options
   Category: common
   Icon: awards
 --}}

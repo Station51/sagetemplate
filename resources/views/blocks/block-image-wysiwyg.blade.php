@@ -4,10 +4,17 @@
   Icon: awards
 --}}
 
-@php $section_id = get_field('section_id'); @endphp
-<section data-{{ $block['id'] }} id="{{ $block['id'] }} {{ $section_id }}" class="{{ $block['classes'] }} section">
+@php 
+  $section_id = get_field('section_id');
+  $sectionPadding = get_field('section_padding');
+@endphp
+<section data-{{ $block['id'] }} id="{{ $block['id'] }} {{ $section_id }}" class="{{ $block['classes'] }} {{ $sectionPadding }}">
   <div class="container">
     <article class="block-image-wysiwyg__content">
+
+      @if(get_field('section_title'))
+        <h2>{!! get_field('section_title') !!}</h2>
+      @endif
 
       @if(get_field('image'))
         @php

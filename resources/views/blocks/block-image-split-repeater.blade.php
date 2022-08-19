@@ -33,7 +33,7 @@
       </div>
       <p class="block-image-split-repeater__text">{!! the_sub_field('content') !!}
       </p>
-      <a href="{!! the_sub_field('url') !!}" class='btn'>{!! the_sub_field('cta') !!}e</a>
+      <a href="{!! the_sub_field('url') !!}" class='btn'>{!! the_sub_field('cta') !!}</a>
     </article>
     <article class='block-image-split-repeater__picture'>
       <div class='block-image-split-repeater__container'>
