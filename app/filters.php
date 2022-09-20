@@ -166,6 +166,7 @@ add_filter( 'allowed_block_types', function ( $allowed_blocks ) {
         'acf/block-gallery-tabs-1',
         'acf/block-image-wysiwyg',
         'acf/block-map-split-1',
+        'acf/block-map-split-2',
         'acf/block-offers-1',
         'acf/block-rooms-1',
         'acf/block-slider-split-1',
@@ -179,5 +180,6 @@ add_filter( 'allowed_block_types', function ( $allowed_blocks ) {
         'acf/block-our-services-options',
         'acf/block-cpt-rooms-slider',
         'acf/block-our-services-single',
+        'acf/block-slider-filter-items',
     );
 });

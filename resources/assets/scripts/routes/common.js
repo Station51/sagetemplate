@@ -33,6 +33,28 @@ export default {
     // });
     // window.addEventListener('load', AOS.refresh);
 
+    // Passive listeners to improve scrolling performance (Lighthouse Report)
+    jQuery.event.special.touchstart = {
+      setup: function( _, ns, handle ) {
+        this.addEventListener('touchstart', handle, { passive: !ns.includes('noPreventDefault') });
+      },
+    };
+    jQuery.event.special.touchmove = {
+      setup: function( _, ns, handle ) {
+        this.addEventListener('touchmove', handle, { passive: !ns.includes('noPreventDefault') });
+      },
+    };
+    jQuery.event.special.wheel = {
+      setup: function( _, ns, handle ){
+        this.addEventListener('wheel', handle, { passive: true });
+      },
+    };
+    jQuery.event.special.mousewheel = {
+      setup: function( _, ns, handle ){
+        this.addEventListener('mousewheel', handle, { passive: true });
+      },
+    };
+
     //---------------------- Slider Block -------------------------------//
     let block_slider = $('.block-slider');
 
@@ -175,6 +197,49 @@ export default {
       })
     }
 
+    //---------------------- Items Slider Block -------------------------------//
+    let items_slider = $('.items-slider');
+
+    if(items_slider.length) {
+      let items_slider_settings = {
+        'dots': false,
+        infinite: true,
+        speed: 500,
+        // fade: true,
+        cssEase: 'linear',
+        // autoplay: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [
+          {
+            breakpoint: 820,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+            },
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },
+          // You can unslick at a given breakpoint now by adding:
+          // settings: "unslick"
+          // instead of a settings object
+        ],
+      }
+
+      items_slider.slick(items_slider_settings);
+
+      $(window).on('resize', function() {
+        if ($(window).width() >= 769 && !items_slider.hasClass('slick-initialized')) {
+          return items_slider.slick(items_slider_settings);
+        }
+      })
+    }
+
     /--- Slider Tab Rooms Slider ----------------------/
 
     $('.slider-single').slick({
@@ -240,6 +305,50 @@ export default {
         $('header').removeClass('addbg');
       }
     });
+
+    /*** Slick Slider filter item read more */
+    let ourItemArticle = document.querySelectorAll('.ouritem');
+    let readMoreButtons = document.querySelectorAll('.read-more-btn');
+    let readMoreBlock = document.querySelectorAll('.read-more-block');
+
+    if(ourItemArticle) {
+      for (let i = 0; i < readMoreButtons.length; i++) {            
+        readMoreButtons[i].addEventListener('click', () => tabClick(i));
+      }
+    }
+    function tabClick(currentTab) {
+
+      ourItemArticle[currentTab].classList.toggle('active');
+      readMoreBlock[currentTab].classList.toggle('active');
+
+        if (readMoreBlock[currentTab].classList.contains('active')) {
+          readMoreButtons[currentTab].innerHTML = 'Read Less';
+        } else {
+          readMoreButtons[currentTab].innerHTML = 'Read More';
+        }
+    }
+
+    /*** Slick Slider filter item */
+    $('.block-slider-filter-items-wrap .menu-cont button').on('click', function(){
+      let filter = $(this).data('filter');
+      $('.coffee-slider').slick('slickUnfilter');
+      
+      if(filter == 'light'){
+        $('.coffee-slider').slick('slickFilter','.light');
+      }
+      else if(filter == 'moderate'){
+        $('.coffee-slider').slick('slickFilter','.moderate');
+      }
+      else if(filter == 'heavy'){
+        $('.coffee-slider').slick('slickFilter','.heavy');
+      }
+      else if(filter == 'decaf'){
+        $('.coffee-slider').slick('slickFilter','.decaf');
+      }
+      else if(filter == 'all'){
+        $('.coffee-slider').slick('slickUnfilter');
+      }
+    })
 
   },
 };
