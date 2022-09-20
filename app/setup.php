@@ -194,6 +194,16 @@ if (function_exists('acf_add_options_page')) {
          'position' => 11
         )
     );
+
+    acf_add_options_page(
+        array(
+         'page_title'  => __('Our Items'),
+         'menu_title'  => __('Our Items'),
+         'capability'    => 'edit_posts',
+         'icon_url' => 'dashicons-screenoptions', 
+         'position' => 12
+        )
+    );
 }
 
 /**

@@ -140,5 +140,40 @@ class Blocks extends Controller
         ];
     }, get_field('services') ?? []);
   }
+
+  /**
+   *
+   * Block Slider Filter Items
+   *
+   * Fetches the slides and returns them in an array.
+   *
+   * @return array An array with the slide data.
+   */
+  public static function getSliderFilterItems() {
+    return array_map(function ($ouritem) {          
+        return [
+           'item_image' => $ouritem['item_image'] ?? null,
+           'title' => $ouritem['title'] ?? null,
+           'brand' => $ouritem['brand'] ?? null,
+           'item_type' => $ouritem['item_type'] ?? null,
+           'content' => $ouritem['content'] ?? null,
+           'the_button' => $ouritem['the_button'] ?? null,
+        ];
+    }, get_field('item', 'option') ?? []);
+  }
+
+  /**
+   *  Get Slider Filter Type
+   */
+  public static function getSliderFilterType() {
+  
+    $section_id = get_field('section_id');
+    $brand = get_field('brand');
+
+    return([
+      'section_id' => $section_id,
+      'brand' => $brand,
+    ]);
+  }
 }
 
