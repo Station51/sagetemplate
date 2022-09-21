@@ -10,7 +10,7 @@
   $buttonLink = get_field('button_link');
 @endphp
 
-<section data-{{ $block['id'] }} id="{{ $block['id'] }} {{ $section_id }}" class="{{ $block['classes'] }} section {{ $section_bg_color }}">
+<section data-{{ $block['id'] }} id="{{ $section_id ? $section_id : $block['id'] }}" class="{{ $block['classes'] }} section {{ $section_bg_color }}">
   <article class="container cta flex" data-aos="zoom-in"" data-aos-duration="1000">
 
       @if(get_field('title')) 

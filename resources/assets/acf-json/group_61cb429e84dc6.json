@@ -11,7 +11,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -20,6 +20,30 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_632b0f688874f",
+            "label": "Section Padding",
+            "name": "section_padding",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "no-pad": "no",
+                "section": "yes"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
         },
         {
             "key": "field_61cb42a8571a0",
@@ -170,5 +194,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1663748160
+    "modified": 1663766691
 }

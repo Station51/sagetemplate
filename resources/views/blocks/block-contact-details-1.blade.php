@@ -8,7 +8,7 @@
   $section_id = get_field('section_id');
   $buttonLink = get_field('button_link');
 @endphp
-<section data-{{ $block['id'] }} id="{{ $block['id'] }} {{ $section_id }}" class="{{ $block['classes'] }} section-color">
+<section data-{{ $block['id'] }} id="{{ $section_id ? $section_id : $block['id'] }}" class="{{ $block['classes'] }} section-color">
   <div class="container grid grid__outer grid-top">
 
     <article class="cta-block">

@@ -35,8 +35,8 @@
                 "id": ""
             },
             "choices": {
-                "full width": "full width",
-                "space": "space"
+                "default": "default",
+                "space": "space around"
             },
             "allow_null": 0,
             "other_choice": 0,
@@ -83,9 +83,9 @@
                 "id": ""
             },
             "choices": {
-                "white": "white",
-                "medium": "medium",
-                "dark": "dark"
+                "default-color": "white",
+                "section-medium": "medium",
+                "section-dark": "dark"
             },
             "allow_null": 0,
             "other_choice": 0,
@@ -283,5 +283,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1663755881
+    "modified": 1663764717
 }

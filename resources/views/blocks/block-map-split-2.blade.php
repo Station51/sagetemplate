@@ -14,7 +14,7 @@
   {!! wp_get_attachment_image( $image, $size, $attachment_title ) !!}
 </section>
 <div class="container form-cont">
-  <section data-{{ $block['id'] }} id="{{ $section_id }}" class="{{ $block['classes'] }} section-bottom">
+  <section data-{{ $block['id'] }} id="{{ $section_id ? $section_id : $block['id'] }}" class="{{ $block['classes'] }} section-bottom">
     <article class="grid grid__outer">
   
       @if(get_field('map_position') == 'left') 

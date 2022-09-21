@@ -9,7 +9,7 @@
   $sectionPadding = get_field('section_padding');
   $buttonLink = get_field('button_link');
 @endphp
-<section data-{{ $block['id'] }} id="{{ $block['id'] }} {{ $section_id }}" class="{{ $block['classes'] }} {{ $sectionPadding }}">
+<section data-{{ $block['id'] }} id="{{ $section_id ? $section_id : $block['id'] }}" class="{{ $block['classes'] }} {{ $sectionPadding }}">
   <div class="container">
     <article class="block-image-wysiwyg__content">
 

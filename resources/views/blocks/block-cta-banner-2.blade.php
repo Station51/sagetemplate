@@ -13,7 +13,7 @@ $addButton = get_field('add_button');
 $buttonLink = get_field('button_link');     
 @endphp
 
-<section data-{{ $block['id'] }} id="{{ $block['id'] }} {{ $section_id }}" class="{{ $block['classes'] }} connect">
+<section data-{{ $block['id'] }} id="{{ $section_id ? $section_id : $block['id'] }}" class="{{ $block['classes'] }} connect">
   @if(get_field('image') && ( get_field('radio_button') == 'image' ))
     {!! wp_get_attachment_image( $image, $size, $attachment_title ) !!}
   @elseif(get_field('video') && ( get_field('radio_button') == 'video' ) ) 

@@ -5,7 +5,7 @@ Icon: awards
 --}}
 
 @php $section_id = get_field('section_id'); @endphp
-<section data-{{ $block['id'] }} id="{{ $block['id'] }} {{ $section_id }}" class="{{ $block['classes'] }} section block-slider-tabs">
+<section data-{{ $block['id'] }} id="{{ $section_id ? $section_id : $block['id'] }}" class="{{ $block['classes'] }} section block-slider-tabs">
   <div class="container">
     @if(get_field('label'))
     <div class="heading heading--line" smooth-parallax="1" start-position-x="-0.1" end-position-x="0">{!!
