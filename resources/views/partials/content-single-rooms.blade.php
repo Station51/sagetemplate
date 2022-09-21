@@ -1,4 +1,7 @@
-@php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ) @endphp
+@php 
+  $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+  $buttonLink = get_field('button_link')
+@endphp
 
 <section class="block-banner-image" style="background-image: url({!! $backgroundImg[0] !!})" role="img">
   <div class="container flex">
@@ -19,7 +22,7 @@
         @if(Blocks::getGallery())
           <div class="section-slider">
             @foreach(Blocks::getGallery() as $image )
-              <div class="rooms-page-slider__column" style="background-image: url({!! $image !!})" role="img">
+              <div class="rooms-page-slider__column" style="background-image: url({!! $image['url'] !!})" role="img">
                 <div class="rooms-page-slider__banner"></div>
               </div>
             @endforeach
@@ -29,17 +32,18 @@
       </div>
 
       <div class="rm-serv">
-        {!! get_field('room_services') !!}
+        {{-- {!! get_field('room_services') !!} --}}
 
-        <div class="block-rooms-1__btns">
-          @if(get_field('breakfast_menu_url', 'option'))
-            <a href="{!! get_field('breakfast_menu_url', 'option') !!}" target="_blank" class="btn block-rooms-1__btn">View Breakfast Menu</a>
-          @endif
-          
-          @if(get_field('button_url'))
-            <a href="{!! get_field('button_url') !!}" class="btn block-rooms-1__btn">Book Now</a>
-          @endif
-        </div>
+        @if($buttonLink)
+          <div class="block-rooms-1__btns">
+            <a href="{!! $buttonLink['url'] !!}" target="{{ $buttonLink['target'] }}" class="btn block-rooms-1__btn">{{ $buttonLink['title'] }}</a>
+
+            {{-- @if(get_field('breakfast_menu_url', 'option'))
+              <a href="{!! get_field('breakfast_menu_url', 'option') !!}" class="btn block-rooms-1__btn">View Breakfast Menu</a>
+            @endif --}}
+          </div>
+        @endif
+        
       </div>
     </div>
   </article>

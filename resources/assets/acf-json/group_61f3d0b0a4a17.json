@@ -66,10 +66,10 @@
             "save_other_choice": 0
         },
         {
-            "key": "field_61f3d0b0ac208",
-            "label": "Button",
-            "name": "button_name",
-            "type": "text",
+            "key": "field_632aecff90fac",
+            "label": "Button Link",
+            "name": "button_link",
+            "type": "link",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -78,27 +78,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_61f3d0b0ac25b",
-            "label": "Button URL",
-            "name": "button_url",
-            "type": "url",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "25",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": ""
+            "return_format": "array"
         },
         {
             "key": "field_61f3d0b0ac05a",
@@ -109,7 +89,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
@@ -138,5 +118,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1660832417
+    "modified": 1663758222
 }

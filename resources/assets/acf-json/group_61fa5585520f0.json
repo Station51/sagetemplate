@@ -174,42 +174,19 @@
             "new_lines": ""
         },
         {
-            "key": "field_6203a85213687",
-            "label": "Book Online Button Text",
-            "name": "book_online_button_text",
-            "type": "text",
+            "key": "field_632b0199f59a3",
+            "label": "Button Link",
+            "name": "button_link",
+            "type": "link",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "25",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_6203a8b013688",
-            "label": "Book Online Button URL",
-            "name": "book_online_button_url",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "25",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "return_format": "array"
         }
     ],
     "location": [
@@ -230,5 +207,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1657709160
+    "modified": 1663763016
 }

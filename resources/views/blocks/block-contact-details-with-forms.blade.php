@@ -8,7 +8,7 @@
   $section_id = get_field('section_id');
   $section = get_field('header');
 @endphp
-<section data-{{ $block['id'] }} id="{{ $block['id'] }} {{ $section_id }}" class="{{ $block['classes'] }} section container contact-us">
+<section data-{{ $block['id'] }} id="{{ $section_id ? $section_id : $block['id'] }}" class="{{ $block['classes'] }} section container contact-us">
   <h1 class="heading heading--2">
     {!! $section['title'] !!}
   </h1>

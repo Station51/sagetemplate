@@ -52,10 +52,8 @@ class Blocks extends Controller
              'content' => $slides['slide_content'] ?? null,
              'image' => $slides['slide_image'] ?? null,
              'background_colour' => $slides['slide_background_colour'] ?? null,
-             'button_text_1' => $slides['button_text_1'] ?? null,
-             'button_url_1' => $slides['button_url_1'] ?? null,
-             'button_text_2' => $slides['button_text_2'] ?? null,
-             'button_url_2' => $slides['button_url_2'] ?? null,
+             'button_one_link' => $slides['button_one_link'] ?? null,
+             'button_two_link' => $slides['button_two_link'] ?? null,
           ];
       }, get_field('slides') ?? []);
   }
@@ -115,8 +113,8 @@ class Blocks extends Controller
            'icon' => $services['icon'] ?? null,
            'title' => $services['title'] ?? null,
            'content' => $services['content'] ?? null,
-           'button_text' => $services['button_text'] ?? null,
-           'button_url' => $services['button_url'] ?? null,
+           'add_button' => $services['add_button'] ?? null,
+           'button_link' => $services['button_link'] ?? null,
         ];
     }, get_field('services', 'option') ?? []);
   }
@@ -135,8 +133,8 @@ class Blocks extends Controller
            'icon' => $services['icon'] ?? null,
            'title' => $services['title'] ?? null,
            'content' => $services['content'] ?? null,
-           'button_text' => $services['button_text'] ?? null,
-           'button_url' => $services['button_url'] ?? null,
+           'add_button' => $services['add_button'] ?? null,
+           'button_link' => $services['button_link'] ?? null,
         ];
     }, get_field('services') ?? []);
   }

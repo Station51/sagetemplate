@@ -4,12 +4,17 @@
   Icon: awards
 --}}
 
-@php $section_id = get_field('section_id'); @endphp
-<section data-{{ $block['id'] }} id="{{ $block['id'] }} {{ $section_id }}" class="{{ $block['classes'] }} section">
+@php 
+  $section_id = get_field('section_id');
+@endphp
+<section data-{{ $block['id'] }} id="{{ $section_id ? $section_id : $block['id'] }}" class="{{ $block['classes'] }} section">
   <article class="container grid grid__outer">
     @php 
       if( have_rows('the_offer') ):
-        while( have_rows('the_offer') ) : the_row(); @endphp
+        while( have_rows('the_offer') ) : the_row(); 
+        
+        $buttonLink = get_sub_field('button_link');
+        @endphp
 
             @if(get_sub_field('image'))
               @php
@@ -21,10 +26,15 @@
               <div class="block-offers-1__content-item">
 
                 <h3>{!! get_sub_field('offer_title') !!}</h3>
-                @if(get_sub_field('popup_required') == 'yes')
-                  <a class="btn {!! get_sub_field('popup_class') !!}">{!! get_sub_field('button_text') !!}</a>
+
+                @if(get_sub_field('button_type') == 'popup')
+                  @if(get_sub_field('popup_button_text'))
+                    <a class="btn {!! get_sub_field('popup_class') !!}">{!! get_sub_field('popup_button_text') !!}</a>
+                  @endif
                 @else
-                  <a class="btn" href="{!! get_sub_field('button_url') !!}">{!! get_sub_field('button_text') !!}</a>
+                  @if($buttonLink)
+                    <a class="btn" target="{{ $buttonLink['target'] }}" href="{!! $buttonLink['url'] !!}">{!! $buttonLink['title'] !!}</a>
+                  @endif
                 @endif
 
               </div>
