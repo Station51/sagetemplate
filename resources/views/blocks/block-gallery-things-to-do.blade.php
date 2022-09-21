@@ -5,7 +5,7 @@ Icon: awards
 --}}
 
 @php $section_id = get_field('section_id'); @endphp
-<section data-{{ $block['id'] }} id="{{ $block['id'] }} {{ $section_id }}" class="{{ $block['classes'] }} section">
+<section data-{{ $block['id'] }} id="{{ $section_id ? $section_id : $block['id'] }}" class="{{ $block['classes'] }} section">
   @php
   $menus = get_terms([
   'taxonomy' => 'things_todo_category'

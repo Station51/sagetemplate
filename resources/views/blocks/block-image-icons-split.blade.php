@@ -4,8 +4,11 @@
   Icon: awards
 --}}
 
-@php $section_id = get_field('section_id'); @endphp
-<section data-{{ $block['id'] }} id="{{ $block['id'] }} {{ $section_id }}" class="{{ $block['classes'] }} section">
+@php 
+  $section_id = get_field('section_id');
+  $buttonLink = get_field('button_link');
+@endphp
+<section data-{{ $block['id'] }} id="{{ $section_id ? $section_id : $block['id'] }}" class="{{ $block['classes'] }} section">
   <div class="container grid grid__outer">
     <div class="block-image-icons-split_content">
       @if(get_field('title')) 
@@ -54,8 +57,8 @@
           </div>  
         </div>
       @endif
-      @if(get_field('button_name'))
-        <a href="{!! get_field('button_url') !!}" class="btn">{!! get_field('button_name') !!}</a>
+      @if(get_field('add_button') == 'yes')
+        <a href="{!! $buttonLink['url'] !!}" target="{{ $buttonLink['target'] }}" class="btn">{!! $buttonLink['title'] !!}</a>
       @endif
     </div>
     @if(get_field('image'))

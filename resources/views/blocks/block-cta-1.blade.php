@@ -7,9 +7,10 @@
 @php 
   $section_id = get_field('section_id');
   $section_bg_color = get_field('section_bg_color');
+  $buttonLink = get_field('button_link');
 @endphp
 
-<section data-{{ $block['id'] }} id="{{ $block['id'] }} {{ $section_id }}" class="{{ $block['classes'] }} section {{ $section_bg_color }}">
+<section data-{{ $block['id'] }} id="{{ $section_id ? $section_id : $block['id'] }}" class="{{ $block['classes'] }} section {{ $section_bg_color }}">
   <article class="container cta flex" data-aos="zoom-in"" data-aos-duration="1000">
 
       @if(get_field('title')) 
@@ -23,8 +24,8 @@
         </p>
       @endif
 
-      @if(get_field('button_name'))
-        <a href="{!! get_field('button_url') !!}" class="btn">{!! get_field('button_name') !!}</a>
+      @if($buttonLink)
+        <a href="{!! $buttonLink['url'] !!}" target="{{ $buttonLink['target'] }}" class="btn">{!! $buttonLink['title'] !!}</a>
       @endif
 
   </article>

@@ -17,14 +17,16 @@
         @if($slide['content'])
           <p class="block-banner-slider-bg-image__content">{!! ($slide['content']) !!}</p>
         @endif
-        <div class="block-banner-slider-bg-image__btns">
-          @if(( $slide['button_text_1']))
-            <a href="{!! $slide['button_url_1'] !!}" class="btn block-banner-slider-bg-image__btn">{!! $slide['button_text_1'] !!}</a>
-          @endif
-          @if(( $slide['button_text_2']))
-            <a href="{!! $slide['button_url_2'] !!}" class="btn block-banner-slider-bg-image__btn">{!! $slide['button_text_2'] !!}</a>
-          @endif
-        </div>
+        @if($slide['button_one_link'] || $slide['button_two_link'])
+          <div class="block-banner-slider-bg-image__btns">
+            @if(( $slide['button_one_link']))
+              <a href="{!! $slide['button_one_link']['url'] !!}" target="{{ $slide['button_one_link']['target'] }}" class="btn block-banner-slider-bg-image__btn">{!! $slide['button_one_link']['title'] !!}</a>
+            @endif
+            @if(( $slide['button_two_link']))
+              <a href="{!! $slide['button_two_link']['url'] !!}" target="{{ $slide['button_two_link']['target'] }}" class="btn block-banner-slider-bg-image__btn">{!! $slide['button_two_link']['title'] !!}</a>
+            @endif
+          </div>
+        @endif
       </div>
     </div>
   @endforeach

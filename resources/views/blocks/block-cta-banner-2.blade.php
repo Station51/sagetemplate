@@ -8,10 +8,12 @@
 $section_id = get_field('section_id');
 $image = get_field('image');
 $size = 'large'; // (thumbnail, medium, large, full or custom size)
-$attachment_title = get_the_title($attach_id);      
+$attachment_title = get_the_title($attach_id); 
+$addButton = get_field('add_button');
+$buttonLink = get_field('button_link');     
 @endphp
 
-<section data-{{ $block['id'] }} id="{{ $block['id'] }} {{ $section_id }}" class="{{ $block['classes'] }} connect">
+<section data-{{ $block['id'] }} id="{{ $section_id ? $section_id : $block['id'] }}" class="{{ $block['classes'] }} connect">
   @if(get_field('image') && ( get_field('radio_button') == 'image' ))
     {!! wp_get_attachment_image( $image, $size, $attachment_title ) !!}
   @elseif(get_field('video') && ( get_field('radio_button') == 'video' ) ) 
@@ -31,8 +33,8 @@ $attachment_title = get_the_title($attach_id);
     @if(get_field('text'))
       <p class="video-text">{!! get_field('text') !!}</p>
     @endif
-    @if(get_field('url') && get_field('cta'))
-      <a href="{!! get_field('url') !!}" class="btn">{!! get_field('cta') !!}</a>
+    @if($addButton == 'yes')
+      <a href="{!! $buttonLink['url'] !!}" target="{{ $buttonLink['target'] }}" class="btn">{!! $buttonLink['title'] !!}</a>
     @endif
   </div>
 </section>

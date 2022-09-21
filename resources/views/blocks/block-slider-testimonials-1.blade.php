@@ -10,7 +10,7 @@
 @endif
 @php $section_id = get_field('section_id'); @endphp
 @if(Blocks::getSliderTestimonials())
-<section data-{{ $block['id'] }} id="{{ $block['id'] }} {{ $section_id }}"  class="{{ $block['classes'] }}" @if($bgImg) style="background-image: url({!! $bgImg !!})" @endif role="img">
+<section data-{{ $block['id'] }} id="{{ $section_id ? $section_id : $block['id'] }}" class="{{ $block['classes'] }}" @if($bgImg) style="background-image: url({!! $bgImg !!})" @endif role="img">
   <article class="block-slider-testimonials-1__inner">
     <div data-aos="zoom-in" data-aos-duration="1000">
       <div class="intro">

@@ -4,22 +4,18 @@
   Icon: format-gallery
 --}}
 
-@php $section_id = get_field('section_id'); @endphp
+@php 
+  $section_id = get_field('section_id'); 
+  $buttonOneLink = get_field('button_one_link');
+  $buttonTwoLink = get_field('button_two_link');
+  $section_bg_color = get_field('section_bg_color');
+  $addSpace = get_field('section_layout_style');
+@endphp
 @if(get_field('text_position') == 'left') 
 
-  @if(get_field('section_bg_color') == 'dark')
-    <section data-{{ $block['id'] }} id="{{ $block['id'] }} {{ $section_id }}" class="{{ $block['classes'] }} section-dark">
-  @elseif(get_field('section_bg_color') == 'medium')
-    <section data-{{ $block['id'] }} id="{{ $block['id'] }} {{ $section_id }}" class="{{ $block['classes'] }} section-medium">
-  @else
-    <section data-{{ $block['id'] }} id="{{ $block['id'] }} {{ $section_id }}" class="{{ $block['classes'] }}">
-  @endif
-  
-    @if(get_field('section_layout_style') == 'space') 
-      <div class="grid grid__outer space">
-    @else
-      <div class="grid grid__outer">
-    @endif
+  <section data-{{ $block['id'] }} id="{{ $section_id ? $section_id : $block['id'] }}" class="{{ $block['classes'] }} {{ $section_bg_color }}">
+
+    <div class="grid grid__outer {{ $addSpace }}">
 
       @if(get_field('static_content')) 
         <article class="text-block left">
@@ -32,11 +28,13 @@
                 @endif
               </div>
             @else
-              @if(get_field('button_text_1'))
+              @if($buttonOneLink || $buttonTwoLink)
                 <div class="block-slider-split-1__btns">
-                  <a href="{!! get_field('button_url_1') !!}" class="btn block-slider-split-1__btn">{!! get_field('button_text_1') !!}</a>
-                  @if(get_field('button_text_2'))
-                    <a href="{!! get_field('button_url_2') !!}" class="btn block-slider-split-1__btn">{!! get_field('button_text_2') !!}</a>
+                  @if($buttonOneLink)
+                    <a href="{!! $buttonOneLink['url'] !!}" target="{{ $buttonOneLink['target'] }}" class="btn block-slider-split-1__btn">{!! $buttonOneLink['title'] !!}</a>
+                  @endif
+                  @if($buttonTwoLink)
+                    <a href="{!! $buttonTwoLink['url'] !!}" target="{{ $buttonTwoLink['target'] }}" class="btn block-slider-split-1__btn">{!! $buttonTwoLink['title'] !!}</a>
                   @endif
                 </div>
               @endif
@@ -60,19 +58,9 @@
 
 @else
 
-  @if(get_field('section_bg_color') == 'dark')
-    <section data-{{ $block['id'] }} id="{{ $block['id'] }} {{ $section_id }}" class="{{ $block['classes'] }} section-dark section-flip">
-  @elseif(get_field('section_bg_color') == 'medium')
-    <section data-{{ $block['id'] }} id="{{ $block['id'] }} {{ $section_id }}" class="{{ $block['classes'] }} section-medium section-flip">
-  @else
-    <section data-{{ $block['id'] }} id="{{ $block['id'] }} {{ $section_id }}" class="{{ $block['classes'] }} section-flip">
-  @endif
+  <section data-{{ $block['id'] }} id="{{ $section_id ? $section_id : $block['id'] }}" class="{{ $block['classes'] }} {{ $section_bg_color }} section-flip">
 
-    @if(get_field('section_layout_style') == 'space') 
-      <div class="grid grid__outer space">
-    @else
-      <div class="grid grid__outer">
-    @endif
+    <div class="grid grid__outer {{ $addSpace }}">
 
       @if(Blocks::getGallery())
         <article data-{{ $block['id'] }} id="{{ $block['id'] }}" class="{{ $block['classes'] }} block-slider">
@@ -95,11 +83,13 @@
                 @endif
               </div>
             @else
-              @if(get_field('button_text_1'))
+              @if($buttonOneLink || $buttonTwoLink)
                 <div class="block-slider-split-1__btns">
-                  <a href="{!! get_field('button_url_1') !!}" class="btn block-slider-split-1__btn">{!! get_field('button_text_1') !!}</a>
-                  @if(get_field('button_text_2'))
-                    <a href="{!! get_field('button_url_2') !!}" class="btn block-slider-split-1__btn">{!! get_field('button_text_2') !!}</a>
+                  @if($buttonOneLink)
+                    <a href="{!! $buttonOneLink['url'] !!}" target="{{ $buttonOneLink['target'] }}" class="btn block-slider-split-1__btn">{!! $buttonOneLink['title'] !!}</a>
+                  @endif
+                  @if($buttonTwoLink)
+                    <a href="{!! $buttonTwoLink['url'] !!}" target="{{ $buttonTwoLink['target'] }}" class="btn block-slider-split-1__btn">{!! $buttonTwoLink['title'] !!}</a>
                   @endif
                 </div>
               @endif
