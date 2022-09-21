@@ -108,77 +108,34 @@
                     "mime_types": ""
                 },
                 {
-                    "key": "field_61dac93303da0",
-                    "label": "Button Text 1",
-                    "name": "button_text_1",
-                    "type": "text",
+                    "key": "field_632adf82e24fd",
+                    "label": "Button One Link",
+                    "name": "button_one_link",
+                    "type": "link",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "25",
+                        "width": "50",
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "return_format": "array"
                 },
                 {
-                    "key": "field_61dae19ee3582",
-                    "label": "Button URL 1",
-                    "name": "button_url_1",
-                    "type": "url",
+                    "key": "field_632adf9be24fe",
+                    "label": "Button Two Link",
+                    "name": "button_two_link",
+                    "type": "link",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "25",
+                        "width": "50",
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "placeholder": ""
-                },
-                {
-                    "key": "field_61dae1bbe3583",
-                    "label": "Button Text 2",
-                    "name": "button_text_2",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "25",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_61dae1c8e3584",
-                    "label": "Button URL 2",
-                    "name": "button_url_2",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "25",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "return_format": "array"
                 }
             ]
         }
@@ -201,5 +158,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1657717255
+    "modified": 1663754233
 }

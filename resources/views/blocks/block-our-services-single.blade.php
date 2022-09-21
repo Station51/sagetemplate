@@ -33,8 +33,8 @@
           @if($service['content'])
             <p>{!! $service['content'] !!}</p>
           @endif
-          @if($service['button_text'])
-            <a class="btn white-btn service-btn" href="{!! $service['button_url'] !!}">{!! $service['button_text'] !!}</a>
+          @if($service['add_button'] == 'yes')
+            <a class="btn white-btn service-btn" target="{{ $service['button_link']['target'] }}" href="{!! $service['button_link']['url'] !!}">{!! $service['button_link']['title'] !!}</a>
           @endif
         </article>
         @endforeach

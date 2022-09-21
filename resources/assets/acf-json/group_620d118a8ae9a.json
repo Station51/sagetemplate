@@ -232,39 +232,51 @@
                     "endpoint": 0
                 },
                 {
-                    "key": "field_620eac0ce809d",
-                    "label": "Button Text",
-                    "name": "button_text",
-                    "type": "text",
+                    "key": "field_632ad3da0f160",
+                    "label": "Add Button",
+                    "name": "add_button",
+                    "type": "radio",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "30",
                         "class": "",
                         "id": ""
                     },
+                    "choices": {
+                        "no": "no",
+                        "yes": "yes"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
                     "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "layout": "horizontal",
+                    "return_format": "value",
+                    "save_other_choice": 0
                 },
                 {
-                    "key": "field_620eac18e809e",
-                    "label": "Button URL",
-                    "name": "button_url",
-                    "type": "url",
+                    "key": "field_632ad3fc0f161",
+                    "label": "Button Link",
+                    "name": "button_link",
+                    "type": "link",
                     "instructions": "",
                     "required": 0,
-                    "conditional_logic": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_632ad3da0f160",
+                                "operator": "==",
+                                "value": "yes"
+                            }
+                        ]
+                    ],
                     "wrapper": {
-                        "width": "",
+                        "width": "70",
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "placeholder": ""
+                    "return_format": "array"
                 },
                 {
                     "key": "field_620eac21e809f",
@@ -338,5 +350,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1657719824
+    "modified": 1663751586
 }

@@ -7,6 +7,7 @@
 @php 
   $section_id = get_field('section_id');
   $sectionPadding = get_field('section_padding');
+  $buttonLink = get_field('button_link');
 @endphp
 <section data-{{ $block['id'] }} id="{{ $block['id'] }} {{ $section_id }}" class="{{ $block['classes'] }} {{ $sectionPadding }}">
   <div class="container">
@@ -29,12 +30,12 @@
         <div class="block-image-wysiwyg__content">
           {!! get_field('content') !!}
           
-          @if(get_field('button_text'))
+          @if(get_field('add_button') == 'yes')
             <div class="block-image-wysiwyg__btns">
               @if(get_field('button_type') == 'popup')
-                <a href="" class="btn block-image-wysiwyg__btn {!! get_field('popup_class') !!}">{!! get_field('button_text') !!}</a>
+                <a href="" class="btn block-image-wysiwyg__btn {!! get_field('popup_class') !!}">{!! get_field('popup_button_text') !!}</a>
               @else
-                <a href="{!! get_field('button_url') !!}" class="btn block-image-wysiwyg__btn">{!! get_field('button_text') !!}</a>
+                <a href="{!! $buttonLink['url'] !!}" target="{!! $buttonLink['target'] !!}" class="btn block-image-wysiwyg__btn">{!! $buttonLink['title'] !!}</a>
               @endif
             </div>
           @endif

@@ -4,7 +4,10 @@
   Icon: format-gallery
 --}}
 
-@php $section_id = get_field('section_id'); @endphp
+@php 
+  $section_id = get_field('section_id');
+  $buttonLink = get_field('button_link');
+@endphp
 <section data-{{ $block['id'] }} id="{{ $block['id'] }} {{ $section_id }}" class="{{ $block['classes'] }} section-color">
   <div class="container grid grid__outer grid-top">
 
@@ -45,11 +48,13 @@
         <p>{!! get_field('book_online_block_content') !!}</p>
       @endif
 
-      <div class="block-contact-details-1__btns">
-        @if(get_field('book_online_button_text'))
-          <a href="{!! get_field('book_online_button_url') !!}" class="btn block-contact-details-1__btn">{!! get_field('book_online_button_text') !!}</a>
-        @endif
-      </div>
+      
+      @if($buttonLink)
+        <div class="block-contact-details-1__btns">
+          <a href="{!! $buttonLink['url'] !!}" target="{{ $buttonLink['target'] }}" class="btn block-contact-details-1__btn">{!! $buttonLink['title'] !!}</a>
+        </div>
+      @endif
+    
     </article>
 
   </div>

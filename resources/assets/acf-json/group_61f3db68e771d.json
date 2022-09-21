@@ -74,7 +74,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "30",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
@@ -98,7 +98,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "70",
+                "width": "75",
                 "class": "",
                 "id": ""
             },
@@ -109,23 +109,28 @@
             "delay": 0
         },
         {
-            "key": "field_620523375b0a7",
-            "label": "Button Text",
-            "name": "button_text",
-            "type": "text",
+            "key": "field_632abf60d65ca",
+            "label": "Add Button",
+            "name": "add_button",
+            "type": "radio",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "33",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
+            "choices": {
+                "no": "no",
+                "yes": "yes"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
             "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
         },
         {
             "key": "field_620523565b0a8",
@@ -134,14 +139,22 @@
             "type": "radio",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_632abf60d65ca",
+                        "operator": "==",
+                        "value": "yes"
+                    }
+                ]
+            ],
             "wrapper": {
-                "width": "33",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
             "choices": {
-                "url": "url",
+                "link": "link",
                 "popup": "popup"
             },
             "allow_null": 0,
@@ -152,9 +165,37 @@
             "save_other_choice": 0
         },
         {
-            "key": "field_620523a35b0a9",
-            "label": "Button URL",
-            "name": "button_url",
+            "key": "field_632abfedd65cb",
+            "label": "Button Link",
+            "name": "button_link",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_632abf60d65ca",
+                        "operator": "==",
+                        "value": "yes"
+                    },
+                    {
+                        "field": "field_620523565b0a8",
+                        "operator": "==",
+                        "value": "link"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_632ac0ff5526e",
+            "label": "Popup Button Text",
+            "name": "popup_button_text",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -163,12 +204,12 @@
                     {
                         "field": "field_620523565b0a8",
                         "operator": "==",
-                        "value": "url"
+                        "value": "popup"
                     }
                 ]
             ],
             "wrapper": {
-                "width": "34",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
@@ -195,7 +236,7 @@
                 ]
             ],
             "wrapper": {
-                "width": "34",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
@@ -224,5 +265,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1660654540
+    "modified": 1663746319
 }

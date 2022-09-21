@@ -4,10 +4,15 @@
   Icon: awards
 --}}
 
-@php $section_id = get_field('section_id'); @endphp
+@php 
+  $section_id = get_field('section_id');
+@endphp
 <section data-{{ $block['id'] }} id="{{ $block['id'] }} {{ $section_id }}" class="{{ $block['classes'] }} section">
 @php 
-  while( have_rows('steps') ): the_row() 
+  while( have_rows('steps') ): the_row();
+
+  $addButton = get_sub_field('add_button');
+  $buttonLink = get_sub_field('button_link');
   @endphp
   @if( get_row_index() % 2 == 0 )
   <div class="grid">
@@ -22,7 +27,9 @@
       </div>
       <p class="block-image-split-repeater__text">{!! the_sub_field('content') !!}
       </p>
-      <a href="{!! the_sub_field('url') !!}" class='btn'>{!! the_sub_field('cta') !!}</a>
+      @if($addButton == 'yes')
+        <a href="{!! $buttonLink['url'] !!}" target="{{ $buttonLink['target'] }}" class='btn'>{!! $buttonLink['title'] !!}</a>
+      @endif
     </article>
   </div>
   @else 
@@ -33,7 +40,9 @@
       </div>
       <p class="block-image-split-repeater__text">{!! the_sub_field('content') !!}
       </p>
-      <a href="{!! the_sub_field('url') !!}" class='btn'>{!! the_sub_field('cta') !!}</a>
+      @if($addButton == 'yes')
+        <a href="{!! $buttonLink['url'] !!}" target="{{ $buttonLink['target'] }}" class='btn'>{!! $buttonLink['title'] !!}</a>
+      @endif
     </article>
     <article class='block-image-split-repeater__picture'>
       <div class='block-image-split-repeater__container'>

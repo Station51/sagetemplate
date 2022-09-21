@@ -28,6 +28,8 @@ Icon: awards
           @php
           $images = get_sub_field('images');
           $size = 'full'; // (thumbnail, medium, large, full or custom size)
+          $addButton = get_sub_field('add_button');
+          $buttonLink = get_sub_field('button_link');
           @endphp
           <div class="slider-single">
             @foreach( $images as $image_id )
@@ -54,9 +56,9 @@ Icon: awards
             <p class="content-description">{!! the_sub_field('description') !!}</p>
             @endif
           </div>
-          @if(get_sub_field('button_text'))
+          @if($addButton == 'yes')
           <div class="btn-wrapper">
-            <a href="{!! the_sub_field('button_url') !!}" class="btn btn--content" style="background-color: {!! the_sub_field('background_button_color') !!}; color: {!! the_sub_field('text_color') !!}; border: 2px solid {!! the_sub_field('border_button_color') !!}">{!! the_sub_field('button_text') !!}</a>
+            <a href="{!! $buttonLink['url'] !!}" target="{{ $addButton['target'] }}" class="btn btn--content" style="background-color: {!! the_sub_field('background_button_color') !!}; color: {!! the_sub_field('text_color') !!}; border: 2px solid {!! the_sub_field('border_button_color') !!}">{!! $buttonLink['title'] !!}</a>
           </div>
           @endif
         </div>
