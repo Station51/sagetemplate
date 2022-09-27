@@ -59,3 +59,14 @@
   max-width: 1240px !important;
 }
 
+.wp-admin {
+  .block-slider-split-1 .text-block {
+    padding: 0;
+  }
+
+  .block-slider-split-1 .grid__outer.space .text-block.right,
+  .block-slider-split-1 .grid__outer.space .text-block.left {
+    padding: 0;
+  }
+}
+

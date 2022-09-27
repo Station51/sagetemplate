@@ -7,6 +7,16 @@
         grid-template-columns: 1fr 1fr;
       }
     }
+
+    &.right {
+      .iframe-cont {
+        order: 2;
+      }
+
+      .form-block {
+        order: 1;
+      }
+    }
   }
 
   p {
