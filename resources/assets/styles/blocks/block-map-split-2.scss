@@ -27,6 +27,16 @@
         grid-template-columns: 1fr 1fr;
       }
     }
+
+    &.right {
+      .map-wrapper {
+        order: 2;
+      }
+
+      .form-wrapper {
+        order: 1;
+      }
+    }
   }
 
   .info-cont {

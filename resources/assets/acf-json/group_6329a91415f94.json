@@ -25,7 +25,7 @@
             "key": "field_6329a9141eda7",
             "label": "Map Position",
             "name": "map_position",
-            "type": "radio",
+            "type": "true_false",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -34,16 +34,11 @@
                 "class": "",
                 "id": ""
             },
-            "choices": {
-                "left": "left",
-                "right": "right"
-            },
-            "allow_null": 0,
-            "other_choice": 0,
-            "default_value": "",
-            "layout": "horizontal",
-            "return_format": "value",
-            "save_other_choice": 0
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Map left",
+            "ui_off_text": "Map right"
         },
         {
             "key": "field_6329a9141ee6d",
@@ -164,5 +159,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1663675741
+    "modified": 1664288021
 }
