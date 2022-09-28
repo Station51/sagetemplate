@@ -25,10 +25,12 @@
     background-color: $hamburger-light;
   }
 
-  .main-navigation ul a,
-  .main-navigation a:focus,
-  .main-navigation ul a:visited {
-    color: $nav-font-dark;
+  .main-navigation ul {
+    a,
+    a:focus,
+    a:visited {
+      color: $nav-font-dark;
+    }
   }
 
   &.parked {
@@ -47,10 +49,12 @@
       background-color: $hamburger-light;
     }
 
-    .main-navigation ul a,
-    .main-navigation a:focus,
-    .main-navigation ul a:visited {
-      color: $nav-font-light;
+    .main-navigation ul {
+      a,
+      a:focus,
+      a:visited {
+        color: $nav-font-light;
+      }
     }
   }
 
@@ -70,10 +74,12 @@
       background-color: $hamburger-light;
     }
 
-    .main-navigation ul a,
-    .main-navigation a:focus,
-    .main-navigation ul a:visited {
-      color: $nav-font-dark;
+    .main-navigation ul {
+      a,
+      a:focus,
+      a:visited {
+        color: $nav-font-dark;
+      }
     }
   }
 
