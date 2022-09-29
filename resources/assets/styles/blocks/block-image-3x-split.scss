@@ -20,12 +20,12 @@
   &-h__wrapper {
     width: 100%;
     min-height: 500px;
-    padding-top: 80px;
+    padding-top: 125px;
     padding-bottom: 125px;
 
     @include medium-up {
-      padding-top: 0;
-      padding-bottom: 185px;
+      padding-top: 150px;
+      padding-bottom: 150px;
     }
   }
 
@@ -35,21 +35,23 @@
     @include medium-up {
       grid-template-columns: 45% 55%;
       align-items: center;
-      padding-top: 130px;
-      padding-bottom: 20px;
     }
 
     &.isSwitched {
       @include medium-up {
         grid-template-columns: 55% 45%;
         align-items: center;
-        padding-top: 130px;
-        padding-bottom: 20px;
       }
     }
   }
 
   &-h__content {
+    margin-left: 10%;
+
+    @include small-up {
+      width: 80%;
+    }
+
     &.isSwitched {
       @include medium-up {
         order: 2;
@@ -64,7 +66,12 @@
     &-title {
       color: $primary;
       font-weight: 700;
-      padding-bottom: 40px;
+      // padding-bottom: 40px;
+    }
+
+    p {
+      font-size: $font-size-14;
+      line-height: 20px;
     }
   }
 
@@ -82,46 +89,134 @@
       width: 100%;
       display: block;
       height: auto;
+      margin: auto;
+
+      // @include large-up {
+      //   width: 500px;
+      // }
     }
 
     &--left {
+      width: auto;
       position: absolute;
-      top: -10%;
-      right: 0;
-      left: 70%;
+      top: 5%;
+      left: -5%;
       z-index: 1;
+      display: none;
 
       @include xl-up {
-        // top: -20%;
-        right: -50px;
-        left: 73%;
+        display: block;
+        left: 0;
+        width: 280px;
+      }
+
+      @include xl-up {
+        left: -80px;
+      }
+
+      &.up {
+        top: -5%;
       }
 
       &_inner {
-        max-width: 120px;
+        // max-width: 120px;
+        width: auto;
         margin: auto;
         height: auto;
         display: block;
 
-        @include small-up {
-          max-width: 300px;
-        }
+        // @include small-up {
+        //   max-width: 300px;
+        // }
+      }
+
+      img {
+        width: 100%;
+        height: auto;
       }
     }
 
-    &--bottom {
+    &--right {
+      width: auto;
       position: absolute;
+      top: 5%;
+      right: -5%;
+      z-index: 1;
+      display: none;
+
+      @include xl-up {
+        display: block;
+        right: 0;
+        width: 280px;
+      }
+
+      @include xl-up {
+        right: -80px;
+      }
+
+      &.up {
+        top: -5%;
+      }
+
+      &_inner {
+        width: auto;
+        margin: auto;
+        height: auto;
+        display: block;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &--bottom-left {
+      position: absolute;
+      left: -10%;
+      bottom: 5%;
       display: none;
 
       @include medium-up {
         display: block;
-        right: -10%;
-        bottom: -20%;
+        left: 0;
+      }
+
+      @include xl-up {
         left: -10%;
       }
 
+      &.down {
+        bottom: -5%;
+      }
+
       &_inner {
-        max-width: 362px;
+        width: auto;
+        height: auto;
+      }
+    }
+
+    &--bottom-right {
+      position: absolute;
+      right: -10%;
+      bottom: 5%;
+      display: none;
+
+      @include medium-up {
+        display: block;
+        right: 0;
+      }
+
+      @include xl-up {
+        right: -10%;
+      }
+
+      &.down {
+        bottom: -5%;
+      }
+
+      &_inner {
+        width: auto;
         height: auto;
       }
     }
@@ -140,19 +235,48 @@
     }
   }
 
+  .button-wrapper {
+    grid-template-columns: 1fr;
+    width: 60%;
+
+    &.one {
+      @include small-up {
+        width: 40%;
+      }
+    }
+
+    &.two {
+      @include small-up {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        width: auto;
+      }
+    }
+
+    &.three {
+      @include small-up {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        width: auto;
+      }
+    }
+
+    a {
+      margin: 0 10px 10px 0;
+    }
+  }
+
   .btn {
     position: relative;
     cursor: pointer;
-    font-weight: 600;
+    // font-weight: 600;
     z-index: 9;
-    min-width: 180px;
 
-    @include xl-up {
-      min-width: 220px;
-    }
-
-    &:last-child {
-      margin-bottom: 120px;
+    &:hover {
+      color: $black !important;
     }
   }
+}
+
+.isSwitched .block-image-3x-split-h__content {
+  margin-left: 5%;
+  margin-right: 5%;
 }
