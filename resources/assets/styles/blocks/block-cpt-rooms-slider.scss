@@ -1,6 +1,5 @@
 .block-cpt-rooms-slider {
   padding: 3rem 0 6em;
-  background-color: $gray-light;
 
   .container {
     width: 90%;
@@ -37,10 +36,59 @@
     padding: 20px;
     background-color: $white;
     margin: 0 10px;
+    display: flex !important;
+    flex-direction: column;
+
+    &.book-btn-option,
+    &.read-btn-option {
+      height: 540px;
+
+      @include medium-up {
+        height: 580px;
+      }
+    }
   }
 
   &__image {
     width: auto;
+  }
+
+  &__room_content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .btn-wrapper {
+      height: initial;
+      margin-top: auto;
+    }
+  }
+
+  .grid {
+    .price {
+      font-size: $font-size-18;
+      font-weight: 600;
+      text-align: center;
+
+      @include medium-up {
+        text-align: initial;
+        font-size: $font-size-22;
+      }
+
+      @include xl-up {
+        font-size: $font-size-28;
+      }
+
+      span {
+        font-size: initial;
+        margin-right: 5px;
+      }
+    }
+
+    &.btn-wrapper {
+      height: initial;
+      margin-top: auto;
+    }
   }
 
   h2 {
@@ -127,7 +175,7 @@
   }
 
   .btn-wrapper {
-    margin-top: 10px;
+    // margin-top: 10px;
     // grid-template-columns: repeat(2, 1fr);
 
     @include large-up {
@@ -147,35 +195,13 @@
     }
   }
 
-  .grid {
-    .price {
-      font-size: $font-size-18;
-      font-weight: 600;
-      text-align: center;
-
-      @include medium-up {
-        text-align: initial;
-        font-size: $font-size-22;
-      }
-
-      @include xl-up {
-        font-size: $font-size-28;
-      }
-
-      span {
-        font-size: initial;
-        margin-right: 5px;
-      }
-    }
-  }
-
   .slick-track {
     display: flex !important;
   }
 
-  .slick-slide {
-    height: inherit !important;
-  }
+  // .slick-slide {
+  //   height: inherit !important;
+  // }
 }
 
 /* Modal CSS */

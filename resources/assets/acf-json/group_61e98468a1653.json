@@ -1,6 +1,6 @@
 {
     "key": "group_61e98468a1653",
-    "title": "Block-Banner-Slider-1",
+    "title": "Block Banner Slider 1",
     "fields": [
         {
             "key": "field_61e98468a765c",
@@ -265,5 +265,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1657699265
+    "modified": 1664456648
 }

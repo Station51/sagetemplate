@@ -1,6 +1,6 @@
 {
     "key": "group_61caf06ff1dbd",
-    "title": "Block-4-Column-Image-Text",
+    "title": "Block 4 Column Image Text",
     "fields": [
         {
             "key": "field_62ce9eedcf6f4",
@@ -11,7 +11,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "30",
                 "class": "",
                 "id": ""
             },
@@ -20,6 +20,23 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_63359cd6e9a39",
+            "label": "Background Color",
+            "name": "background_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "70",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string"
         },
         {
             "key": "field_61caf080c5734",
@@ -123,5 +140,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1657708595
+    "modified": 1664457975
 }
