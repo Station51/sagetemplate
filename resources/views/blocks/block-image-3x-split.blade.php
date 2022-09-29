@@ -42,13 +42,15 @@ Icon: awards
           </p>
           @endif
         </article>
-        @php $button = get_field('button') @endphp
-        @php $buttonR = get_field('button_1') @endphp
-        @if($button['button_text'])
-        <a href="{{ $button[button_url] }}" class="btn" style="color: {{ $button['button_font_color'] }}; background-color: {{ $button['button_background_color'] }}; border: 2px solid {{ $button['button_border_color']  }};">{!! $button['button_text'] !!}</a>
+        @php 
+          $button = get_field('button');
+          $buttonR = get_field('button_1');
+        @endphp
+        @if($button['button_link'])
+          <a href="{{ $button['button_link']['url'] }}" class="btn" target="{{ $button['button_link']['target'] }}" style="color: {{ $button['button_font_color'] }}; background-color: {{ $button['button_background_color'] }}; border: 2px solid {{ $button['button_border_color']  }};">{!! $button['button_link']['title'] !!}</a>
         @endif
-        @if($buttonR['button_text'])
-        <a href="{{ $buttonR[button_url] }}" class="btn" style="color: {{ $buttonR['button_font_color'] }}; background-color: {{ $buttonR['button_background_color'] }}; border: 2px solid {{ $buttonR['button_border_color']  }};">{!! $buttonR['button_text'] !!}</a>
+        @if($buttonR['button_link'])
+          <a href="{{ $buttonR['button_link']['url'] }}" class="btn" target="{{ $buttonR['button_link']['target'] }}" style="color: {{ $buttonR['button_font_color'] }}; background-color: {{ $buttonR['button_background_color'] }}; border: 2px solid {{ $buttonR['button_border_color']  }};">{!! $buttonR['button_link']['title'] !!}</a>
         @endif
       </div>
       <div class="block-image-3x-split-h__inner">
@@ -57,6 +59,8 @@ Icon: awards
           $imageID = $section_bottom['image_1'];
           $image = wp_get_attachment_image_src( $imageID, 'full' );
           $alt_text = get_post_meta($imageID , '_wp_attachment_image_alt', true);
+          $top_image_position = get_field('top_image_position');
+          $bottom_image_position = get_field('bottom_image_position');
           @endphp
           @if($section_bottom['image_1'])
           <img class="block-image-3x-split-h__top-images--top" src="{!! $image[0] !!}" alt="{{ $alt_text }}"
@@ -69,7 +73,7 @@ Icon: awards
           $alt_text2 = get_post_meta($image2 , '_wp_attachment_image_alt', true);
           @endphp
 
-          <div class="block-image-3x-split-h__top-images--left" smooth-parallax="1" start-position-y="1"
+          <div class="block-image-3x-split-h__top-images--{!! $top_image_position['horizontal_position'] !!} {!! $top_image_position['vertical_position'] !!}" smooth-parallax="1" start-position-y="1"
             end-position-y="0.2">
             <img class="block-image-3x-split-h__top-images--left_inner" src="{!! $imageLeft[0] !!}"
               alt="{{ $alt_text2 }}" />
@@ -82,11 +86,11 @@ Icon: awards
           @endphp
 
           @if($section_bottom['image_3'])
-          <div class="block-image-3x-split-h__top-images--bottom" smooth-parallax="1" start-position-y="-0.4"
-            end-position-y="0">
-            <img class="block-image-3x-split-h__top-images--bottom_inner" src="{!! $imageTop[0] !!}" alt="{{ $alt_text3 }}"
-              smooth-parallax="1" start-position-y="-0.1" end-position-y="0" />
-          </div>
+            <div class="block-image-3x-split-h__top-images--bottom-{!! $bottom_image_position['horizontal_position'] !!} {!! $bottom_image_position['vertical_position'] !!}" smooth-parallax="1" start-position-y="-0.4"
+              end-position-y="0">
+              <img class="block-image-3x-split-h__top-images--bottom-{!! $bottom_image_position['horizontal_position'] !!}_inner" src="{!! $imageTop[0] !!}" alt="{{ $alt_text3 }}"
+                smooth-parallax="1" start-position-y="-0.1" end-position-y="0" />
+            </div>
           @endif
 
           @if($section_bottom['tartan'])
