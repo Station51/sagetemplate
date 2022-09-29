@@ -1,6 +1,6 @@
 {
     "key": "group_61dac86889496",
-    "title": "Block-banner-slider-bg-image",
+    "title": "Block Banner Slider BG Image",
     "fields": [
         {
             "key": "field_61dac887c2f64",
@@ -158,5 +158,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1663754233
+    "modified": 1664456675
 }

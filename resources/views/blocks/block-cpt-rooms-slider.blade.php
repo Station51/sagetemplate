@@ -3,7 +3,15 @@
   Category: common
   Icon: awards
 --}}
-<section data-{{ $block['id'] }} id="{{ $block['id'] }}" class="{{ $block['classes'] }} section">
+
+@php 
+  $section_id = get_field('section_id');
+  $background_color = get_field('background_color');
+  $tile_border_color = get_field('tile_border_color');
+  $layout = get_field('cta_layout'); 
+@endphp
+
+<section data-{{ $block['id'] }} id="{{ $section_id ? $section_id : $block['id'] }}" class="{{ $block['classes'] }} section" @if($background_color) style="background-color: {!! $background_color !!}" @endif>
   <div class="container">
     <article class="block-cpt-rooms-slider__content">
       <h2 class="section-header">{!! get_field('headline') !!}</h2>
@@ -11,9 +19,6 @@
 
       @if(get_field('intro'))
         <div class="block-cpt-rooms-slider__intro">
-          @php 
-            $layout = get_field('cta_layout'); 
-          @endphp
           <p>{!! get_field('intro') !!}</p>
         </div>
       @endif
@@ -48,7 +53,7 @@
               $roomgallery = get_field('gallery', get_the_ID());
             @endphp
 
-            <div class="block-cpt-rooms-slider__tile">
+            <div class="block-cpt-rooms-slider__tile {{ $layout }}-btn-option" @if($tile_border_color) style="border: 1px solid {!! $tile_border_color !!}" @endif>
               
               <div class="block-cpt-rooms-slider__image">
                 {!! the_post_thumbnail() !!}

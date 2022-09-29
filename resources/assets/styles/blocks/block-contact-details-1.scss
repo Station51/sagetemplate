@@ -30,7 +30,6 @@
     margin: auto;
     transition: $transition;
     height: 100%;
-    border: 1px solid $ghost-white;
 
     .phone {
       margin: 20px 0;
@@ -67,6 +66,3 @@
   }
 }
 
-.section-color {
-  background-color: $ghost-white;
-}

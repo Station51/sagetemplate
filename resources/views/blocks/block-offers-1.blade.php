@@ -6,8 +6,9 @@
 
 @php 
   $section_id = get_field('section_id');
+  $background_color = get_field('background_color');
 @endphp
-<section data-{{ $block['id'] }} id="{{ $section_id ? $section_id : $block['id'] }}" class="{{ $block['classes'] }} section">
+<section data-{{ $block['id'] }} id="{{ $section_id ? $section_id : $block['id'] }}" class="{{ $block['classes'] }} section" @if($background_color) style="background-color: {!! $background_color !!}" @endif>
   <article class="container grid grid__outer">
     @php 
       if( have_rows('the_offer') ):

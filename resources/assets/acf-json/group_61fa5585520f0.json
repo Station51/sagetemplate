@@ -1,6 +1,6 @@
 {
     "key": "group_61fa5585520f0",
-    "title": "Block-Contact-Details-1",
+    "title": "Block Contact Details 1",
     "fields": [
         {
             "key": "field_62cea25dd4e4f",
@@ -11,7 +11,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "30",
                 "class": "",
                 "id": ""
             },
@@ -20,6 +20,23 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_63359fca17654",
+            "label": "Background Color",
+            "name": "background_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "70",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string"
         },
         {
             "key": "field_61fa55ab4c40d",
@@ -207,5 +224,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1663763016
+    "modified": 1664458719
 }

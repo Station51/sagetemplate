@@ -1,6 +1,6 @@
 {
     "key": "group_61d436cd38215",
-    "title": "Block-CTA-Banner-2",
+    "title": "Block CTA Banner 2",
     "fields": [
         {
             "key": "field_62cea593ce2d4",
@@ -208,5 +208,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1664441683
+    "modified": 1664456766
 }

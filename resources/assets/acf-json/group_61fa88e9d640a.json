@@ -1,6 +1,6 @@
 {
     "key": "group_61fa88e9d640a",
-    "title": "Block-CPT-Rooms-Slider",
+    "title": "Block CPT Rooms Slider",
     "fields": [
         {
             "key": "field_61faa6830af50",
@@ -190,5 +190,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1663762378
+    "modified": 1664456735
 }

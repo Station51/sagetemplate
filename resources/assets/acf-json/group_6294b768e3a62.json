@@ -1,17 +1,17 @@
 {
     "key": "group_6294b768e3a62",
-    "title": "Block-CPT-Rooms-Slider-Intro",
+    "title": "Block CPT Rooms Slider Intro",
     "fields": [
         {
-            "key": "field_6294b78b54418",
-            "label": "Headline",
-            "name": "headline",
+            "key": "field_6335739189a79",
+            "label": "Section ID",
+            "name": "section_id",
             "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
@@ -30,7 +30,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
@@ -44,6 +44,59 @@
             "layout": "horizontal",
             "return_format": "value",
             "save_other_choice": 0
+        },
+        {
+            "key": "field_633573a789a7a",
+            "label": "Background Color",
+            "name": "background_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string"
+        },
+        {
+            "key": "field_63357625875b6",
+            "label": "Tile border color",
+            "name": "tile_border_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string"
+        },
+        {
+            "key": "field_6294b78b54418",
+            "label": "Headline",
+            "name": "headline",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_6294b7a854419",
@@ -83,5 +136,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1657810555
+    "modified": 1664456752
 }
