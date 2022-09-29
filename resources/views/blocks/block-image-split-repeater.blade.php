@@ -26,8 +26,7 @@
       <div class="block-image-split-repeater__title">
         <h2 class="heading heading--2">{!! the_sub_field('title') !!}</h2>
       </div>
-      <p class="block-image-split-repeater__text">{!! the_sub_field('content') !!}
-      </p>
+      <div class="block-image-split-repeater__text">{!! the_sub_field('content') !!}</div>
       @if($addButton == 'yes')
         <a href="{!! $buttonLink['url'] !!}" target="{{ $buttonLink['target'] }}" class='btn'>{!! $buttonLink['title'] !!}</a>
       @endif
@@ -39,8 +38,7 @@
       <div class="block-image-split-repeater__title">
         <h2 class="heading heading--2">{!! the_sub_field('title') !!}</h2>
       </div>
-      <p class="block-image-split-repeater__text">{!! the_sub_field('content') !!}
-      </p>
+      <div class="block-image-split-repeater__text">{!! the_sub_field('content') !!}</div>
       @if($addButton == 'yes')
         <a href="{!! $buttonLink['url'] !!}" target="{{ $buttonLink['target'] }}" class='btn'>{!! $buttonLink['title'] !!}</a>
       @endif

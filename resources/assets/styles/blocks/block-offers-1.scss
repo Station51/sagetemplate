@@ -1,11 +1,17 @@
 .block-offers-1 {
-  background-color: $gray-light;
-
   .grid__outer {
     grid-template-columns: 1fr;
 
+    @include small-up {
+      grid-template-columns: 1fr 1fr;
+    }
+
     @include medium-up {
       grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @include xl-up {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
     }
   }
 

@@ -1,6 +1,6 @@
 {
     "key": "group_61d42eb911297",
-    "title": "Block-Banner-Video-1",
+    "title": "Block Banner Video 1",
     "fields": [
         {
             "key": "field_61d42ecab30f0",
@@ -102,5 +102,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1651661284
+    "modified": 1664456690
 }
