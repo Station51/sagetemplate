@@ -39,7 +39,8 @@
   &__item {
     &.grid {
       grid-template-columns: 1fr;
-      align-items: initial;
+      gap: 2rem 1.4rem;
+      // align-items: initial;
 
       @include xsmall-up {
         grid-template-columns: repeat(2, 1fr);
@@ -49,14 +50,20 @@
         grid-template-columns: repeat(3, 1fr);
         align-items: initial;
       }
+
+      @include xl-up {
+        grid-template-columns: repeat(4, 1fr);
+        align-items: initial;
+      }
     }
 
     &--section-center {
       display: flex;
-      gap: 1rem 2rem;
-      max-width: 25rem;
+      // gap: 1rem 2rem;
+      max-width: 400px;
       width: 100%;
       justify-content: center;
+      margin: auto;
     }
 
     &--block {
@@ -95,10 +102,13 @@
     }
 
     &--content {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 0.5rem;
+      // display: grid;
+      // grid-template-columns: 1fr;
+      // gap: 0.5rem;
+      display: flex;
+      flex-direction: column;
       padding: 15px 15px 20px;
+      height: 320px;
     }
   }
 
@@ -110,6 +120,11 @@
       margin-bottom: 20px;
     }
   }
+}
+
+.btn-cont {
+  height: initial;
+  margin-top: auto;
 }
 
 article.rooms {

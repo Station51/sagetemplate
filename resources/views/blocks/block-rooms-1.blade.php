@@ -38,7 +38,7 @@
                 <h3>{!! $roomtitle !!}</h3>
               </header>
               <div class="block-rooms-1__item--info">{!! $roomsnip !!}</div>
-              <div><a href="<?php the_permalink(); ?>" class="btn">Learn more</a></div>
+              <div class="btn-cont"><a href="<?php the_permalink(); ?>" class="btn">Learn more</a></div>
             </div>
           </div>
         </div>
