@@ -1,5 +1,9 @@
 .block-rooms-1 {
-  padding: 2rem 0;
+  padding: 1rem 0;
+
+  @include small-up {
+    padding: 2rem 0;
+  }
 
   &__banner {
     min-height: 80vh;
@@ -39,7 +43,7 @@
   &__item {
     &.grid {
       grid-template-columns: 1fr;
-      align-items: initial;
+      gap: 1rem;
 
       @include xsmall-up {
         grid-template-columns: repeat(2, 1fr);
@@ -48,68 +52,63 @@
       @include small-up {
         grid-template-columns: repeat(3, 1fr);
         align-items: initial;
+        gap: 1.5rem;
+      }
+
+      @include xl-up {
+        grid-template-columns: repeat(4, 1fr);
       }
     }
 
-    &--section-center {
-      display: flex;
-      gap: 1rem 2rem;
-      max-width: 25rem;
-      width: 100%;
-      justify-content: center;
+    &--info {
+      padding: 10px 0 20px;
     }
 
     &--block {
       text-align: center;
       border: 1px solid $gray-light;
+      display: flex;
+      flex-direction: column;
 
       h3 {
         font-size: $font-size-22;
         margin: 10px 0 0;
       }
 
-      @include small-up {
-        width: 95%;
-      }
+      // @include small-up {
+      //   width: 95%;
+      // }
 
-      img {
-        /* stylelint-disable */
-        max-height: 250px;
-        aspect-ratio: 2/1; 
-        /* stylelint-enable */
-        width: 100%;
-        object-fit: cover;
-        // border-radius: $border-radius;
-
-        @include small-up {
-          max-height: 180px;
-        }
-
-        @include medium-up {
-          max-height: initial;
-          /* stylelint-disable */
-          // aspect-ratio: 1/2; 
-          /* stylelint-enable */
-        }
-      }
+      // img {
+      //   /* stylelint-disable */
+      //   max-height: 250px;
+      //   aspect-ratio: 2/1; 
+      //   /* stylelint-enable */
+      //   width: 100%;
+      //   object-fit: cover;
+      // }
     }
 
     &--content {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 0.5rem;
+      display: flex;
+      flex-direction: column;
       padding: 15px 15px 20px;
+      height: 100%;
     }
   }
 
   &__btns {
     padding-top: 1.5rem;
-    // bottom: 0;
 
     a {
       margin-bottom: 20px;
     }
   }
+}
+
+.btn-cont {
+  height: initial;
+  margin-top: auto;
 }
 
 article.rooms {
