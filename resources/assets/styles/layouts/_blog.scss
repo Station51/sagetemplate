@@ -27,6 +27,19 @@
     padding-top: 25px;
   }
 
+  .grid {
+    grid-template-columns: 1fr;
+    align-items: initial;
+
+    @include small-up {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include xl-up {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
   .heading--2 {
     font-size: 30px;
     line-height: 30px;
@@ -137,9 +150,19 @@
   .tile {
     border: 1px solid $gray-light;
     border-radius: $border-radius;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 
     .inner-wrap {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
       padding: 20px;
+
+      .blog-post-btn-cont {
+        margin-top: auto;
+      }
     }
 
     .single-post__img {

@@ -26,20 +26,25 @@
           $roomdesc = get_field('room_description', get_the_ID());
           $roomserv = get_field('room_services', get_the_ID());
         @endphp
-        @foreach (get_the_terms(get_the_ID(), 'room_category') as $cat) 
-          @php $termsSLug =  $cat->name @endphp     
-        @endforeach
 
-        <div class="block-rooms-1__item--section-center" data-category="{!! $termsSLug !!}">
-          <div class="block-rooms-1__item--block">
-            {!! the_post_thumbnail() !!}
-            <div class="block-rooms-1__item--content">
-              <header>
-                <h3>{!! $roomtitle !!}</h3>
-              </header>
-              <div class="block-rooms-1__item--info">{!! $roomsnip !!}</div>
-              <div class="btn-cont"><a href="<?php the_permalink(); ?>" class="btn">Learn more</a></div>
-            </div>
+        {{-- @foreach (get_the_terms(get_the_ID(), 'room_category') as $cat) 
+          @php $termsSlug = $cat->name @endphp     
+        @endforeach --}}
+        
+        @php 
+          $taxArray = get_the_terms(get_the_ID(), 'room_category');
+          $termsSlug = strtolower($taxArray[0]->name);
+          // dd($termsSlug);
+        @endphp
+
+        <div class="block-rooms-1__item--block" data-category="{!! $termsSlug !!}">
+          {!! the_post_thumbnail() !!}
+          <div class="block-rooms-1__item--content">
+            <header>
+              <h3>{!! $roomtitle !!}</h3>
+            </header>
+            <div class="block-rooms-1__item--info">{!! $roomsnip !!}</div>
+            <div class="btn-cont"><a href="<?php the_permalink(); ?>" class="btn">Learn more</a></div>
           </div>
         </div>
 

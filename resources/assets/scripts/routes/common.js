@@ -300,9 +300,9 @@ export default {
     // scroll ad nav bg color
     $(window).scroll(function () {
       if ($(this).scrollTop() > 50) {
-        $('header').addClass('addbg');
+        $('.header').addClass('addbg');
       } else {
-        $('header').removeClass('addbg');
+        $('.header').removeClass('addbg');
       }
     });
 
