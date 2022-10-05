@@ -1,6 +1,6 @@
 {
     "key": "group_61efb307c1542",
-    "title": "Block-Gallery-Tabs-1",
+    "title": "Block Gallery Tabs 1",
     "fields": [
         {
             "key": "field_62cea70979e84",
@@ -145,5 +145,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1663766234
+    "modified": 1664871827
 }

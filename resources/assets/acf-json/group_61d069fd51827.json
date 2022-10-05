@@ -1,6 +1,6 @@
 {
     "key": "group_61d069fd51827",
-    "title": "Block-Menu-Filter",
+    "title": "Block Menu Filter",
     "fields": [
         {
             "key": "field_61d06a05ef906",
@@ -40,5 +40,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1651659712
+    "modified": 1664871996
 }

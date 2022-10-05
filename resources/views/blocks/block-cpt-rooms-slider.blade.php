@@ -51,6 +51,7 @@
               $roomsnip = get_field('room_snippet', get_the_ID());
               $roomdesc = get_field('room_description', get_the_ID());
               $roomgallery = get_field('gallery', get_the_ID());
+              $openPost = get_field('open_post', get_the_ID());
             @endphp
 
             <div class="block-cpt-rooms-slider__tile {{ $layout }}-btn-option" @if($tile_border_color) style="border: 1px solid {!! $tile_border_color !!}" @endif>
@@ -64,7 +65,7 @@
                 <div class="block-cpt-rooms-slider__room_snippet">{!! $roomsnip !!}</div>
                 @if($layout == 'read')
                   {{-- <div class="btn-wrapper"><a class="btn read-more view-post">{{ $readmorebuttontext ?: "Read more" }}</a></div> --}}
-                  <div class="btn-wrapper"><a class="basic-btn read-more modal-link" href="{!! the_permalink() !!}">{{ $readmorebuttontext ?: "Read more" }}</a></div>
+                  <div class="btn-wrapper"><a class="basic-btn read-more @if($openPost) modal-link @endif" href="{!! the_permalink() !!}">{{ $readmorebuttontext ?: "Read more" }}</a></div>
                 @else
                   <div class="grid btn-wrapper"><div class="price"><span>from</span>{!! $roomprice !!}</div><a class="basic-btn" target="_blank" href="{!! $buttonurl !!}">Book</a></div>
                 @endif

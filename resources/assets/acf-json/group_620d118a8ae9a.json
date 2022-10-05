@@ -1,6 +1,6 @@
 {
     "key": "group_620d118a8ae9a",
-    "title": "Block-Slider-Tabs",
+    "title": "Block Slider Tabs",
     "fields": [
         {
             "key": "field_62cecaf23b668",
@@ -350,5 +350,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1663751586
+    "modified": 1664873061
 }

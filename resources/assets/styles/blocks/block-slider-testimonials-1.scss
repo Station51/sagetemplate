@@ -3,33 +3,39 @@
   // background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  color: $white;
+  // color: $white;
 
   @include medium-up {
     background-attachment: fixed;
   }
 
-  h3 {
-    font-size: 2em;
-    line-height: initial;
-    margin-bottom: 10px;
-    font-family: $heading-font-family;
+  &__inner {
+    // background-color: $overlay-background-color;
+    padding: 2em 0;
 
     @include small-up {
-      font-size: 3em;
+      padding: 2em 1em;
     }
-  }
-
-  h4 {
-    font-size: $font-size-18;
-  }
-
-  &__inner {
-    background-color: $overlay-background-color;
-    padding: 2em 1em;
 
     .intro {
       text-align: center;
+      width: 90%;
+      margin: auto;
+
+      @include small-up {
+        width: 50%;
+      }
+
+      h3 {
+        font-size: 1.5em;
+        line-height: initial;
+        margin-bottom: 10px;
+        font-family: $heading-font-family;
+
+        @include small-up {
+          font-size: 2.5em;
+        }
+      }
     }
 
     @include xl-up {
@@ -46,26 +52,46 @@
   }
 
   &__content {
-    position: relative;
-    background: $white;
-    color: $font-color;
-    padding: 3em;
-    border-radius: $border-radius;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+
+    @include small-up {
+      width: 60%;
+    }
 
     p {
-      margin-bottom: 10px;
+      margin: -5px 0 20px;
     }
 
-    &::after {
-      content: "";
-      position: absolute;
-      top: 100%;
-      right: 20%;
-      height: 15px;
-      width: 30px;
-      background: inherit;
-      clip-path: polygon(0 0, 100% 0, 50% 100%);
+    h4 {
+      font-size: $font-size-18;
     }
+
+    em {
+      color: $blue-medium;
+    }
+
+    // position: relative;
+    // background: $white;
+    // color: $font-color;
+    // padding: 3em;
+    // border-radius: $border-radius;
+
+    // p {
+    //   margin-bottom: 10px;
+    // }
+
+    // &::after {
+    //   content: "";
+    //   position: absolute;
+    //   top: 100%;
+    //   right: 20%;
+    //   height: 15px;
+    //   width: 30px;
+    //   background: inherit;
+    //   clip-path: polygon(0 0, 100% 0, 50% 100%);
+    // }
   }
 
   .slick-dots {
@@ -81,7 +107,7 @@
 
       &::before {
         color: transparent;
-        border: 1px solid $white;
+        border: 1px solid $black;
         border-radius: 50%;
         height: 10px;
         width: 10px;
@@ -93,7 +119,58 @@
     }
 
     li.slick-active button::before {
-      background-color: $white;
+      background-color: $black;
+    }
+  }
+
+  .slick-next,
+  .slick-prev {
+    z-index: 1;
+    width: auto;
+    height: auto;
+    display: none;
+
+    &::before {
+      font-size: 40px;
+    }
+
+    @include small-up {
+      display: block;
+    }
+  }
+
+  .slick-next {
+    right: 3px;
+
+    @include small-up {
+      right: 40px;
+    }
+
+    &::before {
+      content: url(../images/icons/arrow-right-black.svg);
+    }
+  }
+
+  .slick-prev {
+    left: 3px;
+
+    @include small-up {
+      left: 40px;
+    }
+
+    &::before {
+      content: url(../images/icons/arrow-left-black.svg);
+    }
+  }
+
+  .slick-track {
+    display: flex;
+
+    .slick-slide {
+      display: flex;
+      height: auto;
+      align-items: center;
+      justify-content: center;
     }
   }
 }

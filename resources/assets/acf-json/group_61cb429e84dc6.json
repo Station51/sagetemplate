@@ -1,6 +1,6 @@
 {
     "key": "group_61cb429e84dc6",
-    "title": "Block-Image-Split-Repeater",
+    "title": "Block Image Split Repeater",
     "fields": [
         {
             "key": "field_62ceb2e6c6e4b",
@@ -194,5 +194,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1663766691
+    "modified": 1664871926
 }

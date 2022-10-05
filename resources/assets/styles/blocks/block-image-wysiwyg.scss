@@ -15,6 +15,10 @@
       margin: auto;
     }
 
+    .headline-icon {
+      padding: 10px 0 15px;
+    }
+
     h1 {
       font-size: $font-size-28;
       line-height: inherit;
@@ -35,9 +39,9 @@
       line-height: inherit;
       margin: 20px 0;
 
-      @include small-up {
-        margin: 20px 0;
-      }
+      // @include small-up {
+      //   margin: 20px 0;
+      // }
 
       @include medium-up {
         font-size: $font-size-28;

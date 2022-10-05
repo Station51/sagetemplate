@@ -114,6 +114,12 @@
 article.rooms {
   padding: 3em 0;
 
+  @include small-up {
+    padding: 4em 0;
+    max-width: 80%;
+    margin: auto;
+  }
+
   .entry-content.grid {
     grid-template-columns: 1fr;
     align-items: initial;
@@ -131,10 +137,14 @@ article.rooms {
 
   h1 {
     font-size: $font-size-28;
-    margin-bottom: 20px;
+    margin: 20px 0;
+
+    @include small-up {
+      margin: 0 0 20px;
+    }
   }
 
-  .rm-desc {
+  .rm-gallery {
     p {
       margin-bottom: 10px;
     }
@@ -148,7 +158,7 @@ article.rooms {
     }
   }
 
-  .rm-serv {
+  .rm-info {
     padding-bottom: 20px;
 
     ul {
@@ -162,11 +172,5 @@ article.rooms {
     @include small-up {
       padding-bottom: initial;
     }
-  }
-
-  @include small-up {
-    padding: 4em 0;
-    max-width: 80%;
-    margin: auto;
   }
 }
