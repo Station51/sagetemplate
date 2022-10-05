@@ -170,6 +170,25 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_633d849a23322",
+            "label": "Open Post",
+            "name": "open_post",
+            "type": "true_false",
+            "instructions": "Show room page or in modal",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "80",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Open modal",
+            "ui_off_text": "Open page"
         }
     ],
     "location": [
@@ -190,5 +209,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1664456735
+    "modified": 1664976465
 }

@@ -1,6 +1,6 @@
 {
     "key": "group_62f9f7911beef",
-    "title": "Block-Slider-Filter-Items",
+    "title": "Block Slider Filter Items",
     "fields": [
         {
             "key": "field_62f9f79122651",
@@ -169,5 +169,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1663669456
+    "modified": 1664872164
 }

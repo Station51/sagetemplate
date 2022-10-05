@@ -1,0 +1,51 @@
+.modal-wrapper {
+  .hide-modal {
+    display: none;
+  }
+
+  .modal-container {
+    padding: 0;
+  }
+
+  .container.width {
+    max-width: initial;
+  }
+
+  article.gallery,
+  article.offers,
+  article.rooms {
+    padding: 0;
+    max-width: initial;
+
+    h1 {
+      font-size: $font-size-28;
+      margin: 0;
+    }
+
+    .entry-title {
+      font-weight: 600;
+    }
+
+    .entry-content {
+      &.grid {
+        gap: 20px;
+        padding: 0;
+        grid-template-columns: 1fr 1fr;
+        align-items: flex-start;
+      }
+    }
+  }
+
+  .room-price {
+    margin-top: 20px;
+
+    span {
+      font-size: $font-size-28;
+      font-weight: 600;
+    }
+  }
+
+  li {
+    font-weight: 600;
+  }
+}

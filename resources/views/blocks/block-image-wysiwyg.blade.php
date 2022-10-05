@@ -23,7 +23,7 @@
           $size = 'large'; // (thumbnail, medium, large, full or custom size)
           $attachment_title = get_the_title($attach_id);      
         @endphp
-          {!! wp_get_attachment_image( $image, $size, $attachment_title ) !!}
+          {!! wp_get_attachment_image( $image, $size, $attachment_title, ["class" => "headline-icon","alt"=>"divider icon"] ) !!}
       @endif
 
       @if(get_field('content'))

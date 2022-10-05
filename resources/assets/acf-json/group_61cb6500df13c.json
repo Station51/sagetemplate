@@ -1,6 +1,6 @@
 {
     "key": "group_61cb6500df13c",
-    "title": "Block-Gallery-1",
+    "title": "Block Gallery 1",
     "fields": [
         {
             "key": "field_62cea667ba5c4",
@@ -105,5 +105,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1657710192
+    "modified": 1664871812
 }

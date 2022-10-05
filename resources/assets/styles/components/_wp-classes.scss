@@ -68,5 +68,10 @@
   .block-slider-split-1 .grid__outer.space .text-block.left {
     padding: 0;
   }
+
+  .block-gallery-things-to-do__item--image img,
+  .block-gallery-things-to-do .overlay-things {
+    max-width: 250px;
+  }
 }
 

@@ -171,6 +171,8 @@ add_filter( 'allowed_block_types', function ( $allowed_blocks ) {
         'acf/block-rooms-1',
         'acf/block-slider-split-1',
         'acf/block-slider-testimonials-1',
+        'acf/block-slider-testimonials-cpt',
+        'acf/block-slider-testimonials-3',
         'acf/block-wysiwyg',
         'acf/block-single-testimonial-parallax',
         'acf/block-image-3x-split',

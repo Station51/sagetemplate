@@ -31,6 +31,7 @@ $slick-loader-path: "~slick-carousel/slick/";
 @import "components/forms";
 @import "components/wp-classes";
 @import "components/social";
+@import "components/post-modal";
 
 /** Layouts */
 @import "layouts/header";
@@ -67,6 +68,8 @@ $slick-loader-path: "~slick-carousel/slick/";
 @import "blocks/block-rooms-1";
 @import "blocks/block-slider-split-1";
 @import "blocks/block-slider-testimonials-1";
+@import "blocks/block-slider-testimonials-cpt";
+@import "blocks/block-slider-testimonials-3";
 @import "blocks/block-wysiwyg";
 @import "blocks/block-single-testimonial-parallax";
 @import "blocks/block-image-3x-split";

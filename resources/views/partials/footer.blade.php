@@ -47,3 +47,4 @@
   </div>
 </footer>
 <div class="copyright-footer grid"><div>&copy; @php echo date("Y"); @endphp Sage Starter Theme </div><div>@php dynamic_sidebar('sub-footer') @endphp</div><div> Developed by <a class="hop-link" href="https://www.hopsoftware.com/digital">Hop Digital</a></div></div>
+@include('partials/modal-room')

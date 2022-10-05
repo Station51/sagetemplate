@@ -1,6 +1,6 @@
 {
     "key": "group_61c3712545617",
-    "title": "Block-Image-Icons-Split",
+    "title": "Block Image Icons Split",
     "fields": [
         {
             "key": "field_62ceb199c246b",
@@ -225,5 +225,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1663747649
+    "modified": 1664871910
 }
