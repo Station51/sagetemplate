@@ -1,6 +1,6 @@
 {
     "key": "group_61f103002829a",
-    "title": "Block-Slider-Testimonials-1",
+    "title": "Block Slider Testimonials 1",
     "fields": [
         {
             "key": "field_62cecd6afcfa7",
@@ -142,5 +142,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1657720185
+    "modified": 1664873194
 }

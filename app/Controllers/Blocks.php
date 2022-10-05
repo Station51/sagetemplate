@@ -85,13 +85,48 @@ class Blocks extends Controller
 
   /**
    *
-   * Block Slider half page.
+   * Block Slider testimonials 1
    *
    * Fetches the slides and returns them in an array.
    *
    * @return array An array with the slide data.
    */
   public static function getSliderTestimonials() {
+    return array_map(function ($slides) {          
+        return [
+           'content' => $slides['slide_content'] ?? null,
+        ];
+    }, get_field('slides') ?? []);
+  }
+
+  /**
+   *
+   * Block Slider testimonials CTP
+   *
+   * Fetches the slides and returns them in an array.
+   *
+   * @return array An array with the slide data.
+   */
+  public static function getSliderTestimonialsCPT() {
+    return array_map(function ($slides) {          
+          return [
+             'content' => $slides['slide_content'] ?? null,
+             'name' => $slides['name'] ?? null,
+             'location' => $slides['location'] ?? null,
+          ];
+      }, get_field('slides', 'option') ?? []);
+
+  }
+
+  /**
+   *
+   * Block Slider testimonials 3
+   *
+   * Fetches the slides and returns them in an array.
+   *
+   * @return array An array with the slide data.
+   */
+  public static function getSliderTestimonials3() {
     return array_map(function ($slides) {          
         return [
            'content' => $slides['slide_content'] ?? null,

@@ -1,6 +1,6 @@
 {
     "key": "group_61f3db68e771d",
-    "title": "Block-Image-Wysiwyg",
+    "title": "Block Image Wysiwyg",
     "fields": [
         {
             "key": "field_62ceb34e3b127",
@@ -265,5 +265,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1663746319
+    "modified": 1664871939
 }

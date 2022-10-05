@@ -1,6 +1,6 @@
 {
     "key": "group_62615f2f3b9e1",
-    "title": "Block-Image-Grid-Split",
+    "title": "Block Image Grid Split",
     "fields": [
         {
             "key": "field_6334553137601",
@@ -264,5 +264,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1664374780
+    "modified": 1664871895
 }

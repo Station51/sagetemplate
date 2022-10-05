@@ -166,11 +166,11 @@
     }
 
     &.slick-next::before {
-      content: url(../images/svg/arrow-right-white.svg);
+      content: url(../images/icons/arrow-right-white.svg);
     }
 
     &.slick-prev::before {
-      content: url(../images/svg/arrow-left-white.svg);
+      content: url(../images/icons/arrow-left-white.svg);
     }
   }
 
@@ -235,6 +235,10 @@ body.fix {
   margin: 10% auto;
   border-radius: 10px;
   overflow: visible;
+
+  @include small-up {
+    width: 70%;
+  }
 }
 
 .hide {

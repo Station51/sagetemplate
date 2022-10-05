@@ -1,6 +1,6 @@
 {
     "key": "group_6200dc248f1a5",
-    "title": "Block-Offers-1",
+    "title": "Block Offers 1",
     "fields": [
         {
             "key": "field_62ceb55c9a301",
@@ -222,5 +222,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1664456937
+    "modified": 1664872082
 }

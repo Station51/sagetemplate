@@ -1,6 +1,6 @@
 {
     "key": "group_61ee64f6d316a",
-    "title": "Block-Slider-Split-1",
+    "title": "Block Slider Split 1",
     "fields": [
         {
             "key": "field_62cec9a54f7e8",
@@ -278,5 +278,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1664282964
+    "modified": 1664872629
 }

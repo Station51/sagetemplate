@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import Filterizr from 'filterizr';
+import 'bootstrap/js/src/carousel';
 
 export default {
   init() {
@@ -103,11 +104,61 @@ export default {
       })
     }
 
-    //---------------------- Slider Testimonials Block -------------------------------//
-    let block_slider_testimonials = $('.block-slider-testimonials');
+    //---------------------- Slider Testimonials Block 1 -------------------------------//
+    let block_slider_testimonials1 = $('.slider-testimonials1');
 
-    if(block_slider_testimonials.length) {
-      let block_slider_testimonials_settings = {
+    if(block_slider_testimonials1.length) {
+      let block_slider_testimonials1_settings = {
+        'dots': true,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        speed: 500,
+        cssEase: 'linear',
+        autoplay: true,
+        // prevArrow: false,
+        // nextArrow: false,
+      }
+
+      block_slider_testimonials1.slick(block_slider_testimonials1_settings);
+
+      $(window).on('resize', function() {
+        if ($(window).width() >= 769 && !block_slider_testimonials1.hasClass('slick-initialized')) {
+          return block_slider_testimonials1.slick(block_slider_testimonials1_settings);
+        }
+      })
+    }
+
+     //---------------------- Slider Testimonials Block 1 CPT -------------------------------//
+     let block_slider_testimonials1cpt = $('.slider-testimonialscpt');
+
+     if(block_slider_testimonials1cpt.length) {
+       let block_slider_testimonials1cpt_settings = {
+         'dots': true,
+         infinite: true,
+         slidesToShow: 1,
+         slidesToScroll: 1,
+         speed: 500,
+         cssEase: 'linear',
+         autoplay: true,
+         // prevArrow: false,
+         // nextArrow: false,
+       }
+ 
+       block_slider_testimonials1cpt.slick(block_slider_testimonials1cpt_settings);
+ 
+       $(window).on('resize', function() {
+         if ($(window).width() >= 769 && !block_slider_testimonials1cpt.hasClass('slick-initialized')) {
+           return block_slider_testimonials1cpt.slick(block_slider_testimonials1cpt_settings);
+         }
+       })
+     }
+
+    //---------------------- Slider Testimonials Block 3 -------------------------------//
+    let block_slider_testimonials3 = $('.slider-testimonials3');
+
+    if(block_slider_testimonials3.length) {
+      let block_slider_testimonials3_settings = {
         'dots': true,
         infinite: true,
         slidesToShow: 3,
@@ -138,11 +189,11 @@ export default {
         ],
       }
 
-      block_slider_testimonials.slick(block_slider_testimonials_settings);
+      block_slider_testimonials3.slick(block_slider_testimonials3_settings);
 
       $(window).on('resize', function() {
-        if ($(window).width() >= 769 && !block_slider_testimonials.hasClass('slick-initialized')) {
-          return block_slider_testimonials.slick(block_slider_testimonials_settings);
+        if ($(window).width() >= 769 && !block_slider_testimonials3.hasClass('slick-initialized')) {
+          return block_slider_testimonials3.slick(block_slider_testimonials3_settings);
         }
       })
     }
@@ -350,5 +401,50 @@ export default {
       }
     })
 
+    /****************** CPT Modal *************/
+    // Close modal 
+    $('.close-modal').click(function() {
+      $('.modal-wrapper').toggleClass('show');
+      // $('.modal').toggleClass('show');
+      $('body').toggleClass('fix');
+  });
+  
+  // // Detect windows width function
+  var $window = $(window);
+  
+  function checkWidth() {
+      var windowsize = $window.width();
+      if (windowsize > 767) {
+          // if the window is greater than 767px wide then do below. we don't want the modal to show on mobile devices and instead the link will be followed.
+      
+          $('.modal-link').click(function(e) {
+              var modalContent = $('#modal-content');
+              //var post_link = $('.show-in-modal').html(); // get content to show in modal
+              var post_link = $(this).attr('href'); // this can be used in WordPress and it will pull the content of the page in the href
+              
+              e.preventDefault(); // prevent link from being followed
+              
+              $('.modal-wrapper').addClass('show', 1000); // show class to display the previously hidden modal
+              $('body').addClass('fix');
+              
+              // $('.modal').addClass('show', 1000, 'easeOutSine'); // show class to display the previously hidden modal
+              modalContent.html('loading...'); // display loading animation or in this case static content
+              // modalContent.html(post_link); // for dynamic content, change this to use the load() function instead of html() -- like this: modalContent.load(post_link + ' #modal-ready')
+
+              modalContent.load(post_link + ' #modal-ready');
+
+              // $('html, body').animate({ // if you're below the fold this will animate and scroll to the modal
+              //     scrollTop: 0
+              // }, 'slow');
+              return false;
+          });
+      }
+  }
+  
+  checkWidth(); // excute function to check width on load
+  $(window).resize(checkWidth); // execute function to check width on resize
+
+  /******************* end My Modal *************/
+  
   },
 };

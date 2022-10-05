@@ -1,6 +1,6 @@
 {
     "key": "group_62fe14bc475ff",
-    "title": "Block-Slider-Filter-Items-Type-Selection",
+    "title": "Block Slider Filter Items (Type Selection)",
     "fields": [
         {
             "key": "field_62ff65792f31c",
@@ -65,5 +65,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1663669447
+    "modified": 1664872197
 }
