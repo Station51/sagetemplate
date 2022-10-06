@@ -401,12 +401,17 @@ export default {
       }
     })
 
-    /****************** CPT Modal *************/
-    // Close modal 
-    $('.close-modal').click(function() {
-      $('.modal-wrapper').toggleClass('show');
-      // $('.modal').toggleClass('show');
-      $('body').toggleClass('fix');
+  /*********
+   ********* Open WordPress post in Modal 
+   ********* https://allurewebsolutions.com/open-wordpress-post-modal-without-plugin
+   *********
+   *********/
+
+  // Close modal 
+  $('.close-modal').click(function() {
+    $('.modal-wrapper').toggleClass('show');
+    // $('.modal').toggleClass('show');
+    $('body').toggleClass('fix');
   });
   
   // // Detect windows width function
@@ -444,7 +449,9 @@ export default {
   checkWidth(); // excute function to check width on load
   $(window).resize(checkWidth); // execute function to check width on resize
 
-  /******************* end My Modal *************/
+  /**********
+   ********** end Open WordPress post in Modal 
+   **********/
   
   },
 };
