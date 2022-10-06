@@ -29,7 +29,5 @@
     </div>
   </article>
 </section>
-@else 
-<h1>missed</h1>
 @endif
 
