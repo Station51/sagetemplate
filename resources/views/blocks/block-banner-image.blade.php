@@ -19,16 +19,13 @@
           @endif
         </h1>
         @if(get_field('subtitle')) 
-        <p> 
-          {!! get_field('subtitle') !!}
-        </p>
+          <p>{!! get_field('subtitle') !!}</p>
         @endif
-        @if(get_field('button_name')) 
-        <a 
-          href="@if(get_field('button_url')) {!! get_field('button_url') !!} @endif" 
-          class="btn" @if(get_field('button_background_color') && get_field('button_font_color')) style="background-color:{{ get_field('button_background_color') }}; color:{{ get_field('button_font_color') }};" @endif>
-            {!! get_field('button_name') !!}
-        </a>
+        @if(get_field('button_link')) 
+          @php $link = get_field('button_link') @endphp
+          <a href="{!! $link['url'] !!}" target="{{ $link['target'] }}" class="btn" @if(get_field('button_background_color') && get_field('button_font_color')) style="background-color:{{ get_field('button_background_color') }}; color:{{ get_field('button_font_color') }};" @endif>
+              {!! $link['title'] !!}
+          </a>
         @endif
       </div>
     </div>
