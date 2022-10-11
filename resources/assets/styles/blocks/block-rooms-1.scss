@@ -104,73 +104,9 @@
       margin-bottom: 20px;
     }
   }
-}
 
-.btn-cont {
-  height: initial;
-  margin-top: auto;
-}
-
-article.rooms {
-  padding: 3em 0;
-
-  @include small-up {
-    padding: 4em 0;
-    max-width: 80%;
-    margin: auto;
-  }
-
-  .entry-content.grid {
-    grid-template-columns: 1fr;
-    align-items: initial;
-
-    @include small-up {
-      gap: 40px;
-      padding: 0 10px;
-      grid-template-columns: 70% 30%;
-    }
-  }
-
-  p {
-    margin-bottom: 10px;
-  }
-
-  h1 {
-    font-size: $font-size-28;
-    margin: 20px 0;
-
-    @include small-up {
-      margin: 0 0 20px;
-    }
-  }
-
-  .rm-gallery {
-    p {
-      margin-bottom: 10px;
-    }
-
-    h3 {
-      margin: 20px 0 10px;
-    }
-
-    @include small-up {
-      padding: 0 10px;
-    }
-  }
-
-  .rm-info {
-    padding-bottom: 20px;
-
-    ul {
-      margin-left: 20px;
-    }
-
-    li {
-      list-style-type: circle;
-    }
-
-    @include small-up {
-      padding-bottom: initial;
-    }
+  .btn-cont {
+    // height: initial;
+    margin-top: auto;
   }
 }

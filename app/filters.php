@@ -184,5 +184,6 @@ add_filter( 'allowed_block_types', function ( $allowed_blocks ) {
         'acf/block-our-services-single',
         'acf/block-slider-filter-items',
         'acf/block-image-grid-split',
+        'acf/block-offers-gallery',
     );
 });

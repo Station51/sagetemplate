@@ -1,0 +1,148 @@
+.block-offers-gallery {
+  background-color: $white;
+  position: relative;
+  padding: 40px 0 80px;
+  overflow: hidden;
+  margin-top: -8px;
+
+  .bg-color {
+    background-color: $blue-light;
+    height: 150px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    margin-top: -2px;
+  }
+
+  h3 {
+    font-size: 20px;
+    text-transform: uppercase;
+    line-height: 25px;
+    color: $primary;
+    background-color: rgba(15, 35, 81, 0.5);
+    // min-height: 60px;
+  }
+
+  &__main-text {
+    max-width: 636px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__grid {
+    margin-top: 22px;
+    gap: 42px;
+    align-items: flex-start;
+
+    @include small-up {
+      margin-top: 60px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 38px;
+    }
+
+    @include medium-up {
+      margin-top: 60px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+  }
+
+  &__article {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+
+    &--buttons {
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+      text-transform: capitalize;
+
+      .btn.btn--blue {
+        min-width: 200px;
+        margin: 5px 5px 5px 0;
+      }
+    }
+
+    &--text {
+      margin: 5px 0 25px;
+      min-height: 110px;
+    }
+
+    &--subtitle {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 25px;
+      color: #0f2351;
+    }
+
+    &--main-img {
+      position: relative;
+      margin-bottom: 30px;
+    }
+
+    img {
+      /* stylelint-disable */
+      aspect-ratio: 2/2;
+      /* stylelint-enable */
+      width: 100%;
+      object-fit: cover;
+      height: auto;
+    }
+  }
+
+  .project-info {
+    font-family: $ff-secondary;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: left;
+    height: 100%;
+    width: 100%;
+    font-size: 40px;
+    line-height: 43px;
+    padding: 10px;
+  }
+
+  &__flex {
+    display: flex;
+    flex-wrap: wrap;
+    // row-gap: 10px;
+    column-gap: 10px;
+    margin-top: 60px;
+
+    .block-offers-gallery__article {
+      @include small-up {
+        flex: 0 0 32%;
+      }
+
+      @include xl-up {
+        flex: 0 0 24.4%;
+      }
+    }
+
+    .content-wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .project-info {
+      font-size: 40px;
+      line-height: 43px;
+
+      @include small-up {
+        font-size: 30px;
+        line-height: 33px;
+      }
+
+      @include medium-up {
+        font-size: 40px;
+        line-height: 43px;
+      }
+    }
+  }
+}
