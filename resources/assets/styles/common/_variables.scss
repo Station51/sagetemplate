@@ -1,27 +1,23 @@
 // Colors
-$primary:             #2caeba;
+$white:               #fff;
+$black:               #000;
 $gray-dark:           #3a3b3c;
 $gray-light:          #d3d3d3;
 $ghost-white:         #f8f8ff;
-$white:               #fff;
-$black:               #000;
 $blue-light:          #aae0ea;
 $blue-medium:         #211d71;
 $blue-dark:           #173c5e;
 $green-light:         #1c6061;
 $gold:                #d7bd70;
-$secondary:           $ghost-white;
 $brown-light:         #eae3cf;
 $brown-medium:        #b6a58b;
 $orange:              #f5822a;
+$primary:             $black;
+$secondary:           $ghost-white;
 
 // link color
 $link:                $blue-dark;
 $link-hover:          $black;
-
-// Body text color
-$heading-text-color: $blue-dark;
-$body-text-color: $blue-dark;
 
 // Buttons
 $button-bg-color: $blue-dark;
@@ -38,7 +34,6 @@ $border-radius: 5px;
 $ff-primary: "Rajdhani", sans-serif;
 $ff-secondary: "EB Garamond", serif;
 $font-size-base: 1rem;
-$font-color: $gray-dark;
 $letter-spacing: 0.2rem;
 $font-size-160: $font-size-base * 10; // ~160px
 $font-size-80: $font-size-base * 5; // ~80px
@@ -54,6 +49,13 @@ $font-size-15: $font-size-base * 0.9375; // ~15px
 $font-size-14: $font-size-base * 0.875; // ~14px
 $font-size-12: $font-size-base * 0.75; // ~12px
 $font-size-10: $font-size-base * 0.625; // ~10px
+
+// Headings
+$heading-font-family: $ff-secondary;
+$heading-text-color: $blue-dark;
+
+// Body text color
+$body-text-color: $blue-dark;
 
 // transitions
 $transition: all 0.3s linear;
@@ -105,9 +107,6 @@ $banner-h1-size-desktop: $font-size-52;
 $banner-h1-size-mobile: $font-size-44;
 $banner-h2-size-desktop: $font-size-44;
 $banner-h2-size-mobile: $font-size-28;
-
-// Headings
-$heading-font-family: $ff-secondary;
 
 // Logo height
 $logo-height: 80px;
