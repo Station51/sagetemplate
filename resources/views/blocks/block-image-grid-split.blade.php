@@ -41,10 +41,10 @@
           @endphp
           <div class="the__btns">
             @if($buttonOne)
-              <a href="{!! $buttonOne['url'] !!}" class="btn">{!! $buttonOne['title'] !!}</a>
+              <a href="{!! $buttonOne['url'] !!}" target="{!! $buttonOne['target'] !!}" class="btn">{!! $buttonOne['title'] !!}</a>
             @endif
             @if($buttonTwo)
-              <a href="{!! $buttonTwo['url'] !!}" class="btn">{!! $buttonTwo['title'] !!}</a>
+              <a href="{!! $buttonTwo['url'] !!}" target="{!! $buttonOne['target'] !!}" class="btn">{!! $buttonTwo['title'] !!}</a>
             @endif
           </div>
 
