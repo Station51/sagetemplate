@@ -88,7 +88,7 @@
         },
         {
             "key": "field_6295f271b8084",
-            "label": "CTA layout (price and book)",
+            "label": "Slider CTA layout (price and book)",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -138,7 +138,7 @@
         },
         {
             "key": "field_6296069366c52",
-            "label": "CTA layout (read more)",
+            "label": "Slider CTA layout (read more)",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -209,5 +209,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1664976465
+    "modified": 1666964318
 }
