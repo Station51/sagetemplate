@@ -47,7 +47,7 @@
               $roomtitle = get_field('room_title', get_the_ID());
               $readmorebuttontext = get_field('read_more_button_text', get_the_ID());
               $roomprice = get_field('room_price', get_the_ID());
-              $buttonurl = get_field('button_url', get_the_ID());
+              $link = get_field('button_link', get_the_ID());
               $roomsnip = get_field('room_snippet', get_the_ID());
               $roomdesc = get_field('room_description', get_the_ID());
               $roomgallery = get_field('gallery', get_the_ID());
@@ -67,7 +67,7 @@
                   {{-- <div class="btn-wrapper"><a class="btn read-more view-post">{{ $readmorebuttontext ?: "Read more" }}</a></div> --}}
                   <div class="btn-wrapper"><a class="basic-btn read-more @if($openPost) modal-link @endif" href="{!! the_permalink() !!}">{{ $readmorebuttontext ?: "Read more" }}</a></div>
                 @else
-                  <div class="grid btn-wrapper"><div class="price"><span>from</span>{!! $roomprice !!}</div><a class="basic-btn" target="_blank" href="{!! $buttonurl !!}">Book</a></div>
+                  <div class="grid btn-wrapper"><div class="price"><span>from</span>{!! $roomprice !!}</div><a class="basic-btn" target="{!! $link['target'] !!}" href="{!! $link['url'] !!}">{!! $link['title'] !!}</a></div>
                 @endif
               </div>
             
