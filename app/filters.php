@@ -160,6 +160,7 @@ add_filter( 'allowed_block_types', function ( $allowed_blocks ) {
         'core/image',
         'core/heading',
         'core/list',
+        'core/shortcode',
         'acf/block-banner-slider-1',
         'acf/block-contact-details-1',
         'acf/block-cta-1',
