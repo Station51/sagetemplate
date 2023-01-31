@@ -111,7 +111,7 @@ Help support our open-source development efforts by [becoming a patron](https://
 
 ## Community.
 
-Keep track of development and community news
+Keep track of development and community news.
 
 * Participate on the [Roots Discourse](https://discourse.roots.io/)
 * Follow [@rootswp on Twitter](https://twitter.com/rootswp)
